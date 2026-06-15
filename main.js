@@ -55,11 +55,41 @@ const secondaryUseOptions = {
   podium: ["retail", "cafe"],
   tower: ["office", "housing"],
 };
+const hourlyActivityProbabilities = {
+  0: { Home: 0.92, Office: 0.0, Shopping: 0.0, Cafe: 0.0, Park: 0.0, Plaza: 0.0, Other: 0.08 },
+  1: { Home: 0.93, Office: 0.0, Shopping: 0.0, Cafe: 0.0, Park: 0.0, Plaza: 0.0, Other: 0.07 },
+  2: { Home: 0.94, Office: 0.0, Shopping: 0.0, Cafe: 0.0, Park: 0.0, Plaza: 0.0, Other: 0.06 },
+  3: { Home: 0.95, Office: 0.0, Shopping: 0.0, Cafe: 0.0, Park: 0.0, Plaza: 0.0, Other: 0.05 },
+  4: { Home: 0.95, Office: 0.0, Shopping: 0.0, Cafe: 0.0, Park: 0.0, Plaza: 0.0, Other: 0.05 },
+  5: { Home: 0.93, Office: 0.0, Shopping: 0.0, Cafe: 0.0, Park: 0.01, Plaza: 0.0, Other: 0.06 },
+  6: { Home: 0.88, Office: 0.0, Shopping: 0.0, Cafe: 0.02, Park: 0.03, Plaza: 0.0, Other: 0.07 },
+  7: { Home: 0.72, Office: 0.05, Shopping: 0.0, Cafe: 0.08, Park: 0.06, Plaza: 0.01, Other: 0.08 },
+  8: { Home: 0.35, Office: 0.25, Shopping: 0.02, Cafe: 0.2, Park: 0.05, Plaza: 0.02, Other: 0.11 },
+  9: { Home: 0.1, Office: 0.7, Shopping: 0.02, Cafe: 0.08, Park: 0.03, Plaza: 0.02, Other: 0.05 },
+  10: { Home: 0.1, Office: 0.72, Shopping: 0.03, Cafe: 0.04, Park: 0.04, Plaza: 0.02, Other: 0.05 },
+  11: { Home: 0.1, Office: 0.65, Shopping: 0.05, Cafe: 0.05, Park: 0.05, Plaza: 0.03, Other: 0.07 },
+  12: { Home: 0.1, Office: 0.55, Shopping: 0.08, Cafe: 0.12, Park: 0.05, Plaza: 0.05, Other: 0.05 },
+  13: { Home: 0.1, Office: 0.65, Shopping: 0.06, Cafe: 0.08, Park: 0.04, Plaza: 0.04, Other: 0.03 },
+  14: { Home: 0.1, Office: 0.72, Shopping: 0.05, Cafe: 0.04, Park: 0.03, Plaza: 0.03, Other: 0.03 },
+  15: { Home: 0.1, Office: 0.72, Shopping: 0.06, Cafe: 0.04, Park: 0.03, Plaza: 0.03, Other: 0.02 },
+  16: { Home: 0.1, Office: 0.7, Shopping: 0.06, Cafe: 0.04, Park: 0.03, Plaza: 0.03, Other: 0.04 },
+  17: { Home: 0.2, Office: 0.5, Shopping: 0.1, Cafe: 0.05, Park: 0.06, Plaza: 0.05, Other: 0.04 },
+  18: { Home: 0.45, Office: 0.15, Shopping: 0.12, Cafe: 0.06, Park: 0.1, Plaza: 0.07, Other: 0.05 },
+  19: { Home: 0.6, Office: 0.05, Shopping: 0.1, Cafe: 0.05, Park: 0.1, Plaza: 0.06, Other: 0.04 },
+  20: { Home: 0.7, Office: 0.02, Shopping: 0.08, Cafe: 0.04, Park: 0.08, Plaza: 0.05, Other: 0.03 },
+  21: { Home: 0.78, Office: 0.01, Shopping: 0.05, Cafe: 0.03, Park: 0.06, Plaza: 0.04, Other: 0.03 },
+  22: { Home: 0.84, Office: 0.01, Shopping: 0.03, Cafe: 0.02, Park: 0.04, Plaza: 0.03, Other: 0.03 },
+  23: { Home: 0.89, Office: 0.0, Shopping: 0.01, Cafe: 0.01, Park: 0.02, Plaza: 0.02, Other: 0.05 },
+};
 let buildingOpacity = 1;
 
 const transparencySlider = document.getElementById("transparency-slider");
 const transparencyValue = document.getElementById("transparency-value");
+const timeSlider = document.getElementById("time-slider");
+const timeValue = document.getElementById("time-value");
 const radarChart = document.getElementById("radar-chart");
+const pieChart = document.getElementById("pie-chart");
+let timeOfDay = 0;
 
 const quadrantCenters = {
   northwest: new THREE.Vector3(-planeSize / 4, 0, planeSize / 4),
@@ -78,6 +108,20 @@ const planeMaterial = new THREE.MeshStandardMaterial({
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 plane.rotation.x = -Math.PI / 2;
 scene.add(plane);
+
+const offSiteGeometry = new THREE.PlaneGeometry(planeSize / 2, planeSize / 2);
+const offSiteMaterial = new THREE.MeshStandardMaterial({
+  color: 0x5a6f86,
+  side: THREE.DoubleSide,
+  metalness: 0.08,
+  roughness: 0.78,
+});
+const offSitePlane = new THREE.Mesh(offSiteGeometry, offSiteMaterial);
+offSitePlane.rotation.x = -Math.PI / 2;
+offSitePlane.position.set(-planeSize * 0.78, 0, 0);
+scene.add(offSitePlane);
+const offSiteCenter = offSitePlane.position.clone();
+const quadrantSize = planeSize / 2;
 
 const dividerMaterial = new THREE.LineBasicMaterial({ color: 0xe8f1ff });
 const dividerGeometry = new THREE.BufferGeometry().setFromPoints([
@@ -296,6 +340,16 @@ function createEmptyTemplate(center) {
   return group;
 }
 
+const offSiteLabel = createGroundLabel(
+  "off site",
+  "",
+  planeSize / 2.4,
+  "#c7d3df",
+  "#233042"
+);
+offSiteLabel.position.set(-planeSize * 0.78, 0.02, 0);
+scene.add(offSiteLabel);
+
 const quadrantTemplates = {
   podium: (center, secondaryText) => createPodiumTemplate(center, secondaryText),
   tower: (center, secondaryText) => createTowerTemplate(center, secondaryText),
@@ -326,6 +380,24 @@ const radarMetricLabels = {
   housingAffordability: ["Housing", "Affordability"],
   emissionReduction: ["Emission", "Reduction"],
 };
+const usageTypeColors = {
+  Home: "#7cc7ff",
+  Office: "#ffd166",
+  Shopping: "#ff8fab",
+  Cafe: "#cdb4db",
+  Park: "#7bd389",
+  Plaza: "#a0c4ff",
+  Other: "#9aa6b2",
+};
+const agentCount = 10;
+const agentLocationAnchors = {
+  offSite: { center: offSiteCenter, size: quadrantSize },
+  northwest: { center: quadrantCenters.northwest, size: quadrantSize },
+  northeast: { center: quadrantCenters.northeast, size: quadrantSize },
+  southwest: { center: quadrantCenters.southwest, size: quadrantSize },
+  southeast: { center: quadrantCenters.southeast, size: quadrantSize },
+};
+const agents = [];
 
 function deployQuadrant(quadrantKey) {
   const existingGroup = deployedQuadrants[quadrantKey];
@@ -344,6 +416,173 @@ function deployQuadrant(quadrantKey) {
   scene.add(nextGroup);
 }
 
+function createAgent(agentId) {
+  const agentGeometry = new THREE.CircleGeometry(0.12, 24);
+  const agentMaterial = new THREE.MeshBasicMaterial({
+    color: 0xff4d4d,
+  });
+  const agentMesh = new THREE.Mesh(agentGeometry, agentMaterial);
+  agentMesh.rotation.x = -Math.PI / 2;
+  scene.add(agentMesh);
+
+  return {
+    id: agentId,
+    mesh: agentMesh,
+    currentActivity: "Other",
+    currentDestination: "offSite",
+  };
+}
+
+function getCommunitySignature() {
+  return Object.keys(quadrantPrimaryStates)
+    .map(
+      (quadrantKey) =>
+        `${quadrantKey}:${quadrantPrimaryStates[quadrantKey]}:${quadrantSecondaryStates[quadrantKey]}`
+    )
+    .join("|");
+}
+
+function deterministicRandom(seedString) {
+  let hash = 2166136261;
+
+  for (let index = 0; index < seedString.length; index += 1) {
+    hash ^= seedString.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return ((hash >>> 0) % 1000000) / 1000000;
+}
+
+function getAvailableDestinationsByActivity() {
+  const destinations = {
+    Home: [],
+    Office: [],
+    Shopping: [],
+    Cafe: [],
+    Park: [],
+    Plaza: [],
+    Other: ["offSite"],
+  };
+
+  Object.keys(quadrantPrimaryStates).forEach((quadrantKey) => {
+    const primaryState = quadrantPrimaryStates[quadrantKey];
+    const secondaryState = quadrantSecondaryStates[quadrantKey];
+
+    if (secondaryState === "housing") {
+      destinations.Home.push(quadrantKey);
+    }
+
+    if (secondaryState === "office") {
+      destinations.Office.push(quadrantKey);
+    }
+
+    if (secondaryState === "retail") {
+      destinations.Shopping.push(quadrantKey);
+    }
+
+    if (secondaryState === "cafe") {
+      destinations.Cafe.push(quadrantKey);
+    }
+
+    if (primaryState === "public space" && secondaryState === "park") {
+      destinations.Park.push(quadrantKey);
+    }
+
+    if (primaryState === "public space" && secondaryState === "plaza") {
+      destinations.Plaza.push(quadrantKey);
+    }
+  });
+
+  return destinations;
+}
+
+function sampleWeightedActivity(probabilityMap, seedValue) {
+  const weightedEntries = Object.entries(probabilityMap).filter(
+    ([, probability]) => probability > 0
+  );
+
+  const probabilityTotal = weightedEntries.reduce(
+    (sum, [, probability]) => sum + probability,
+    0
+  );
+
+  if (probabilityTotal <= 0) {
+    return "Other";
+  }
+
+  let runningTotal = 0;
+
+  for (const [activity, probability] of weightedEntries) {
+    runningTotal += probability / probabilityTotal;
+    if (seedValue <= runningTotal) {
+      return activity;
+    }
+  }
+
+  return weightedEntries[weightedEntries.length - 1][0];
+}
+
+function getAgentDestinationKey(agent, hour) {
+  const hourlyProbabilities = hourlyActivityProbabilities[hour] ?? hourlyActivityProbabilities[0];
+  const availableDestinations = getAvailableDestinationsByActivity();
+  const communitySignature = getCommunitySignature();
+  const activitySeed = deterministicRandom(`activity|${agent.id}|${hour}|${communitySignature}`);
+  const activity = sampleWeightedActivity(hourlyProbabilities, activitySeed);
+  const destinationOptions = availableDestinations[activity] ?? ["offSite"];
+
+  agent.currentActivity = destinationOptions.length === 0 ? "Other" : activity;
+
+  if (destinationOptions.length === 0) {
+    agent.currentDestination = "offSite";
+    return "offSite";
+  }
+
+  const locationSeed = deterministicRandom(`location|${agent.id}|${hour}|${communitySignature}`);
+  const destinationIndex = Math.floor(locationSeed * destinationOptions.length);
+  const destinationKey =
+    destinationOptions[Math.min(destinationIndex, destinationOptions.length - 1)];
+  agent.currentDestination = destinationKey;
+  return destinationKey;
+}
+
+function getAgentSlotPosition(locationCenter, squareSize, slotIndex) {
+  const margin = 0.35;
+  const spacing = 0.38;
+  const usableWidth = squareSize - margin * 2;
+  const columns = Math.max(1, Math.floor(usableWidth / spacing) + 1);
+  const columnIndex = slotIndex % columns;
+  const rowIndex = Math.floor(slotIndex / columns);
+  const startX = locationCenter.x - squareSize / 2 + margin;
+  const startZ = locationCenter.z + squareSize / 2 - margin;
+
+  return new THREE.Vector3(
+    startX + columnIndex * spacing,
+    0.05,
+    startZ - rowIndex * spacing
+  );
+}
+
+function updateAgentPositions() {
+  const agentsByDestination = {};
+
+  agents.forEach((agent) => {
+    const destinationKey = getAgentDestinationKey(agent, timeOfDay);
+    if (!agentsByDestination[destinationKey]) {
+      agentsByDestination[destinationKey] = [];
+    }
+    agentsByDestination[destinationKey].push(agent);
+  });
+
+  Object.entries(agentsByDestination).forEach(([destinationKey, destinationAgents]) => {
+    const anchor = agentLocationAnchors[destinationKey] ?? agentLocationAnchors.offSite;
+
+    destinationAgents.forEach((agent, slotIndex) => {
+      const position = getAgentSlotPosition(anchor.center, anchor.size, slotIndex);
+      agent.mesh.position.copy(position);
+    });
+  });
+}
+
 function resetSecondaryStateForQuadrant(quadrantKey) {
   const primaryState = quadrantPrimaryStates[quadrantKey];
   const options = secondaryUseOptions[primaryState];
@@ -357,6 +596,10 @@ Object.keys(quadrantPrimaryStates).forEach((quadrantKey) => {
 Object.keys(quadrantPrimaryStates).forEach((quadrantKey) => {
   deployQuadrant(quadrantKey);
 });
+
+for (let agentIndex = 0; agentIndex < agentCount; agentIndex += 1) {
+  agents.push(createAgent(agentIndex));
+}
 
 const quadrantNumberLabels = [
   { text: "1", position: new THREE.Vector3(-0.45, 0.03, -0.45) },
@@ -398,7 +641,9 @@ function cycleQuadrantState(quadrantKey) {
   quadrantPrimaryStates[quadrantKey] = quadrantStateOrder[nextIndex];
   resetSecondaryStateForQuadrant(quadrantKey);
   deployQuadrant(quadrantKey);
+  updateAgentPositions();
   renderRadarChart();
+  renderPieChart();
   renderScene();
 }
 
@@ -415,7 +660,9 @@ function cycleQuadrantSecondaryState(quadrantKey) {
   const nextIndex = currentIndex >= 0 ? (currentIndex + 1) % options.length : 0;
   quadrantSecondaryStates[quadrantKey] = options[nextIndex];
   deployQuadrant(quadrantKey);
+  updateAgentPositions();
   renderRadarChart();
+  renderPieChart();
   renderScene();
 }
 
@@ -486,6 +733,26 @@ function createSvgNode(tagName, attributes) {
   });
 
   return node;
+}
+
+function polarToCartesian(centerX, centerY, radius, angleRadians) {
+  return {
+    x: centerX + Math.cos(angleRadians) * radius,
+    y: centerY + Math.sin(angleRadians) * radius,
+  };
+}
+
+function describePieSlice(centerX, centerY, radius, startAngle, endAngle) {
+  const start = polarToCartesian(centerX, centerY, radius, startAngle);
+  const end = polarToCartesian(centerX, centerY, radius, endAngle);
+  const largeArcFlag = endAngle - startAngle > Math.PI ? 1 : 0;
+
+  return [
+    `M ${centerX} ${centerY}`,
+    `L ${start.x} ${start.y}`,
+    `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${end.x} ${end.y}`,
+    "Z",
+  ].join(" ");
 }
 
 function renderRadarChart() {
@@ -599,12 +866,127 @@ function renderRadarChart() {
   });
 }
 
+function renderPieChart() {
+  pieChart.replaceChildren();
+
+  const counts = {
+    Home: 0,
+    Office: 0,
+    Shopping: 0,
+    Cafe: 0,
+    Park: 0,
+    Plaza: 0,
+    Other: 0,
+  };
+
+  agents.forEach((agent) => {
+    counts[agent.currentActivity] += 1;
+  });
+
+  const entries = Object.entries(counts).filter(([, count]) => count > 0);
+  const centerX = 82;
+  const centerY = 86;
+  const radius = 52;
+  let startAngle = -Math.PI / 2;
+
+  entries.forEach(([usageType, count]) => {
+    const fraction = count / agentCount;
+    const endAngle = startAngle + fraction * Math.PI * 2;
+    pieChart.appendChild(
+      createSvgNode("path", {
+        d: describePieSlice(centerX, centerY, radius, startAngle, endAngle),
+        fill: usageTypeColors[usageType],
+        stroke: "rgba(8, 12, 20, 0.65)",
+        "stroke-width": 1,
+      })
+    );
+    startAngle = endAngle;
+  });
+
+  pieChart.appendChild(
+    createSvgNode("circle", {
+      cx: centerX,
+      cy: centerY,
+      r: 22,
+      fill: "rgba(8, 12, 20, 0.9)",
+    })
+  );
+
+  const countText = createSvgNode("text", {
+    x: centerX,
+    y: centerY - 2,
+    fill: "#e8f1ff",
+    "font-size": 10,
+    "text-anchor": "middle",
+  });
+  countText.textContent = `${agentCount}`;
+  pieChart.appendChild(countText);
+
+  const agentsText = createSvgNode("text", {
+    x: centerX,
+    y: centerY + 12,
+    fill: "#b9cae3",
+    "font-size": 8,
+    "text-anchor": "middle",
+  });
+  agentsText.textContent = "agents";
+  pieChart.appendChild(agentsText);
+
+  entries.forEach(([usageType, count], index) => {
+    const legendY = 26 + index * 20;
+    pieChart.appendChild(
+      createSvgNode("rect", {
+        x: 165,
+        y: legendY - 10,
+        width: 10,
+        height: 10,
+        rx: 2,
+        fill: usageTypeColors[usageType],
+      })
+    );
+
+    const label = createSvgNode("text", {
+      x: 182,
+      y: legendY,
+      fill: "#e8f1ff",
+      "font-size": 10,
+    });
+    label.textContent = `${usageType} ${Math.round((count / agentCount) * 100)}%`;
+    pieChart.appendChild(label);
+  });
+}
+
 function updateBuildingTransparency(value) {
   buildingOpacity = value;
   transparencyValue.textContent = `${Math.round(value * 100)}%`;
   Object.values(deployedQuadrants).forEach((quadrantGroup) => {
     applyBuildingOpacity(quadrantGroup);
   });
+  renderScene();
+}
+
+function formatHourLabel(hour) {
+  if (hour === 0) {
+    return "12am";
+  }
+
+  if (hour < 12) {
+    return `${hour}am`;
+  }
+
+  if (hour === 12) {
+    return "12pm";
+  }
+
+  return `${hour - 12}pm`;
+}
+
+function updateTimeOfDay(hour) {
+  timeOfDay = hour;
+  timeSlider.value = String(hour);
+  timeValue.textContent = formatHourLabel(hour);
+  updateAgentPositions();
+  renderPieChart();
   renderScene();
 }
 
@@ -658,6 +1040,16 @@ transparencySlider.addEventListener("input", (event) => {
   updateBuildingTransparency(nextOpacity);
 });
 
+function syncTimeSlider(event) {
+  updateTimeOfDay(Number(event.target.value));
+}
+
+timeSlider.addEventListener("input", syncTimeSlider);
+timeSlider.addEventListener("change", syncTimeSlider);
+
 updateBuildingTransparency(1);
+updateTimeOfDay(0);
+updateAgentPositions();
 renderRadarChart();
+renderPieChart();
 renderScene();

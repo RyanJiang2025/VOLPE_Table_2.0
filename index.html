@@ -63,6 +63,35 @@
       color: #b9cae3;
     }
 
+    .time-controls {
+      position: fixed;
+      top: 72px;
+      left: 16px;
+      width: 260px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      background: rgba(8, 12, 20, 0.72);
+      color: #e8f1ff;
+      backdrop-filter: blur(10px);
+    }
+
+    .time-controls label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .time-controls input[type="range"] {
+      width: 100%;
+    }
+
+    .time-controls .value {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #b9cae3;
+    }
+
     .radar-panel {
       position: fixed;
       top: 16px;
@@ -88,10 +117,35 @@
       display: block;
     }
 
+    .pie-title {
+      margin-top: 12px;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+    }
+
+    .pie-chart {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
   </style>
 </head>
 <body>
   <div class="label">Three.js 3D Plane</div>
+  <div class="time-controls">
+    <label for="time-slider">Time of Day</label>
+    <input
+      id="time-slider"
+      type="range"
+      min="0"
+      max="23"
+      step="1"
+      value="0"
+    >
+    <div class="value"><span id="time-value">12am</span></div>
+  </div>
   <div class="radar-panel">
     <div class="radar-title">Community Metrics</div>
     <svg
@@ -99,6 +153,13 @@
       class="radar-chart"
       viewBox="0 0 320 320"
       aria-label="Community metrics radar chart"
+    ></svg>
+    <div class="pie-title">Agent Usage Mix</div>
+    <svg
+      id="pie-chart"
+      class="pie-chart"
+      viewBox="0 0 320 180"
+      aria-label="Agent usage type pie chart"
     ></svg>
   </div>
   <div class="controls">
