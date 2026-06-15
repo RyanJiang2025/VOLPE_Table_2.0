@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>June Prototype - Three.js Plane</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top, #24415f 0%, #0f1b2d 45%, #05080f 100%);
+    }
+
+    canvas {
+      display: block;
+    }
+
+    .label {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      background: rgba(8, 12, 20, 0.72);
+      color: #e8f1ff;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(10px);
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      width: 260px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      background: rgba(8, 12, 20, 0.72);
+      color: #e8f1ff;
+      backdrop-filter: blur(10px);
+    }
+
+    .controls label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .controls input[type="range"] {
+      width: 100%;
+    }
+
+    .controls .value {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #b9cae3;
+    }
+
+    .radar-panel {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 340px;
+      padding: 14px 16px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      background: rgba(8, 12, 20, 0.72);
+      color: #e8f1ff;
+      backdrop-filter: blur(10px);
+    }
+
+    .radar-title {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+
+    .radar-chart {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="label">Three.js 3D Plane</div>
+  <div class="radar-panel">
+    <div class="radar-title">Community Metrics</div>
+    <svg
+      id="radar-chart"
+      class="radar-chart"
+      viewBox="0 0 320 320"
+      aria-label="Community metrics radar chart"
+    ></svg>
+  </div>
+  <div class="controls">
+    <label for="transparency-slider">Building Transparency</label>
+    <input
+      id="transparency-slider"
+      type="range"
+      min="50"
+      max="100"
+      step="1"
+      value="100"
+    >
+    <div class="value"><span id="transparency-value">100%</span></div>
+  </div>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
