@@ -1,0 +1,131 @@
+AMENITY LIST BACKGROUND AND CONVERSION NOTES
+============================================
+
+Purpose
+-------
+This file records how the pro forma amenity taxonomy was derived so that a
+future converter can reproduce the current amenity_list.py structure from the
+preserved source list.
+
+Source of record
+----------------
+- Preserved source: ProForma/raw_amenity_pref_order.json
+- The source file has a .json extension, but its contents are CSV-formatted:
+  amenity_type,broad_amenity_category
+- It contains 141 unique, specific amenity labels.
+- Those labels were originally obtained from the Kendall synthetic-population
+  POI data. The original POIs have more attributes (for example name,
+  location, OSM identifier, and OSM type); this pro forma taxonomy is a
+  type-level list, not a list of individual POIs.
+
+Current output
+--------------
+- Current table: ProForma/amenity_list.py
+- Final taxonomy: 106 amenity types.
+- The Python module constructs two pandas DataFrames:
+  1. amenity_financials: shared financial assumptions by financial group.
+  2. amenity_list: one row per amenity type, joined to amenity_financials.
+
+Broad amenity categories
+------------------------
+The source list assigns each amenity type to one of these broad categories:
+- civic
+- education
+- grocery
+- healthcare
+- leisure_indoor
+- leisure_outdoor
+- shopping
+- work
+
+Consolidation from 141 source labels to 106 amenity types
+---------------------------------------------------------
+The following normalizations were intentionally applied. All labels not shown
+below retain their source amenity type and broad category.
+
+1. Fire stations
+   - 31 specific fire-company/engine labels beginning with "Engine" were
+     consolidated to: fire_department
+   - This eliminates 30 redundant labels while retaining the functional use.
+
+2. Other spelling or naming variants
+   - coworking_space      -> coworking
+   - construction_company -> construction
+   - engineering          -> engineer
+   - corporate            -> company
+   - startup_incubator    -> startup incubator
+
+3. Generic OSM office value
+   - yes -> general_office
+   - "yes" was an uninformative OpenStreetMap office tag value, not an amenity
+     name. general_office is the current pro forma placeholder for it.
+
+Financial model
+---------------
+amenity_financials is the only shared lookup table for financial inputs. Its
+current financial groups are:
+- civic
+- education
+- grocery
+- healthcare
+- leisure_indoor
+- leisure_outdoor
+- shopping
+- office
+- lab
+
+Each financial group has these per-square-foot assumptions:
+- construction_cost_per_sqft
+- rent_per_sqft_yearly
+- upkeep_per_sqft_yearly
+
+All financial assumptions are currently zero placeholders. Update an input in
+amenity_financials to update every amenity assigned to that group.
+
+Why financial_group is separate from broad_amenity_category
+------------------------------------------------------------
+broad_amenity_category describes the use taxonomy. financial_group selects
+the level of financial assumptions that available data can support. The model
+does not attempt a more granular tenant classification at this stage.
+
+Current assignment rule:
+- research uses financial_group = lab.
+- All other amenities in broad category work use financial_group = office.
+- Amenities outside work generally use their matching broad category as their
+  financial group.
+- university retains the source broad category "education; work" but uses
+  financial_group = education.
+
+Current amenity_list fields
+---------------------------
+Input/type fields:
+- amenity_type
+- broad_amenity_category
+- financial_group
+- square_footage (currently 0)
+- ground_level (currently False)
+- FAR_Bonus (currently 0)
+
+Fields supplied by the financial lookup:
+- construction_cost_per_sqft
+- rent_per_sqft_yearly
+- upkeep_per_sqft_yearly
+
+Calculated output fields:
+- construction_cost = construction_cost_per_sqft * square_footage
+- rent_yearly = rent_per_sqft_yearly * square_footage
+- upkeep_yearly = upkeep_per_sqft_yearly * square_footage
+- NOI_yearly = rent_yearly - upkeep_yearly
+
+Converter guidance
+-----------------
+When implementing a converter from raw_amenity_pref_order.json:
+1. Read it as CSV, not JSON.
+2. Apply the normalization map above before deduplicating.
+3. Preserve the source broad_amenity_category unless a future taxonomy change
+   is explicitly intended.
+4. Add financial_group using the current assignment rule above.
+5. Initialize square_footage, FAR_Bonus, and financial assumptions to 0 and
+   ground_level to False unless scenario-specific values are available.
+6. Build amenity_list by joining its financial_group to amenity_financials and
+   calculate the four financial output fields.

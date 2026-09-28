@@ -1,0 +1,142 @@
+amenity_type,broad_amenity_category
+Charlie Company,work
+Engine 1,work
+Engine 10,work
+Engine 2,work
+"Engine 2, Ladder 19",work
+Engine 22,work
+"Engine 29, Ladder 11",work
+Engine 3,work
+"Engine 3, Ladder 2",work
+"Engine 3, Ladder Co. 2",work
+"Engine 32, Ladder 9",work
+"Engine 33, Ladder 15",work
+"Engine 37, Ladder 26",work
+"Engine 39, Ladder 18",work
+Engine 4,work
+Engine 4 & Tower 1,work
+Engine 5,work
+Engine 50,work
+Engine 51,work
+Engine 6,work
+Engine 6 & Ladder 3,work
+Engine 7,work
+"Engine 7, Ladder 17",work
+"Engine 8, Ladder Co. 4, Division 2",work
+Engine 9,work
+High Pressure Company,work
+Highland Station,work
+Nonprofit,work
+Park Circle Station,work
+Station 1,work
+Station 2,work
+Station 3,work
+Station 5,work
+accountant,work
+acting_school,work
+adoption_agency,work
+advertising_agency,work
+architect,work
+association,work
+bakery,grocery
+bank,civic
+bar,leisure_indoor
+barber,leisure_indoor
+butcher,grocery
+cafe,leisure_indoor
+childcare,education
+cinema,leisure_indoor
+clinic,healthcare
+clothes,shopping
+clothes;toys,shopping
+clothes;toys;books;games,shopping
+college,education
+commercial,work
+community_centre,civic
+company,work
+construction,work
+construction_company,work
+consulting,work
+convenience,grocery
+corporate,work
+coworking,work
+coworking_space,work
+dentist,healthcare
+department_store,shopping
+design,work
+digital_media,work
+diplomatic,work
+doctors,healthcare
+educational_institution,work
+electronics,shopping
+employment_agency,work
+energy_supplier,work
+engineer,work
+engineering,work
+estate_agent,work
+fast_food,leisure_indoor
+financial,work
+financial_advisor,work
+fitness_centre,leisure_indoor
+foundation,work
+gift,shopping
+government,work
+graphic_design,work
+greengrocer,grocery
+guide,work
+harbour_master,work
+healthcare,work
+hospital,healthcare
+insurance,work
+investment,work
+it,work
+jewelry,shopping
+lawyer,work
+library,education
+library_dropoff,education
+mall,shopping
+marketplace,grocery
+medical,work
+mortgage,work
+moving_company,work
+museum,leisure_indoor
+newspaper,work
+ngo,work
+park,leisure_outdoor
+peak,leisure_outdoor
+pharmacy,healthcare
+pitch,leisure_outdoor
+place_of_worship,civic
+playground,leisure_outdoor
+playground;park,leisure_outdoor
+post_office,civic
+property_management,work
+psychic,work
+pub,leisure_indoor
+public_bookcase,leisure_indoor
+rectory,work
+religion,work
+research,work
+restaurant,leisure_indoor
+school,education
+shoes,shopping
+sports,shopping
+sports_centre,leisure_indoor
+startup incubator,work
+startup_incubator,work
+supermarket,grocery
+tax_advisor,work
+telecommunication,work
+theatre,leisure_indoor
+therapist,work
+towing,work
+townhall,civic
+travel_agent,work
+tutoring,work
+union,work
+university,education; work
+vacant,work
+venture_capital,work
+water_utility,work
+yes,work
+youth_services,work
