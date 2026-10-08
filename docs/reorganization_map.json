@@ -1,0 +1,391 @@
+{
+  "files": [
+    {
+      "original_path": ".gitignore",
+      "original_sha256": "48e96a3d7bd168091013d189e705620322b719b9166813b3e7fb0aaf22c43bfe",
+      "destinations": [
+        ".gitignore"
+      ]
+    },
+    {
+      "original_path": "amenity_break_even.py",
+      "original_sha256": "8a16315696b12dbed615d49692cd133a37a06dc9d3371c3cf1623da55f656cd8",
+      "destinations": [
+        "src/proforma/analysis.py"
+      ]
+    },
+    {
+      "original_path": "amenity_break_even_results.json",
+      "original_sha256": "b3d30cc25e7afed0096a706f46beb00254e665be53c74e64c5b49b77c8e4f311",
+      "destinations": [
+        "results/history/root/amenity_break_even_results.json"
+      ]
+    },
+    {
+      "original_path": "amenity_list.py",
+      "original_sha256": "3e1246bb5b8a5c092d32ea76c9a9f80a1990801fe5df8fec71b9eb16535e1f96",
+      "destinations": [
+        "src/proforma/catalog.py",
+        "src/proforma/finance.py",
+        "src/proforma/bonuses.py",
+        "reference/poi_taxonomy.json",
+        "config/catalog.json"
+      ]
+    },
+    {
+      "original_path": "amenity_pref_order_votes.json",
+      "original_sha256": "3466da7564edb70762722a37374afd2bebd3a40408f9b10fc43b1f9f5ba6e42a",
+      "destinations": [
+        "config/preferences.json"
+      ]
+    },
+    {
+      "original_path": "assumptions.py",
+      "original_sha256": "ecefac0216435e38ab2795104e401e12a43b3d7a5d6a3fe608345e24b4a8df47",
+      "destinations": [
+        "config/economics.json",
+        "config/scenarios/default.json",
+        "src/proforma/models.py",
+        "config/catalog.json"
+      ]
+    },
+    {
+      "original_path": "boston_construction_costs.json",
+      "original_sha256": "52b10487bec68e21f8c5d36423e3d4a174ec79009ea17dcbd436f23f2791794d",
+      "destinations": [
+        "config/construction_costs.json"
+      ]
+    },
+    {
+      "original_path": "building_use_example.json",
+      "original_sha256": "f5ee1ac02e004705a758f810408f2d8044e7b5856c122e3f8217df567493fdf2",
+      "destinations": [
+        "results/history/root/building_use_example.json"
+      ]
+    },
+    {
+      "original_path": "building_use_example.py",
+      "original_sha256": "0f2c1b5fec747f6ba0d8e4f65692f573467e33c39b70fa17ca01c606354f38bb",
+      "destinations": [
+        "examples/building_use.py"
+      ]
+    },
+    {
+      "original_path": "demo_buildable_use_data.json",
+      "original_sha256": "9b69feb1f581633c1315409872a0e3846e9ea90119be2c9f7c6f1fbf4fed44e8",
+      "destinations": [
+        "config/catalog.json"
+      ]
+    },
+    {
+      "original_path": "FINANCIAL_OBJECTIVE_DECISION.md",
+      "original_sha256": "4c49df764c21356943195577f0a7af91aa0fbe46b65a7d18af6211b55aff9dc0",
+      "destinations": [
+        "docs/history/root_financial_objective.md"
+      ]
+    },
+    {
+      "original_path": "financial_objectives.py",
+      "original_sha256": "5b3af2fb2555cf3baf26174d5dd37c3bbb413145c7d9fdf745f0d22aee239190",
+      "destinations": [
+        "src/proforma/finance.py"
+      ]
+    },
+    {
+      "original_path": "financial_optimizer.py",
+      "original_sha256": "c9d51c5990c8acb22696e37afab4bce6fd67c0db81cfe16bd52272af2211dfbc",
+      "destinations": [
+        "src/proforma/models.py",
+        "src/proforma/optimizer.py",
+        "src/proforma/pipeline.py",
+        "src/proforma/__main__.py"
+      ]
+    },
+    {
+      "original_path": "financial_optimizer_result.json",
+      "original_sha256": "e87c0ecc27ae3b97660cb5c7d1476d5fbe0cc2a4931a4977c07e39b18f48e8af",
+      "destinations": [
+        "results/history/root/financial_optimizer_result.json"
+      ]
+    },
+    {
+      "original_path": "legacy_optimizer_result.json",
+      "original_sha256": "e9dbd17e31e9dca267a5abeba12c77da196604313c3307b1630853c9083b2c5f",
+      "destinations": [
+        "results/history/root/legacy_optimizer_result.json"
+      ]
+    },
+    {
+      "original_path": "preference_bonus.py",
+      "original_sha256": "0bbbf11dd65916ff74758e5d14970a71f63000f24ce3d0f86ed225f924ca51d1",
+      "destinations": [
+        "src/proforma/bonuses.py",
+        "src/proforma/analysis.py"
+      ]
+    },
+    {
+      "original_path": "PREFERENCE_BONUS_DECISION.md",
+      "original_sha256": "ecc4ab27730547dcc7e2aa454785be632012495f40e54396246e7b91e82caf90",
+      "destinations": [
+        "docs/history/root_preference_bonus.md"
+      ]
+    },
+    {
+      "original_path": "preference_bonus_results.json",
+      "original_sha256": "6ddcdd68dea00e9c81fdd67ff91e8baa5abf9f9a885fe2418181a83c1772a951",
+      "destinations": [
+        "results/history/root/preference_bonus_results.json"
+      ]
+    },
+    {
+      "original_path": "requirements.txt",
+      "original_sha256": "6c4b7977325c76109fde93b3ddf23b64c3e46b7f4ceee7aea0e06ebe3eb6e561",
+      "destinations": [
+        "pyproject.toml"
+      ]
+    },
+    {
+      "original_path": "sources.md",
+      "original_sha256": "73f3f95c3857b58ec69d514f6e9a1313a87883e0d8c66913264b863441313ca2",
+      "destinations": [
+        "docs/history/root_sources.md"
+      ]
+    },
+    {
+      "original_path": "dummy_data/amenity_break_even.py",
+      "original_sha256": "654040ce7509f2141fdc8cd85898c8c97f61faeaa2413212501aa0fcbc46d68f",
+      "destinations": [
+        "src/proforma/analysis.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/amenity_break_even_results.json",
+      "original_sha256": "b3d30cc25e7afed0096a706f46beb00254e665be53c74e64c5b49b77c8e4f311",
+      "destinations": [
+        "results/history/dummy_data/amenity_break_even_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/amenity_list.py",
+      "original_sha256": "e8d02b03c01704862a6e167fd8b4a78b76abfffc3231a76322f6127461089890",
+      "destinations": [
+        "src/proforma/catalog.py",
+        "src/proforma/finance.py",
+        "src/proforma/bonuses.py",
+        "reference/poi_taxonomy.json",
+        "config/catalog.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/amenity_pref_order_votes.json",
+      "original_sha256": "3466da7564edb70762722a37374afd2bebd3a40408f9b10fc43b1f9f5ba6e42a",
+      "destinations": [
+        "config/preferences.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/assumptions.py",
+      "original_sha256": "d024ce0ae19e41dca0fc96d2864ab6de79d8ee6b7cad0ac4de199aeca3196698",
+      "destinations": [
+        "config/economics.json",
+        "config/scenarios/default.json",
+        "src/proforma/models.py",
+        "config/catalog.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/boston_construction_costs.json",
+      "original_sha256": "593670e0d39b7a31c9ba84533543ba7606a8073e6a449656521f3062a9a0fad1",
+      "destinations": [
+        "config/construction_costs.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/building_use_example.json",
+      "original_sha256": "7e1fcb25af9e1cb1fa27242cd9498eb00366bb29a99d93e6bfd0a862b99e75a2",
+      "destinations": [
+        "results/history/dummy_data/building_use_example.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/building_use_example.py",
+      "original_sha256": "c6e6f12e57f43ef1276c9634f1469149700e98621efb446f1ab779b4fd2b1114",
+      "destinations": [
+        "examples/building_use.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/check_uncapped_amenities.py",
+      "original_sha256": "488a3d93004582ba0c84e29d19cba5e3c5dc81abf84f2a451db868a40021e69e",
+      "destinations": [
+        "experiments/uncapped_amenities.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/demo_buildable_use_data.json",
+      "original_sha256": "b0ddcf31c326fd313d0cb664a6d142c91b9821ce13cc5081e114672908ceebdc",
+      "destinations": [
+        "config/catalog.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/FINANCIAL_OBJECTIVE_DECISION.md",
+      "original_sha256": "d6f322f814cc44994838e6a4e8665608ad66c20b4d2ce944cd8f094e217c69c8",
+      "destinations": [
+        "docs/history/dummy_financial_objective.md"
+      ]
+    },
+    {
+      "original_path": "dummy_data/financial_objectives.py",
+      "original_sha256": "5b3af2fb2555cf3baf26174d5dd37c3bbb413145c7d9fdf745f0d22aee239190",
+      "destinations": [
+        "src/proforma/finance.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/financial_optimizer.py",
+      "original_sha256": "0623befd91bd34df79a00c04b3230586a987b42450371051ed4f72294f3523b0",
+      "destinations": [
+        "src/proforma/models.py",
+        "src/proforma/optimizer.py",
+        "src/proforma/pipeline.py",
+        "src/proforma/__main__.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/financial_optimizer_required_result.json",
+      "original_sha256": "33dcf553ca27f69c59ade8cd90f61818d6b4fd006ed40bfe20af09fdb4ee9c7a",
+      "destinations": [
+        "results/history/dummy_data/financial_optimizer_required_result.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/financial_optimizer_result.json",
+      "original_sha256": "c2fea9e2a41065b1cd3cf5f5849602bc5233cbbc64cc121d81415b13d3a6eece",
+      "destinations": [
+        "results/history/dummy_data/financial_optimizer_result.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/financial_optimizer_sensitivity.json",
+      "original_sha256": "96ad1de83c292cf7824801dcfd2f8ee0bb939cae637c47a363c2a2189c86aeba",
+      "destinations": [
+        "results/history/dummy_data/financial_optimizer_sensitivity.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/missing_constraints",
+      "original_sha256": "c2b67f6ee3bae092d4fafd456dee234d8b8c1e35112b65f76a5eb1638b4edf64",
+      "destinations": [
+        "docs/limitations.md",
+        "docs/history/missing_constraints.md"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_bonus.py",
+      "original_sha256": "c82054067dc6c53830ad07fadef9c8ed746f820b4161a7140bd69b9c42c2f6c3",
+      "destinations": [
+        "src/proforma/bonuses.py",
+        "src/proforma/analysis.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/PREFERENCE_BONUS_DECISION.md",
+      "original_sha256": "9c2d0c9bacf33c8ccfe59efb901196d60adbf61de45b955540e55075b3b3de0a",
+      "destinations": [
+        "docs/history/dummy_preference_bonus.md"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_bonus_one_per_type_no_type_cap_results.json",
+      "original_sha256": "fe9b534da8e6ce4b7b420cb1ce8985ef09d1dc7e79bdd76f53c06cebf8282651",
+      "destinations": [
+        "results/history/dummy_data/preference_bonus_one_per_type_no_type_cap_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_bonus_results.json",
+      "original_sha256": "71c7379947e343f2e4d8c42aa2bf4d02627dd8cb3a7fd6b438164e526f90a7f0",
+      "destinations": [
+        "results/history/dummy_data/preference_bonus_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo.py",
+      "original_sha256": "871c077a8a49f62b2fc9c80f9d3e05c29ce0334e3803c473ff23e4d98eaab368",
+      "destinations": [
+        "experiments/preference_monte_carlo.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_lab_results.json",
+      "original_sha256": "08011e2535083b3b48762422b4c8add7246a1547aaeec581750b58da3b0881aa",
+      "destinations": [
+        "results/history/dummy_data/preference_monte_carlo_lab_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_lab_unrestricted_results.json",
+      "original_sha256": "fed7a0ff88ee8b914a2c77f51b64d07a01e48679c498050bd6d02f317eb9ce2d",
+      "destinations": [
+        "results/history/dummy_data/preference_monte_carlo_lab_unrestricted_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_office_results.json",
+      "original_sha256": "5d85c5681715e9f6d483aaf79c1f1fb168c94eefd4640bd7052b35c0cff8672c",
+      "destinations": [
+        "results/history/dummy_data/preference_monte_carlo_office_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_office_unrestricted_results.json",
+      "original_sha256": "02caee687ea596a7b1352413288b82358c574f934c8bbd716802caac2cc1cf23",
+      "destinations": [
+        "results/history/dummy_data/preference_monte_carlo_office_unrestricted_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_results.json",
+      "original_sha256": "0f51ba46063ee768cfc69b982e7482fc6978d7a3daedd2f2ee30765619c6bc9a",
+      "destinations": [
+        "results/history/dummy_data/preference_monte_carlo_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/sources.md",
+      "original_sha256": "72c5fb555eacb803e29d3bef72bd23391a345ea1489ad8252a72c8d366775a39",
+      "destinations": [
+        "docs/history/dummy_sources.md"
+      ]
+    },
+    {
+      "original_path": "dummy_data/stress_test.py",
+      "original_sha256": "27749ddd2a3d1d48ae211f3e0836a71732275d36e7300f064710977809e58a73",
+      "destinations": [
+        "experiments/stress_test.py"
+      ]
+    },
+    {
+      "original_path": "dummy_data/stress_test_results.json",
+      "original_sha256": "47ce334301de67fac13b234164d40952f7986ec2a719ba31605bc44e0a359f33",
+      "destinations": [
+        "results/history/dummy_data/stress_test_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/uncapped_amenity_results.json",
+      "original_sha256": "0dbeb8caa5cd6a069b23aa02ad27363d77076a5362ddb0800ce7e89445ef192b",
+      "destinations": [
+        "results/history/dummy_data/uncapped_amenity_results.json"
+      ]
+    },
+    {
+      "original_path": "dummy_data/valuation_optimizer_result.json",
+      "original_sha256": "8c890191fa7e8973e36790ad78be181e94c5263c6b34acfa2337d816fed7bd76",
+      "destinations": [
+        "results/history/dummy_data/valuation_optimizer_result.json"
+      ]
+    }
+  ]
+}

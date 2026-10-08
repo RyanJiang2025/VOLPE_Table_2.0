@@ -1,0 +1,70 @@
+{
+  "status": "optimal",
+  "objective": "development-profit",
+  "scenario": {
+    "required_return": 0.06,
+    "podium_footprint": 4000.0,
+    "podium_stories": 5,
+    "tower_footprint": 6000.0,
+    "base_tower_stories": 5,
+    "max_tower_stories": 30,
+    "open_space": 2500.0,
+    "max_nonhousing_stories": 2,
+    "land_cost": 0.0,
+    "development_budget": null,
+    "capitalization_rate": 0.045
+  },
+  "required_quantities": {},
+  "solver": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "solve_seconds": 0.006419200000000069,
+    "nodes": 1,
+    "relative_gap": 0.0
+  },
+  "allocation": [
+    {
+      "amenity_type": "luxury_multifamily",
+      "program_unit": "dwelling_unit",
+      "quantity": 40.0,
+      "podium_quantity": 16.0,
+      "tower_quantity": 24.0,
+      "area_sqft": 50000.0,
+      "podium_sqft": 20000.0,
+      "tower_sqft": 30000.0,
+      "outdoor_sqft": 0.0,
+      "bonus_far": 0.0,
+      "annual_noi": 2730000.0,
+      "construction_cost": 45240000.0,
+      "annual_surplus": 15600.0,
+      "capitalization_rate": 0.045,
+      "completed_value": 60666666.66666667,
+      "development_profit": 15426666.666666672
+    }
+  ],
+  "totals": {
+    "annual_noi": 2730000.0,
+    "construction_cost": 45240000.0,
+    "land_cost": 0.0,
+    "development_cost": 45240000.0,
+    "annual_capital_charge": 2714400.0,
+    "annual_surplus": 15600.0,
+    "yield_on_development_cost": 0.0603448275862069,
+    "completed_value": 60666666.66666667,
+    "development_profit": 15426666.666666672,
+    "profit_on_cost": 0.3409961685823756,
+    "objective_value": 15426666.66666667,
+    "bonus_far": 0.0,
+    "podium_sqft": 20000.0,
+    "tower_sqft": 30000.0,
+    "indoor_sqft": 50000.0,
+    "outdoor_sqft": 0.0,
+    "podium_floor_equivalents": 5.0,
+    "tower_floor_equivalents": 5.0,
+    "effective_tower_capacity_sqft": 30000.0,
+    "unused_authorized_tower_sqft": 0.0,
+    "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+    "unused_podium_sqft": 0.0
+  },
+  "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+  "decision": "develop"
+}

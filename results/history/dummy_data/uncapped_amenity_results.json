@@ -1,0 +1,313 @@
+{
+  "method": "Height cap made nonbinding; current bonuses, minimum single-amenity packages, luxury filler, developer-borne costs, and all other limits unchanged. Also includes unrestricted full-catalog optimization. Capitalization rate remains provisional at 4.5%.",
+  "baseline": {
+    "status": "optimal",
+    "objective": "development-profit",
+    "scenario": {
+      "required_return": 0.06,
+      "podium_footprint": 4000.0,
+      "podium_stories": 5,
+      "tower_footprint": 6000.0,
+      "base_tower_stories": 5,
+      "max_tower_stories": 1000000,
+      "open_space": 2500.0,
+      "max_nonhousing_stories": 2,
+      "land_cost": 0.0,
+      "development_budget": null,
+      "capitalization_rate": 0.045
+    },
+    "required_quantities": {},
+    "solver": {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "solve_seconds": 0.019504500000000036,
+      "nodes": 1,
+      "relative_gap": 0.0
+    },
+    "allocation": [
+      {
+        "amenity_type": "luxury_multifamily",
+        "program_unit": "dwelling_unit",
+        "quantity": 40.0,
+        "podium_quantity": 16.0,
+        "tower_quantity": 24.0,
+        "area_sqft": 50000.0,
+        "podium_sqft": 20000.0,
+        "tower_sqft": 30000.0,
+        "outdoor_sqft": 0.0,
+        "bonus_far": 0.0,
+        "annual_noi": 2730000.0,
+        "construction_cost": 45240000.0,
+        "annual_surplus": 15600.0,
+        "capitalization_rate": 0.045,
+        "completed_value": 60666666.66666667,
+        "development_profit": 15426666.666666672
+      }
+    ],
+    "totals": {
+      "annual_noi": 2730000.0,
+      "construction_cost": 45240000.0,
+      "land_cost": 0.0,
+      "development_cost": 45240000.0,
+      "annual_capital_charge": 2714400.0,
+      "annual_surplus": 15600.0,
+      "yield_on_development_cost": 0.0603448275862069,
+      "completed_value": 60666666.66666667,
+      "development_profit": 15426666.666666672,
+      "profit_on_cost": 0.3409961685823756,
+      "objective_value": 15426666.66666667,
+      "bonus_far": 0.0,
+      "podium_sqft": 20000.0,
+      "tower_sqft": 30000.0,
+      "indoor_sqft": 50000.0,
+      "outdoor_sqft": 0.0,
+      "podium_floor_equivalents": 5.0,
+      "tower_floor_equivalents": 5.0,
+      "effective_tower_capacity_sqft": 30000.0,
+      "unused_authorized_tower_sqft": 0.0,
+      "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+      "unused_podium_sqft": 0.0
+    },
+    "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+    "decision": "develop"
+  },
+  "individual_amenities": [
+    {
+      "amenity": "general_multifamily",
+      "bonus_far": 1.1865809772206857,
+      "profit_change": -1062402.0833333284,
+      "tower_stories": 6.0375
+    },
+    {
+      "amenity": "mid_career_multifamily",
+      "bonus_far": 1.2300676059624542,
+      "profit_change": -845124.9999999925,
+      "tower_stories": 6.125
+    },
+    {
+      "amenity": "senior_multifamily",
+      "bonus_far": 0.8692466852596585,
+      "profit_change": -2502000.0,
+      "tower_stories": 5.666666666666667
+    },
+    {
+      "amenity": "attainable_multifamily",
+      "bonus_far": 0.9001005853637957,
+      "profit_change": -1287604.1666666642,
+      "tower_stories": 5.833333333333333
+    },
+    {
+      "amenity": "higher_education_career_training",
+      "bonus_far": 2.51607898845698,
+      "profit_change": -25005833.33333333,
+      "tower_stories": 7.5
+    },
+    {
+      "amenity": "childcare",
+      "bonus_far": 1.9625506114462197,
+      "profit_change": -14258333.333333343,
+      "tower_stories": 6.875
+    },
+    {
+      "amenity": "library",
+      "bonus_far": 2.0152490141946244,
+      "profit_change": -13465000.000000007,
+      "tower_stories": 6.875
+    },
+    {
+      "amenity": "community_centre",
+      "bonus_far": 2.4635329806577793,
+      "profit_change": -18705416.666666664,
+      "tower_stories": 7.291666666666667
+    },
+    {
+      "amenity": "government_operations",
+      "bonus_far": 1.870175202317598,
+      "profit_change": -13616666.666666672,
+      "tower_stories": 6.666666666666667
+    },
+    {
+      "amenity": "place_of_worship",
+      "bonus_far": 2.2810017566953604,
+      "profit_change": -17968194.444444448,
+      "tower_stories": 7.083333333333333
+    },
+    {
+      "amenity": "post_office",
+      "bonus_far": 1.190522404976224,
+      "profit_change": -8011944.444444448,
+      "tower_stories": 6.041666666666667
+    },
+    {
+      "amenity": "clinic",
+      "bonus_far": 2.4112426188119755,
+      "profit_change": -12160277.777777776,
+      "tower_stories": 7.291666666666667
+    },
+    {
+      "amenity": "pharmacy",
+      "bonus_far": 1.2324272781636283,
+      "profit_change": -2584999.9999999925,
+      "tower_stories": 6.041666666666667
+    },
+    {
+      "amenity": "convenience_store",
+      "bonus_far": 0.4964141412845934,
+      "profit_change": -1484666.6666666716,
+      "tower_stories": 5.416666666666667
+    },
+    {
+      "amenity": "bakery",
+      "bonus_far": 0.4931353997880114,
+      "profit_change": -1744666.6666666716,
+      "tower_stories": 5.416666666666667
+    },
+    {
+      "amenity": "butcher",
+      "bonus_far": 0.3617944295884008,
+      "profit_change": -1752666.6666666642,
+      "tower_stories": 5.208333333333333
+    },
+    {
+      "amenity": "greengrocer",
+      "bonus_far": 0.6060022578070278,
+      "profit_change": -1563333.3333333284,
+      "tower_stories": 5.416666666666667
+    },
+    {
+      "amenity": "marketplace",
+      "bonus_far": 0.7357301752616521,
+      "profit_change": -2227000.0,
+      "tower_stories": 5.625
+    },
+    {
+      "amenity": "general_retail",
+      "bonus_far": 0.4648295396228857,
+      "profit_change": -1484666.6666666716,
+      "tower_stories": 5.416666666666667
+    },
+    {
+      "amenity": "barber",
+      "bonus_far": 0.22703664756331782,
+      "profit_change": -742333.3333333284,
+      "tower_stories": 5.208333333333333
+    },
+    {
+      "amenity": "bank_financial_services",
+      "bonus_far": 0.920351378933874,
+      "profit_change": -4659333.333333328,
+      "tower_stories": 5.833333333333333
+    },
+    {
+      "amenity": "cafe",
+      "bonus_far": 0.36609225646319055,
+      "profit_change": -1563333.3333333284,
+      "tower_stories": 5.208333333333333
+    },
+    {
+      "amenity": "restaurant",
+      "bonus_far": 0.8477401983716211,
+      "profit_change": -2167222.222222224,
+      "tower_stories": 5.833333333333333
+    },
+    {
+      "amenity": "bar_pub",
+      "bonus_far": 0.5758302341697443,
+      "profit_change": -1572777.7777777761,
+      "tower_stories": 5.416666666666667
+    },
+    {
+      "amenity": "fitness_recreation",
+      "bonus_far": 2.820793051133441,
+      "profit_change": -9866666.666666672,
+      "tower_stories": 7.625
+    },
+    {
+      "amenity": "cultural_venue",
+      "bonus_far": 1.4721880431307746,
+      "profit_change": -11651666.666666664,
+      "tower_stories": 6.458333333333333
+    },
+    {
+      "amenity": "park",
+      "bonus_far": 0.24773023706208008,
+      "profit_change": -340000.0,
+      "tower_stories": 5.208333333333333
+    },
+    {
+      "amenity": "playground",
+      "bonus_far": 0.2231543149054837,
+      "profit_change": -694861.1111111045,
+      "tower_stories": 5.208333333333333
+    }
+  ],
+  "full_catalog": {
+    "status": "optimal",
+    "objective": "development-profit",
+    "scenario": {
+      "required_return": 0.06,
+      "podium_footprint": 4000.0,
+      "podium_stories": 5,
+      "tower_footprint": 6000.0,
+      "base_tower_stories": 5,
+      "max_tower_stories": 1000000,
+      "open_space": 2500.0,
+      "max_nonhousing_stories": 2,
+      "land_cost": 0.0,
+      "development_budget": null,
+      "capitalization_rate": 0.045
+    },
+    "required_quantities": {},
+    "solver": {
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "solve_seconds": 0.009342799999999984,
+      "nodes": 1,
+      "relative_gap": 0.0
+    },
+    "allocation": [
+      {
+        "amenity_type": "luxury_multifamily",
+        "program_unit": "dwelling_unit",
+        "quantity": 40.0,
+        "podium_quantity": 16.0,
+        "tower_quantity": 24.0,
+        "area_sqft": 50000.0,
+        "podium_sqft": 20000.0,
+        "tower_sqft": 30000.0,
+        "outdoor_sqft": 0.0,
+        "bonus_far": 0.0,
+        "annual_noi": 2730000.0,
+        "construction_cost": 45240000.0,
+        "annual_surplus": 15600.0,
+        "capitalization_rate": 0.045,
+        "completed_value": 60666666.66666667,
+        "development_profit": 15426666.666666672
+      }
+    ],
+    "totals": {
+      "annual_noi": 2730000.0,
+      "construction_cost": 45240000.0,
+      "land_cost": 0.0,
+      "development_cost": 45240000.0,
+      "annual_capital_charge": 2714400.0,
+      "annual_surplus": 15600.0,
+      "yield_on_development_cost": 0.0603448275862069,
+      "completed_value": 60666666.66666667,
+      "development_profit": 15426666.666666672,
+      "profit_on_cost": 0.3409961685823756,
+      "objective_value": 15426666.66666667,
+      "bonus_far": 0.0,
+      "podium_sqft": 20000.0,
+      "tower_sqft": 30000.0,
+      "indoor_sqft": 50000.0,
+      "outdoor_sqft": 0.0,
+      "podium_floor_equivalents": 5.0,
+      "tower_floor_equivalents": 5.0,
+      "effective_tower_capacity_sqft": 30000.0,
+      "unused_authorized_tower_sqft": 0.0,
+      "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+      "unused_podium_sqft": 0.0
+    },
+    "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+    "decision": "develop"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "optimal",
+  "objective": "annual NOI minus required return times development cost",
+  "scenario": {
+    "required_return": 0.06,
+    "podium_footprint": 4000.0,
+    "podium_stories": 5,
+    "tower_footprint": 6000.0,
+    "base_tower_stories": 5,
+    "max_tower_stories": 30,
+    "open_space": 2500.0,
+    "max_nonhousing_stories": 2,
+    "land_cost": 0.0,
+    "development_budget": null
+  },
+  "required_quantities": {},
+  "solver": {
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "solve_seconds": 0.02768909999999991,
+    "nodes": 1,
+    "relative_gap": 0.0
+  },
+  "allocation": [
+    {
+      "amenity_type": "luxury_multifamily",
+      "program_unit": "dwelling_unit",
+      "quantity": 16.0,
+      "podium_quantity": 16.0,
+      "tower_quantity": 0.0,
+      "area_sqft": 20000.0,
+      "podium_sqft": 20000.0,
+      "tower_sqft": 0.0,
+      "outdoor_sqft": 0.0,
+      "bonus_far": 0.0,
+      "annual_noi": 1092000.0,
+      "construction_cost": 12480000.0,
+      "annual_surplus": 343200.0
+    }
+  ],
+  "totals": {
+    "annual_noi": 1092000.0,
+    "construction_cost": 12480000.0,
+    "land_cost": 0.0,
+    "development_cost": 12480000.0,
+    "annual_capital_charge": 748800.0,
+    "annual_surplus": 343200.0,
+    "yield_on_development_cost": 0.0875,
+    "bonus_far": 0.0,
+    "podium_sqft": 20000.0,
+    "tower_sqft": 0.0,
+    "indoor_sqft": 20000.0,
+    "outdoor_sqft": 0.0,
+    "podium_floor_equivalents": 5.0,
+    "tower_floor_equivalents": 0.0,
+    "effective_tower_capacity_sqft": 30000.0,
+    "unused_authorized_tower_sqft": 30000.0,
+    "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+    "unused_podium_sqft": 0.0
+  },
+  "limitations": "Stabilized annual model; fixed rates; simplified common area basis; no financing, vacancy, sale value, floor-plan packing, or mechanical floors. Required return is a scenario assumption, not a market estimate.",
+  "decision": "develop"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "name": "default",
+  "inputs": {
+    "catalog": "../catalog.json",
+    "economics": "../economics.json",
+    "construction_costs": "../construction_costs.json",
+    "preferences": "../preferences.json"
+  },
+  "site": {
+    "parcel_area_sqft": 12500.0,
+    "podium": {
+      "footprint_sqft": 4000.0,
+      "stories": 5
+    },
+    "tower": {
+      "footprint_sqft": 6000.0,
+      "base_stories": 5,
+      "maximum_stories": 30
+    },
+    "open_space_sqft": 2500.0
+  },
+  "finance": {
+    "objective": "development-profit",
+    "capitalization_rate": 0.045,
+    "required_return": 0.06,
+    "include_land": false,
+    "land_regime": "tower_permitted",
+    "development_budget_usd": null,
+    "soft_cost_fraction": 0.3,
+    "tower_cost_multiplier": 1.75
+  },
+  "bonuses": {
+    "policy": "preference",
+    "normalization": "weight_divided_by_maximum_snapshot_weight",
+    "threshold": 0.6,
+    "maximum_premium": 0.15,
+    "baseline": "luxury_only",
+    "housing_block_units": 5,
+    "housing_premium_multipliers": [
+      1.0,
+      0.75,
+      0.5,
+      0.25
+    ],
+    "legacy": {
+      "scale": 2.0,
+      "reference_area_sqft": 10000.0,
+      "noi_per_sqft_scale": 100.0
+    }
+  },
+  "selection": {
+    "minimum_housing_units": 5,
+    "maximum_amenity_types": null,
+    "one_package_per_nonhousing_use": true,
+    "package_limit_exemptions": [
+      "general_office",
+      "lab"
+    ],
+    "floor_limit_exemptions": [
+      "general_office",
+      "lab"
+    ],
+    "maximum_nonhousing_floor_equivalents": 2
+  },
+  "solver": {
+    "time_limit_seconds": 60,
+    "relative_gap": 0.0
+  }
+}

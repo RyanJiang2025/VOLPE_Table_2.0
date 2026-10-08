@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "currency": "USD",
+  "financial_groups": {
+    "civic": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 12,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "education": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 15,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "school": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 15,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "higher_education_career_training": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 18,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "grocery": {
+      "annual_rent_per_sqft_usd": 27.2,
+      "opex_fraction": 0.4,
+      "basis": "User-supplied retail rent and operating expense."
+    },
+    "healthcare": {
+      "annual_rent_per_sqft_usd": 60,
+      "opex_fraction": 0.5,
+      "basis": "Synthetic commercial model assumption."
+    },
+    "hospital": {
+      "annual_rent_per_sqft_usd": 75,
+      "opex_fraction": 0.6,
+      "basis": "Synthetic commercial model assumption."
+    },
+    "leisure_indoor": {
+      "annual_rent_per_sqft_usd": 35,
+      "opex_fraction": 0.45,
+      "basis": "Synthetic commercial model assumption."
+    },
+    "leisure_outdoor": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 3,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "shopping": {
+      "annual_rent_per_sqft_usd": 27.2,
+      "opex_fraction": 0.4,
+      "basis": "User-supplied retail rent and operating expense."
+    },
+    "office": {
+      "annual_rent_per_sqft_usd": 91.0,
+      "opex_fraction": 0.3195,
+      "basis": "User-supplied CoStar office rent and operating expense."
+    },
+    "lab": {
+      "annual_rent_per_sqft_usd": 110,
+      "opex_fraction": 0.35,
+      "basis": "Synthetic commercial model assumption."
+    },
+    "general_multifamily": {
+      "annual_rent_per_unit_usd": 48000,
+      "unit_size_from_use": "general_multifamily",
+      "opex_fraction": 0.4,
+      "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+    },
+    "mid_career_multifamily": {
+      "annual_rent_per_unit_usd": 60000,
+      "unit_size_from_use": "mid_career_multifamily",
+      "opex_fraction": 0.38,
+      "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+    },
+    "senior_multifamily": {
+      "annual_rent_per_unit_usd": 21600,
+      "unit_size_from_use": "senior_multifamily",
+      "opex_fraction": 0.45,
+      "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+    },
+    "attainable_multifamily": {
+      "annual_rent_per_unit_usd": 24000,
+      "unit_size_from_use": "attainable_multifamily",
+      "opex_fraction": 0.42,
+      "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+    },
+    "luxury_multifamily": {
+      "annual_rent_per_unit_usd": 105000,
+      "unit_size_from_use": "luxury_multifamily",
+      "opex_fraction": 0.35,
+      "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+    },
+    "supermarket": {
+      "annual_rent_per_sqft_usd": 27.2,
+      "opex_fraction": 0.4,
+      "basis": "User-supplied retail rent and operating expense."
+    },
+    "food_retail": {
+      "annual_rent_per_sqft_usd": 27.2,
+      "opex_fraction": 0.4,
+      "basis": "User-supplied retail rent and operating expense."
+    },
+    "clinic": {
+      "annual_rent_per_sqft_usd": 55,
+      "opex_fraction": 0.45,
+      "basis": "Synthetic commercial model assumption."
+    },
+    "pharmacy": {
+      "annual_rent_per_sqft_usd": 27.2,
+      "opex_fraction": 0.4,
+      "basis": "User-supplied retail rent and operating expense."
+    },
+    "food_drink": {
+      "annual_rent_per_sqft_usd": 40,
+      "opex_fraction": 0.45,
+      "basis": "Synthetic commercial model assumption."
+    },
+    "fitness": {
+      "annual_rent_per_sqft_usd": 32,
+      "opex_fraction": 0.45,
+      "basis": "Synthetic commercial model assumption."
+    },
+    "cultural_venue": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 18,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "park": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 3,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "playground": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 5,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    },
+    "outdoor_sports": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 4,
+      "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+    }
+  },
+  "use_overrides": {
+    "library": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 12,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "community_centre": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 12,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "government_operations": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 12,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "place_of_worship": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 8,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "post_office": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 10,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "government": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 12,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "townhall": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 12,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "fire_department": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 15,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "diplomatic": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 12,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "harbour_master": {
+      "annual_rent_per_sqft_usd": 0.0,
+      "annual_maintenance_per_sqft_usd": 10,
+      "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+    },
+    "bank": {
+      "annual_rent_per_sqft_usd": 27.2,
+      "opex_fraction": 0.4,
+      "basis": "Retail economics override the shared civic financial group."
+    },
+    "bank_financial_services": {
+      "annual_rent_per_sqft_usd": 27.2,
+      "opex_fraction": 0.4,
+      "basis": "Retail economics override the shared civic financial group."
+    }
+  },
+  "land_cost_per_parcel_sqft_usd": {
+    "plinth_only": 450.0,
+    "tower_permitted": 1340.0
+  },
+  "inactive_observations": {
+    "description": "Retained original inputs; these do not override active financial groups.",
+    "general_housing_annual_rent_per_unit_usd": 48000.0,
+    "general_housing_conversion_area_sqft": 995.0,
+    "residential_opex_fraction": 0.4,
+    "government_proxy_annual_rent_per_sqft_usd": 91.0,
+    "government_proxy_opex_fraction": 0.3195,
+    "hospitality_daily_revpar_usd": 223.0,
+    "hospitality_opex_fraction": 0.67,
+    "student_opex_fraction": 0.4
+  },
+  "reference_only_use_ids": [
+    "government",
+    "townhall",
+    "fire_department",
+    "diplomatic",
+    "harbour_master",
+    "bank"
+  ]
+}
