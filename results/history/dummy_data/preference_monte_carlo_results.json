@@ -1,0 +1,5035 @@
+{
+  "seed": 20261008,
+  "trials": 10,
+  "distribution": "Dirichlet with common alpha=1.0",
+  "original_weight_total": 0.9999999999999999,
+  "randomized_scope": "All identifiers in the saved snapshot, including inactive and bonus-ineligible uses; normalization remains weight/max(snapshot).",
+  "policy": {
+    "max_types": null,
+    "one_unit_per_nonhousing_use": true,
+    "exemptions": [
+      "general_office",
+      "lab"
+    ],
+    "threshold": 0.6,
+    "max_premium": 0.15,
+    "housing_premiums": [
+      1.0,
+      0.75,
+      0.5,
+      0.25
+    ]
+  },
+  "scenario": {
+    "required_return": 0.06,
+    "podium_footprint": 4000.0,
+    "podium_stories": 5,
+    "tower_footprint": 6000.0,
+    "base_tower_stories": 5,
+    "max_tower_stories": 30,
+    "open_space": 2500.0,
+    "max_nonhousing_stories": 2,
+    "land_cost": 0.0,
+    "development_budget": null,
+    "capitalization_rate": 0.045
+  },
+  "summary": {
+    "mean_profit": 16827201.708333537,
+    "minimum_profit": 15959000.0,
+    "maximum_profit": 17863761.111111104,
+    "selection_frequency": {
+      "butcher": 3,
+      "general_multifamily": 3,
+      "marketplace": 3,
+      "senior_multifamily": 2,
+      "park": 2,
+      "clinic": 2,
+      "cafe": 2,
+      "childcare": 1,
+      "greengrocer": 1,
+      "bank_financial_services": 1,
+      "bakery": 1,
+      "mid_career_multifamily": 1,
+      "post_office": 1,
+      "barber": 1,
+      "attainable_multifamily": 1,
+      "playground": 1
+    }
+  },
+  "runs": [
+    {
+      "trial": 1,
+      "weights": {
+        "supermarket": 0.009359728222087318,
+        "park": 0.015635738794445617,
+        "hospital": 0.09510496297514526,
+        "school": 0.00889003817110452,
+        "convenience_store": 0.0024570416821862446,
+        "clinic": 0.03399394483013357,
+        "playground": 0.010063912266548618,
+        "bakery": 0.030433956711927466,
+        "cafe": 0.006680297005035521,
+        "pharmacy": 0.003516903088627556,
+        "marketplace": 0.03723940154328958,
+        "restaurant": 0.0007631861834417694,
+        "outdoor_sports": 0.0122826073334954,
+        "general_multifamily": 0.007336666612410734,
+        "greengrocer": 0.16987202124935105,
+        "butcher": 0.0016728943577996387,
+        "attainable_multifamily": 0.0026627950189709463,
+        "library": 0.04658016020123056,
+        "higher_education_career_training": 0.00928318420703665,
+        "community_centre": 0.02905867624669778,
+        "fitness_recreation": 0.018442970441534767,
+        "childcare": 0.11978280564721377,
+        "cultural_venue": 0.001622915587273025,
+        "general_retail": 0.04343797528129761,
+        "bar_pub": 0.002198485407937847,
+        "bank_financial_services": 0.01825583707124521,
+        "mid_career_multifamily": 0.010809036321203804,
+        "post_office": 0.02339769368806878,
+        "coworking": 0.025385524184149712,
+        "barber": 0.010345841497802601,
+        "government_operations": 0.011661064647122056,
+        "general_office": 0.001453068891669097,
+        "place_of_worship": 0.036081988622783126,
+        "commercial_services": 0.029625179680732687,
+        "luxury_multifamily": 0.009416982073486206,
+        "lab": 0.06275019602036346,
+        "senior_multifamily": 0.04244431823515034
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.043189376087080386,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 0.01401150665667213,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.043189376087080386,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 0.012932036886222235,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.043189376087080386,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 0.012932036886222235,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.043189376087080386,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 0.012932036886222235,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.06363046864166924,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.026711076152614355,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.06363046864166924,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.02671107405774054,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.06363046864166924,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.024367997496265427,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.06363046864166924,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.02671107405774054,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.24986055927860742,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 0.7297986497573478,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.24986055927860742,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 0.6936699743065841,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.24986055927860742,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 0.7297986497573478,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.24986055927860742,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 0.6936700066081101,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.01567530073161544,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.0018485507631001762,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.01567530073161544,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.0017063545603334949,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.01567530073161544,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.0018485507631001762,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.01567530073161544,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.0017063545603334949,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.05464810590209018,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.705135576572598,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 22.520893239226233,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.2742073701051491,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 4.264229658408471,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.17106216805440402,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.06864617587616186,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 0.26724835259454655,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.21240689524627038,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.13773718306279448,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 0.6367759461515399,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.20011503118712337,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 2.1320800903218915,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.020703250969535344,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.005705072913836888,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.014464075155611484,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.0014528435640600097,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.17915814792863502,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 0.2600503411355497,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.009847968756102792,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.000729613636363722,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 3.114583361893892,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.21922033581166822,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 0.500599557739753,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.2557100042833778,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.45408060600664146,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.06090374048482174,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.012879395613460774,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.10746818067495593,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 0.23392902308996458,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.0393254695853043,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.010739531813536306,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.004492712677631043,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.00022193570029233517,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.012942010060095438,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.0012600944080497591,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.10856979451879703,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 0.5361629999073556,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.009553754499045998,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 0.004436941513308859,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.09204422646796138,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.019611437534206626,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.05924408382576459,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.012187020076945455,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "childcare"
+      ],
+      "profit_gain_vs_luxury_only": 861903.4722232074,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.00925219999999971,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 140.0,
+            "podium_quantity": 9.0,
+            "tower_quantity": 131.0,
+            "area_sqft": 175000.0,
+            "podium_sqft": 11250.0,
+            "tower_sqft": 163750.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 9555000.0,
+            "construction_cost": 185835000.0,
+            "annual_surplus": -1595100.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 212333333.33333334,
+            "development_profit": 26498333.333333343
+          },
+          {
+            "amenity_type": "commercial_services",
+            "program_unit": "square_foot",
+            "quantity": 999.999999996342,
+            "podium_quantity": 750.0,
+            "tower_quantity": 249.99999999634207,
+            "area_sqft": 999.999999996342,
+            "podium_sqft": 750.0,
+            "tower_sqft": 249.99999999634207,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 61925.49999977348,
+            "construction_cost": 1119218.7499939667,
+            "annual_surplus": -5227.624999864514,
+            "capitalization_rate": 0.045,
+            "completed_value": 1376122.2222171884,
+            "development_profit": 256903.4722232218
+          },
+          {
+            "amenity_type": "childcare",
+            "program_unit": "facility",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 8000.0,
+            "podium_sqft": 8000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 22.520893239226233,
+            "annual_noi": -120000.0,
+            "construction_cost": 7800000.0,
+            "annual_surplus": -588000.0,
+            "capitalization_rate": 0.045,
+            "completed_value": -2666666.666666667,
+            "development_profit": -10466666.666666668
+          }
+        ],
+        "totals": {
+          "annual_noi": 9496925.499999773,
+          "construction_cost": 194754218.74999398,
+          "land_cost": 0.0,
+          "development_cost": 194754218.74999398,
+          "annual_capital_charge": 11685253.124999639,
+          "annual_surplus": -2188327.624999866,
+          "yield_on_development_cost": 0.04876364456161526,
+          "completed_value": 211042788.88888386,
+          "development_profit": 16288570.138889879,
+          "profit_on_cost": 0.08363654581367257,
+          "objective_value": 16288570.138889898,
+          "bonus_far": 22.520893239226233,
+          "podium_sqft": 20000.0,
+          "tower_sqft": 163999.99999999633,
+          "indoor_sqft": 183999.99999999633,
+          "outdoor_sqft": 0.0,
+          "podium_floor_equivalents": 5.0,
+          "tower_floor_equivalents": 27.33333333333272,
+          "effective_tower_capacity_sqft": 165125.3594353574,
+          "unused_authorized_tower_sqft": 1125.3594353610533,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 0.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 2,
+      "weights": {
+        "supermarket": 0.006000924453531961,
+        "park": 0.010245728893363693,
+        "hospital": 0.00017532108631457293,
+        "school": 0.04848590458568227,
+        "convenience_store": 0.0005657122256764639,
+        "clinic": 0.01799333343244125,
+        "playground": 0.0008891604781513477,
+        "bakery": 0.023698344423117877,
+        "cafe": 0.046790120318367934,
+        "pharmacy": 0.002789881318082464,
+        "marketplace": 0.05330602632248877,
+        "restaurant": 0.0013960831788031509,
+        "outdoor_sports": 0.01820486075977001,
+        "general_multifamily": 0.04452198272037865,
+        "greengrocer": 0.03830355684019852,
+        "butcher": 0.018476823399130718,
+        "attainable_multifamily": 0.046650601792650424,
+        "library": 0.011431343717703879,
+        "higher_education_career_training": 0.0678842721296965,
+        "community_centre": 0.003960455197409639,
+        "fitness_recreation": 0.04698747883204574,
+        "childcare": 0.014513393700675266,
+        "cultural_venue": 0.008862519964737013,
+        "general_retail": 0.04798044297122567,
+        "bar_pub": 0.032784464837504836,
+        "bank_financial_services": 0.02016161595258752,
+        "mid_career_multifamily": 0.0100291940843364,
+        "post_office": 0.004676288214429737,
+        "coworking": 0.09872648149455437,
+        "barber": 0.00906460715716848,
+        "government_operations": 0.02615462928641244,
+        "general_office": 0.00996016072475397,
+        "place_of_worship": 0.020250507382312013,
+        "commercial_services": 0.0427953481569856,
+        "luxury_multifamily": 0.008528755469008999,
+        "lab": 0.059772645152530654,
+        "senior_multifamily": 0.07698102934577108
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.4509629234870932,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 1.5276105582929551,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.4509629234870932,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 1.4099209008490077,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.4509629234870932,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 1.4099209008490077,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.4509629234870932,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 1.4099209008490077,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.10158565293233505,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.06808099502401456,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.10158565293233505,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.06808098968461554,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.10158565293233505,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.062108973326635175,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.10158565293233505,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.06808098968461554,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.7797404321556548,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 4.491986292960364,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.7797404321556548,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 4.202207892248444,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.7797404321556548,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 4.350159855366806,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.7797404321556548,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 4.067402760548032,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.4725236946201067,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 1.6797583173168718,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.4725236946201067,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 1.5505461479482423,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.4725236946201067,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 1.6797583173168718,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.4725236946201067,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 1.5505461479482423,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.6875994272462845,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.1470060867253312,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 1.3006493708650728,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.11578801902642927,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 0.7603430612847948,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.04011542939092884,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.2649200993540431,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 3.980266559823253,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.20511728034619572,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.047366098169797276,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 0.07530424832502448,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.18225437754948998,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 1.7684794989848724,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.02825869286384272,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.010628898117917519,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.0057300960908615774,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.00022801390069286027,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.24004040318630263,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 0.4668238053820496,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.187151644821353,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.26350381958726016,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.38797652119620296,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 1.132427760959301,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.5399364538827311,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 3.0367852689153616,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.4859936487645638,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 1.6402071538819225,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.09181535713564827,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.02927104360990527,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.20421689953267108,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 0.844710067577339,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.473936877016617,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 1.559834491272956,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.014140919008444122,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.002198695803687389,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.33207366798859517,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.8295995288042555,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.4759359203400509,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 10.303286489363325,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.08976841705055455,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 0.3917262579062094,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.10377893284821291,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.024930714510336613,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.00900630170032336,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.0002816440193380445,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "senior_multifamily"
+      ],
+      "profit_gain_vs_luxury_only": 532333.3333333284,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.006721200000000316,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "senior_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 15.0,
+            "podium_quantity": 0.0,
+            "tower_quantity": 15.0,
+            "area_sqft": 12000.0,
+            "podium_sqft": 0.0,
+            "tower_sqft": 12000.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 13.044354040575614,
+            "annual_noi": 178200.0,
+            "construction_cost": 11466000.0,
+            "annual_surplus": -509760.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 3960000.0,
+            "development_profit": -7506000.0
+          },
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 93.0,
+            "podium_quantity": 16.0,
+            "tower_quantity": 77.0,
+            "area_sqft": 116250.0,
+            "podium_sqft": 20000.0,
+            "tower_sqft": 96250.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 6347250.0,
+            "construction_cost": 117585000.0,
+            "annual_surplus": -707850.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 141050000.0,
+            "development_profit": 23465000.0
+          }
+        ],
+        "totals": {
+          "annual_noi": 6525450.0,
+          "construction_cost": 129051000.0,
+          "land_cost": 0.0,
+          "development_cost": 129051000.0,
+          "annual_capital_charge": 7743060.0,
+          "annual_surplus": -1217610.0,
+          "yield_on_development_cost": 0.05056489294929911,
+          "completed_value": 145010000.0,
+          "development_profit": 15959000.0,
+          "profit_on_cost": 0.12366428776220253,
+          "objective_value": 15959000.000000007,
+          "bonus_far": 13.044354040575614,
+          "podium_sqft": 20000.0,
+          "tower_sqft": 108250.0,
+          "indoor_sqft": 128250.0,
+          "outdoor_sqft": 0.0,
+          "podium_floor_equivalents": 5.0,
+          "tower_floor_equivalents": 18.041666666666668,
+          "effective_tower_capacity_sqft": 108266.12424345367,
+          "unused_authorized_tower_sqft": 16.124243453668896,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 0.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 3,
+      "weights": {
+        "supermarket": 0.021941851706031395,
+        "park": 0.010569813002817055,
+        "hospital": 0.0011953004607454976,
+        "school": 0.009612461324811784,
+        "convenience_store": 0.020943745572095156,
+        "clinic": 0.001144916892014043,
+        "playground": 0.0030335507583874022,
+        "bakery": 0.01702380849725326,
+        "cafe": 0.015590110301431785,
+        "pharmacy": 0.007070707978937307,
+        "marketplace": 0.013353037015820813,
+        "restaurant": 0.004547723570377382,
+        "outdoor_sports": 0.1131444949145262,
+        "general_multifamily": 0.006815531146084939,
+        "greengrocer": 0.08264673188987764,
+        "butcher": 0.13411923954613894,
+        "attainable_multifamily": 0.015408200836222942,
+        "library": 0.015275589672268242,
+        "higher_education_career_training": 0.10200738974225458,
+        "community_centre": 0.010595809767172091,
+        "fitness_recreation": 0.03882470639189258,
+        "childcare": 0.03903283730188179,
+        "cultural_venue": 0.06420181504847527,
+        "general_retail": 0.004337914287032266,
+        "bar_pub": 0.0063261965231192945,
+        "bank_financial_services": 0.05192436957468447,
+        "mid_career_multifamily": 0.03989743927885852,
+        "post_office": 0.029383740130645514,
+        "coworking": 0.012872088851037298,
+        "barber": 0.010446615191046768,
+        "government_operations": 0.031477026088850904,
+        "general_office": 0.0013697638271255017,
+        "place_of_worship": 0.009277675975442776,
+        "commercial_services": 0.029578091168324418,
+        "luxury_multifamily": 0.0056304432800314995,
+        "lab": 0.0020215307622246685,
+        "senior_multifamily": 0.017357731724057877
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.05081695340018908,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 0.0193976101126892,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.05081695340018908,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 0.017903185976249156,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.05081695340018908,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 0.017903185976249156,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.05081695340018908,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 0.017903185976249156,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.2974773747142611,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.5838066290406579,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.2974773747142611,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.5838065832543626,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.2974773747142611,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.5325954818699253,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.2974773747142611,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.5838065832543626,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.12942014719734948,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 0.19579942806746845,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.12942014719734948,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 0.18610637918001605,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.12942014719734948,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 0.19579942806746845,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.12942014719734948,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 0.18610638784626987,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.11488434387463328,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.09929361322392259,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.11488434387463328,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.09165564350122682,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.11488434387463328,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.09929361322392259,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.11488434387463328,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.09165564350122682,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.7605723838537168,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.29103085757098957,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 5.097622599035322,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.11389558816439024,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 0.7356921850330094,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.0790029066898115,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.2346943376309732,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 3.1238312328436377,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.06917483283411492,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.21908668905431042,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 1.611076788383779,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.0085365596754683,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 0.0038798046047492938,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.052719565088981006,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.036993697715611264,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.15615765227247808,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.16934175504597335,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.12693039831467898,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 0.1305315770768708,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 3.114583361893892,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.6162183156537059,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 2.724805085155442,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.09956093593288812,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 0.10325396205953379,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.032343713711111235,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.00726469327926851,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.0778905041990861,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.021065733287547628,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.3871507902251544,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 3.0358800881698573,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.11624067027362292,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.09383259463197241,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.03390806259986957,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.01264200129056484,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.04716844909445667,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.016737971027150956,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.2894790227209447,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 3.8116499034673677,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.47869205988443536,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 11.13904600141606,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.07880907346765031,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.01437701638627417,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.022618311650535548,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.0017763474571537692,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "butcher",
+        "greengrocer"
+      ],
+      "profit_gain_vs_luxury_only": 909288.8888888955,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.005422600000000166,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 64.0,
+            "podium_quantity": 12.0,
+            "tower_quantity": 52.0,
+            "area_sqft": 80000.0,
+            "podium_sqft": 15000.0,
+            "tower_sqft": 65000.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 4368000.0,
+            "construction_cost": 80340000.0,
+            "annual_surplus": -452400.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 97066666.66666667,
+            "development_profit": 16726666.666666672
+          },
+          {
+            "amenity_type": "commercial_services",
+            "program_unit": "square_foot",
+            "quantity": 1000.0,
+            "podium_quantity": 1000.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1000.0,
+            "podium_sqft": 1000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 61925.5,
+            "construction_cost": 942500.0,
+            "annual_surplus": 5375.5,
+            "capitalization_rate": 0.045,
+            "completed_value": 1376122.2222222222,
+            "development_profit": 433622.22222222225
+          },
+          {
+            "amenity_type": "butcher",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1500.0,
+            "podium_sqft": 1500.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 3.114583361893892,
+            "annual_noi": 24480.0,
+            "construction_cost": 975000.0,
+            "annual_surplus": -34020.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 544000.0,
+            "development_profit": -431000.0
+          },
+          {
+            "amenity_type": "greengrocer",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 2500.0,
+            "podium_sqft": 2500.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 2.724805085155442,
+            "annual_noi": 40800.0,
+            "construction_cost": 1300000.0,
+            "annual_surplus": -37200.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 906666.6666666667,
+            "development_profit": -393333.33333333326
+          }
+        ],
+        "totals": {
+          "annual_noi": 4495205.5,
+          "construction_cost": 83557500.0,
+          "land_cost": 0.0,
+          "development_cost": 83557500.0,
+          "annual_capital_charge": 5013450.0,
+          "annual_surplus": -518244.5,
+          "yield_on_development_cost": 0.05379775005235916,
+          "completed_value": 99893455.55555557,
+          "development_profit": 16335955.555555567,
+          "profit_on_cost": 0.19550555671909245,
+          "objective_value": 16335955.55555556,
+          "bonus_far": 5.839388447049334,
+          "podium_sqft": 20000.0,
+          "tower_sqft": 65000.0,
+          "indoor_sqft": 85000.0,
+          "outdoor_sqft": 0.0,
+          "podium_floor_equivalents": 5.0,
+          "tower_floor_equivalents": 10.833333333333334,
+          "effective_tower_capacity_sqft": 65036.33068229601,
+          "unused_authorized_tower_sqft": 36.33068229600758,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 0.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 4,
+      "weights": {
+        "supermarket": 9.2695791138417e-05,
+        "park": 0.05411841773648551,
+        "hospital": 0.04111889803804344,
+        "school": 0.021231810321277026,
+        "convenience_store": 0.01864076369674208,
+        "clinic": 0.05407485503432096,
+        "playground": 0.026557712558419693,
+        "bakery": 0.006846426613648821,
+        "cafe": 0.013837961198967451,
+        "pharmacy": 0.004623776868322473,
+        "marketplace": 0.003999328420249662,
+        "restaurant": 0.013670040417367664,
+        "outdoor_sports": 0.008736105554847311,
+        "general_multifamily": 0.08062782691312731,
+        "greengrocer": 0.029786788076817994,
+        "butcher": 0.05350155479780531,
+        "attainable_multifamily": 0.014177030690837448,
+        "library": 0.031106264852227235,
+        "higher_education_career_training": 0.013727538063527065,
+        "community_centre": 0.019973709136281426,
+        "fitness_recreation": 0.027626364327168036,
+        "childcare": 0.019490523740908997,
+        "cultural_venue": 0.024599589489095294,
+        "general_retail": 0.026411430997542697,
+        "bar_pub": 0.020605046035396563,
+        "bank_financial_services": 0.0576345391155176,
+        "mid_career_multifamily": 0.032517906102787035,
+        "post_office": 0.02158004559129912,
+        "coworking": 0.008982268558999801,
+        "barber": 0.006457017031049808,
+        "government_operations": 0.02739468996628131,
+        "general_office": 0.003407323429042781,
+        "place_of_worship": 0.02036801930740622,
+        "commercial_services": 0.041371380635405026,
+        "luxury_multifamily": 0.09014914733300469,
+        "lab": 0.05711914944616846,
+        "senior_multifamily": 0.0038360541124721937
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.8943825792971032,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 3.002689157070503,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.8943825792971032,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 2.702476068781875,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.8943825792971032,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 2.6335951458726083,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.8943825792971032,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 2.5647142229633406,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.36071229806165717,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.858386819565309,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.36071229806165717,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.8583867522444695,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.36071229806165717,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.7830896722574548,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.36071229806165717,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.8583867522444695,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.04255230610559273,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 0.021166733554953288,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.04255230610559273,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 0.020118874604797703,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.04255230610559273,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 0.021166733554953288,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.04255230610559273,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 0.02011887554165583,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.15726194989364103,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.18605739261849194,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.15726194989364103,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.17174528647830187,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.15726194989364103,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.18605739261849194,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.15726194989364103,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.17174528647830187,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.15227585029527227,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.21620308474923622,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 2.8132826873350867,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.3450533451783282,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 6.7523481073578715,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.22156292907019887,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.30388185331456574,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 5.237112126371952,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.2259369046738531,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.2393815829625535,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 1.9233827881986525,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.5998376760522448,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 19.15629753419013,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.05129030063082641,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.035015037436356575,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.20677692743875203,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.2969215163759401,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.07594555041500943,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 0.046729266859679194,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.5934782122805253,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 2.6497760948260494,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.33041674777896307,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.8213414159614879,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.0443634636440478,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 0.020501218590653025,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.29297482870226943,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.5960711911955147,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.07162593570849911,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.01781345529444565,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.6393242844840187,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 7.399194133060178,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.15350074413739026,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.16362832501278363,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.1516380445271599,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.25282861660214245,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.22856617777296276,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.3930280528416852,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.30645175405950503,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 4.27172249429022,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.27287656308302194,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 3.619662034577405,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.600320905272413,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.8334337528413778,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.29459749031588006,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.3013461425688834,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "general_multifamily",
+        "bank_financial_services",
+        "park"
+      ],
+      "profit_gain_vs_luxury_only": 1291809.1666666716,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.01702500000000029,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "general_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 15.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 14.0,
+            "area_sqft": 14925.0,
+            "podium_sqft": 995.0,
+            "tower_sqft": 13930.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 8.338760371724986,
+            "annual_noi": 432000.0,
+            "construction_cost": 12863857.5,
+            "annual_surplus": -339831.44999999995,
+            "capitalization_rate": 0.045,
+            "completed_value": 9600000.0,
+            "development_profit": -3263857.5
+          },
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 104.0,
+            "podium_quantity": 12.0,
+            "tower_quantity": 92.0,
+            "area_sqft": 130000.0,
+            "podium_sqft": 15000.0,
+            "tower_sqft": 115000.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 7098000.0,
+            "construction_cost": 134940000.0,
+            "annual_surplus": -998400.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 157733333.33333334,
+            "development_profit": 22793333.333333343
+          },
+          {
+            "amenity_type": "bank_financial_services",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 4000.0,
+            "podium_sqft": 4000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 7.399194133060178,
+            "annual_noi": 65280.0,
+            "construction_cost": 3770000.0,
+            "annual_surplus": -160920.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 1450666.6666666667,
+            "development_profit": -2319333.333333333
+          },
+          {
+            "amenity_type": "park",
+            "program_unit": "facility",
+            "quantity": 1.0,
+            "podium_quantity": 0.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 2500.0,
+            "podium_sqft": 0.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 2500.0,
+            "bonus_far": 0.8334337528413778,
+            "annual_noi": -7500.0,
+            "construction_cost": 325000.0,
+            "annual_surplus": -27000.0,
+            "capitalization_rate": 0.045,
+            "completed_value": -166666.6666666667,
+            "development_profit": -491666.6666666667
+          }
+        ],
+        "totals": {
+          "annual_noi": 7587780.0,
+          "construction_cost": 151898857.5,
+          "land_cost": 0.0,
+          "development_cost": 151898857.5,
+          "annual_capital_charge": 9113931.45,
+          "annual_surplus": -1526151.4499999993,
+          "yield_on_development_cost": 0.04995284444453442,
+          "completed_value": 168617333.33333334,
+          "development_profit": 16718475.833333343,
+          "profit_on_cost": 0.11006320987854265,
+          "objective_value": 16718475.83333334,
+          "bonus_far": 16.57138825762654,
+          "podium_sqft": 19995.0,
+          "tower_sqft": 128930.0,
+          "indoor_sqft": 148925.0,
+          "outdoor_sqft": 2500.0,
+          "podium_floor_equivalents": 4.99875,
+          "tower_floor_equivalents": 21.488333333333333,
+          "effective_tower_capacity_sqft": 129428.32954575925,
+          "unused_authorized_tower_sqft": 498.3295457592467,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 5.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 5,
+      "weights": {
+        "supermarket": 0.01235400318940606,
+        "park": 0.011028153811064754,
+        "hospital": 0.06457336598426408,
+        "school": 0.0026438955346011635,
+        "convenience_store": 0.010069615587210975,
+        "clinic": 0.08236670425385897,
+        "playground": 0.04897686110598502,
+        "bakery": 0.009264306031461809,
+        "cafe": 0.024174110881225796,
+        "pharmacy": 0.07525390364943071,
+        "marketplace": 0.09900402446662991,
+        "restaurant": 0.00576082994594424,
+        "outdoor_sports": 0.017462717482639438,
+        "general_multifamily": 0.017663531097444007,
+        "greengrocer": 0.009875239581707223,
+        "butcher": 0.015980764542347686,
+        "attainable_multifamily": 0.00916902257313223,
+        "library": 0.01450141604508908,
+        "higher_education_career_training": 0.0036686785544443623,
+        "community_centre": 0.015382388874423735,
+        "fitness_recreation": 0.017975894795589056,
+        "childcare": 0.035597555338886346,
+        "cultural_venue": 0.018414053053792057,
+        "general_retail": 0.06812090218961186,
+        "bar_pub": 0.03497620847731048,
+        "bank_financial_services": 0.0023727036976185544,
+        "mid_career_multifamily": 0.009202524422860785,
+        "post_office": 0.01563362417865975,
+        "coworking": 0.030755878047649916,
+        "barber": 0.027584606935207975,
+        "government_operations": 0.022824720841530012,
+        "general_office": 0.009415409584562167,
+        "place_of_worship": 0.03611467554777498,
+        "commercial_services": 0.030900344917707347,
+        "luxury_multifamily": 0.03975177138275997,
+        "lab": 0.011620071941929655,
+        "senior_multifamily": 0.03956552145423769
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.1784122533665047,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 0.23910041713030464,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.1784122533665047,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 0.22067972343058617,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.1784122533665047,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 0.22067972343058617,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.1784122533665047,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 0.22067972343058617,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.09295101358190311,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.05699928416898952,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.09295101358190311,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.0569992796986976,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.09295101358190311,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.05199934311830089,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.09295101358190311,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.0569992796986976,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.39963548620766987,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 1.866963082076283,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.39963548620766987,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 1.7745390918519677,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.39963548620766987,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 1.866963082076283,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.39963548620766987,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 1.7745391744853853,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.09261262481529446,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.06452678159710082,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.09261262481529446,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.059563183354077905,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.09261262481529446,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.06452678159710082,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.09261262481529446,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.059563183354077905,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.037055852771731713,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.35955664964796236,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 7.780799985843039,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.14647299565056465,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 1.2167391073650349,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.1553713493698278,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.23054336391368882,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 3.0143077554112767,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.3647798737711689,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.1579089765581114,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 0.8369468783999207,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.831953091781853,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 20.833829689319483,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.7601095415550065,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 5.079363591290737,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.10170915416276859,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.07183855690732391,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.09357504486683181,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 0.07094215672889452,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.1614153023419177,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.19601487320469405,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.09974583997881571,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.07484955144448761,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 4.312500171363354,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.6880619505783075,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 2.582558117150277,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.2786210670103172,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.2695475900090403,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.023965729781199884,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 0.011633372384511087,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.24417301227359572,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.4140309778553863,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.05818783607009807,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.03722839310405724,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.35328067384876344,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.9389433238273465,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.18156731397972586,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 1.4995265045560038,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.18599297506333856,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 1.6816229752871188,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.11139096486710881,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.028722104370015003,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.4946956587860028,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.8497354746587833,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "clinic",
+        "marketplace"
+      ],
+      "profit_gain_vs_luxury_only": 1794625.6944454461,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.037212799999999824,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 148.0,
+            "podium_quantity": 13.0,
+            "tower_quantity": 135.0,
+            "area_sqft": 185000.0,
+            "podium_sqft": 16250.0,
+            "tower_sqft": 168750.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 10101000.0,
+            "construction_cost": 194415000.0,
+            "annual_surplus": -1563900.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 224466666.6666667,
+            "development_profit": 30051666.666666687
+          },
+          {
+            "amenity_type": "commercial_services",
+            "program_unit": "square_foot",
+            "quantity": 999.9999999963293,
+            "podium_quantity": 750.0,
+            "tower_quantity": 249.99999999632928,
+            "area_sqft": 999.9999999963293,
+            "podium_sqft": 750.0,
+            "tower_sqft": 249.99999999632928,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 61925.49999977269,
+            "construction_cost": 1119218.7499939455,
+            "annual_surplus": -5227.624999864034,
+            "capitalization_rate": 0.045,
+            "completed_value": 1376122.222217171,
+            "development_profit": 256903.47222322552
+          },
+          {
+            "amenity_type": "clinic",
+            "program_unit": "facility",
+            "quantity": 1.0,
+            "podium_quantity": 0.0,
+            "tower_quantity": 1.0,
+            "area_sqft": 10000.0,
+            "podium_sqft": 0.0,
+            "tower_sqft": 10000.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 20.833829689319483,
+            "annual_noi": 302500.0,
+            "construction_cost": 19337500.0,
+            "annual_surplus": -857750.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 6722222.222222222,
+            "development_profit": -12615277.777777778
+          },
+          {
+            "amenity_type": "marketplace",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 3000.0,
+            "podium_sqft": 3000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 4.312500171363354,
+            "annual_noi": 48960.0,
+            "construction_cost": 1560000.0,
+            "annual_surplus": -44640.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 1088000.0,
+            "development_profit": -472000.0
+          }
+        ],
+        "totals": {
+          "annual_noi": 10514385.499999773,
+          "construction_cost": 216431718.74999395,
+          "land_cost": 0.0,
+          "development_cost": 216431718.74999395,
+          "annual_capital_charge": 12985903.124999637,
+          "annual_surplus": -2471517.624999864,
+          "yield_on_development_cost": 0.04858061267879696,
+          "completed_value": 233653011.11110607,
+          "development_profit": 17221292.361112118,
+          "profit_on_cost": 0.07956917063993237,
+          "objective_value": 17221292.361112125,
+          "bonus_far": 25.146329860682837,
+          "podium_sqft": 20000.0,
+          "tower_sqft": 178999.99999999633,
+          "indoor_sqft": 198999.99999999633,
+          "outdoor_sqft": 0.0,
+          "podium_floor_equivalents": 5.0,
+          "tower_floor_equivalents": 29.83333333333272,
+          "effective_tower_capacity_sqft": 180000.0,
+          "unused_authorized_tower_sqft": 1000.0000000036671,
+          "bonus_capacity_blocked_by_height_cap_sqft": 877.9791640970216,
+          "unused_podium_sqft": 0.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 6,
+      "weights": {
+        "supermarket": 0.03744925748186132,
+        "park": 0.020734484854495555,
+        "hospital": 0.019050715313602657,
+        "school": 0.014298925850899093,
+        "convenience_store": 0.020972445031869985,
+        "clinic": 0.021709805903269385,
+        "playground": 0.001726414377178536,
+        "bakery": 0.11251858736646637,
+        "cafe": 0.008873711988974783,
+        "pharmacy": 0.01204685474492099,
+        "marketplace": 0.01360418974967986,
+        "restaurant": 0.038774474718882436,
+        "outdoor_sports": 0.049253652310531304,
+        "general_multifamily": 0.03678366282265808,
+        "greengrocer": 0.008158389594788215,
+        "butcher": 0.05897237586548616,
+        "attainable_multifamily": 0.019758469567202015,
+        "library": 0.0007220411264223421,
+        "higher_education_career_training": 0.0832199534226704,
+        "community_centre": 0.008752372811733742,
+        "fitness_recreation": 0.004607106370804123,
+        "childcare": 0.03452403995360652,
+        "cultural_venue": 0.049210371190931336,
+        "general_retail": 0.004347948482878767,
+        "bar_pub": 0.0017139484152030593,
+        "bank_financial_services": 0.03617731794612062,
+        "mid_career_multifamily": 0.01879803147016192,
+        "post_office": 0.025027502586173023,
+        "coworking": 0.0026492993607182924,
+        "barber": 0.0002306146523463261,
+        "government_operations": 0.06567737236782036,
+        "general_office": 0.006282930920368915,
+        "place_of_worship": 0.011234540541570505,
+        "commercial_services": 0.11179019789046292,
+        "luxury_multifamily": 0.0017537599077155554,
+        "lab": 0.03623978526248107,
+        "senior_multifamily": 0.0023544477770433337
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.3269118790378684,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 0.8027723038799375,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.3269118790378684,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 0.7409253907801133,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.3269118790378684,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 0.7409253907801133,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.3269118790378684,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 0.7409253907801133,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.16706601024893641,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.18413542318251797,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.16706601024893641,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.18413540874129986,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.16706601024893641,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.16798318066440784,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.16706601024893641,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.18413540874129986,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.020924967440046478,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 0.005118435345648675,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.020924967440046478,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 0.004865047250891109,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.020924967440046478,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 0.005118435345648675,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.020924967440046478,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 0.00486504747743753,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.17560182748162176,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.23198381207722582,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.17560182748162176,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.214138904683177,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.17560182748162176,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.23198381207722582,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.17560182748162176,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.214138904683177,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.7396107200637699,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.30682966042902554,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 5.666100590038497,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.0064170831088618,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 0.0023353805952158932,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.07778601755128495,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.5837024255727016,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 19.322589850035467,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.09984608591805612,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.2224299395499868,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 1.6606218347072423,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.19294417403732445,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 1.9820172592482934,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.10706546382141377,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.15257483580932557,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.18639093791289765,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.24126098787319156,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 3.3541666809469457,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.5241123022049382,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 2.0665614594556296,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.0725070389323039,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.03955122665405888,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.1209061548681892,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 0.15227394651968265,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.03864204647999851,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.01036949846120066,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.002049569388879971,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 1.4585885609058213e-05,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.3215230371520151,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 2.0938641674181104,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.07886440984255898,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.04319163355898821,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.3446050614961621,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 1.3057293967748866,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.01523258028134348,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.0017456073807979027,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.04094529160590197,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 0.0762582343452813,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.4373532617384901,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 9.298230101205545,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.18427608575429913,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.07860574385884864,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.015343370527357464,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.0008174272228745909,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "bakery",
+        "butcher"
+      ],
+      "profit_gain_vs_luxury_only": 727666.6666666716,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.003847300000000331,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 63.0,
+            "podium_quantity": 13.0,
+            "tower_quantity": 50.0,
+            "area_sqft": 78750.0,
+            "podium_sqft": 16250.0,
+            "tower_sqft": 62500.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 4299750.0,
+            "construction_cost": 78390000.0,
+            "annual_surplus": -403650.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 95550000.0,
+            "development_profit": 17160000.0
+          },
+          {
+            "amenity_type": "bakery",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 2000.0,
+            "podium_sqft": 2000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 3.3541666809469457,
+            "annual_noi": 32640.0,
+            "construction_cost": 1300000.0,
+            "annual_surplus": -45360.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 725333.3333333334,
+            "development_profit": -574666.6666666666
+          },
+          {
+            "amenity_type": "butcher",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1500.0,
+            "podium_sqft": 1500.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 2.0665614594556296,
+            "annual_noi": 24480.0,
+            "construction_cost": 975000.0,
+            "annual_surplus": -34020.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 544000.0,
+            "development_profit": -431000.0
+          }
+        ],
+        "totals": {
+          "annual_noi": 4356870.0,
+          "construction_cost": 80665000.0,
+          "land_cost": 0.0,
+          "development_cost": 80665000.0,
+          "annual_capital_charge": 4839900.0,
+          "annual_surplus": -483030.0,
+          "yield_on_development_cost": 0.05401190107233621,
+          "completed_value": 96819333.33333334,
+          "development_profit": 16154333.333333343,
+          "profit_on_cost": 0.20026446827413802,
+          "objective_value": 16154333.33333334,
+          "bonus_far": 5.420728140402575,
+          "podium_sqft": 19750.0,
+          "tower_sqft": 62500.0,
+          "indoor_sqft": 82250.0,
+          "outdoor_sqft": 0.0,
+          "podium_floor_equivalents": 4.9375,
+          "tower_floor_equivalents": 10.416666666666666,
+          "effective_tower_capacity_sqft": 62524.36884241545,
+          "unused_authorized_tower_sqft": 24.3688424154534,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 250.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 7,
+      "weights": {
+        "supermarket": 0.06789242047093398,
+        "park": 0.06152043160572767,
+        "hospital": 0.005265405758172275,
+        "school": 0.03973002358253175,
+        "convenience_store": 0.0019479671077423744,
+        "clinic": 0.001391746796276474,
+        "playground": 0.018257594945993258,
+        "bakery": 0.03806381964914537,
+        "cafe": 0.018447647268512387,
+        "pharmacy": 0.022344783030296092,
+        "marketplace": 0.07516415434844283,
+        "restaurant": 0.020130906297242582,
+        "outdoor_sports": 0.049196778368137274,
+        "general_multifamily": 0.001250037332643432,
+        "greengrocer": 0.046807109113206596,
+        "butcher": 0.023822873956801185,
+        "attainable_multifamily": 0.0220791014133207,
+        "library": 0.00768795177014393,
+        "higher_education_career_training": 0.006736702653263344,
+        "community_centre": 0.012802025037871605,
+        "fitness_recreation": 0.0171237539623772,
+        "childcare": 0.0016102415735268156,
+        "cultural_venue": 0.04477398608096128,
+        "general_retail": 0.007703294030404478,
+        "bar_pub": 0.006486641207828462,
+        "bank_financial_services": 0.006313157456759488,
+        "mid_career_multifamily": 0.05269737541691071,
+        "post_office": 0.08572241688920447,
+        "coworking": 0.03546742324991119,
+        "barber": 0.06077000698832334,
+        "government_operations": 0.037371325278733214,
+        "general_office": 0.036184863835885345,
+        "place_of_worship": 0.016315141423811415,
+        "commercial_services": 0.02406384925842747,
+        "luxury_multifamily": 0.004582757413200616,
+        "lab": 0.011131391448842879,
+        "senior_multifamily": 0.011142893978486449
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.014582385541685032,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 0.0015973060238647077,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.014582385541685032,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 0.0014742469118670409,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.014582385541685032,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 0.0014742469118670409,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.014582385541685032,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 0.0014742469118670409,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.6147443962647675,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 2.388131885250604,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.6147443962647675,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 2.384848766016573,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.6147443962647675,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 2.172656560216479,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.6147443962647675,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 2.3782829021373093,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.12998809859605975,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 0.19752170343530934,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.12998809859605975,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 0.18774339332159642,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.12998809859605975,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 0.19752170343530934,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.12998809859605975,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 0.18774340206407966,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.2575650829100836,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.499083936954013,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.2575650829100836,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.46069286752095756,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.2575650829100836,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.499083936954013,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.2575650829100836,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.46069286752095756,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.07858740919508228,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.018784369736192106,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 0.02123649585947484,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.08968426287000919,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 0.45615750578502884,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.14934279156428965,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.4359574383796872,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 10.77880272627284,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.19032526165120384,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 13.89583336189389,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.01623550579628775,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 0.014033814735350515,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.26066440776135075,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.9043729735193834,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.02272412722870502,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.003586013652785579,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.4440357730270548,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 1.5974240508914312,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.27790716619191985,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.5810307398596775,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.5460311411156828,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 2.2430266941131265,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.876831954535205,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 4.139295100545935,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.08986323892804986,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.05607917938175443,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.7089161644481873,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 1.3010545684084205,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.07364651728052876,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 0.10985725462797175,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.21520213659346332,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.32161083530898354,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.234838295836451,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.6063839784690508,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.07567030239257479,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.04307750654917823,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.1997581797595548,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 1.8150473227101132,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.5223136223379153,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 13.261671171449294,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.7176702878693018,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.8701054409138624,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.21298506981658077,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.1575091806267703,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "mid_career_multifamily",
+        "post_office",
+        "marketplace",
+        "barber",
+        "park"
+      ],
+      "profit_gain_vs_luxury_only": 2437094.444444433,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.007886200000001509,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "mid_career_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 10.0,
+            "podium_quantity": 0.0,
+            "tower_quantity": 10.0,
+            "area_sqft": 11000.0,
+            "podium_sqft": 0.0,
+            "tower_sqft": 11000.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 4.7729806512671775,
+            "annual_noi": 372000.0,
+            "construction_cost": 10260250.0,
+            "annual_surplus": -243615.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 8266666.666666667,
+            "development_profit": -1993583.333333333
+          },
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 143.0,
+            "podium_quantity": 8.0,
+            "tower_quantity": 135.0,
+            "area_sqft": 178750.0,
+            "podium_sqft": 10000.0,
+            "tower_sqft": 168750.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 9759750.0,
+            "construction_cost": 190515000.0,
+            "annual_surplus": -1671150.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 216883333.33333334,
+            "development_profit": 26368333.333333343
+          },
+          {
+            "amenity_type": "commercial_services",
+            "program_unit": "square_foot",
+            "quantity": 1000.0,
+            "podium_quantity": 1000.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1000.0,
+            "podium_sqft": 1000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 61925.5,
+            "construction_cost": 942500.0,
+            "annual_surplus": 5375.5,
+            "capitalization_rate": 0.045,
+            "completed_value": 1376122.2222222222,
+            "development_profit": 433622.22222222225
+          },
+          {
+            "amenity_type": "post_office",
+            "program_unit": "facility",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 5000.0,
+            "podium_sqft": 5000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 13.89583336189389,
+            "annual_noi": -50000.0,
+            "construction_cost": 4712500.0,
+            "annual_surplus": -332750.0,
+            "capitalization_rate": 0.045,
+            "completed_value": -1111111.1111111112,
+            "development_profit": -5823611.111111111
+          },
+          {
+            "amenity_type": "marketplace",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 3000.0,
+            "podium_sqft": 3000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 4.139295100545935,
+            "annual_noi": 48960.0,
+            "construction_cost": 1560000.0,
+            "annual_surplus": -44640.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 1088000.0,
+            "development_profit": -472000.0
+          },
+          {
+            "amenity_type": "barber",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1000.0,
+            "podium_sqft": 1000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 1.3010545684084205,
+            "annual_noi": 16320.0,
+            "construction_cost": 520000.0,
+            "annual_surplus": -14880.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 362666.6666666667,
+            "development_profit": -157333.3333333333
+          },
+          {
+            "amenity_type": "park",
+            "program_unit": "facility",
+            "quantity": 1.0,
+            "podium_quantity": 0.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 2500.0,
+            "podium_sqft": 0.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 2500.0,
+            "bonus_far": 0.8701054409138624,
+            "annual_noi": -7500.0,
+            "construction_cost": 325000.0,
+            "annual_surplus": -27000.0,
+            "capitalization_rate": 0.045,
+            "completed_value": -166666.6666666667,
+            "development_profit": -491666.6666666667
+          }
+        ],
+        "totals": {
+          "annual_noi": 10201455.5,
+          "construction_cost": 208835250.0,
+          "land_cost": 0.0,
+          "development_cost": 208835250.0,
+          "annual_capital_charge": 12530115.0,
+          "annual_surplus": -2328659.5,
+          "yield_on_development_cost": 0.04884929866964509,
+          "completed_value": 226699011.1111111,
+          "development_profit": 17863761.111111104,
+          "profit_on_cost": 0.08553997043655755,
+          "objective_value": 17863761.111111123,
+          "bonus_far": 24.979269123029287,
+          "podium_sqft": 20000.0,
+          "tower_sqft": 179750.0,
+          "indoor_sqft": 199750.0,
+          "outdoor_sqft": 2500.0,
+          "podium_floor_equivalents": 5.0,
+          "tower_floor_equivalents": 29.958333333333332,
+          "effective_tower_capacity_sqft": 179875.61473817573,
+          "unused_authorized_tower_sqft": 125.61473817573278,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 0.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 8,
+      "weights": {
+        "supermarket": 0.06598843255060724,
+        "park": 0.02351925313742724,
+        "hospital": 0.009678904630624922,
+        "school": 0.03593102767470302,
+        "convenience_store": 0.00431816956205362,
+        "clinic": 0.027337469957403035,
+        "playground": 0.046555737502285165,
+        "bakery": 0.031767037858862,
+        "cafe": 0.03984050134379645,
+        "pharmacy": 0.006253530308013271,
+        "marketplace": 0.06811996551839745,
+        "restaurant": 0.007878869062146148,
+        "outdoor_sports": 0.0038021010460391,
+        "general_multifamily": 0.0841865276351387,
+        "greengrocer": 0.011646055340788527,
+        "butcher": 0.004112189292805793,
+        "attainable_multifamily": 0.10870063811959829,
+        "library": 0.028434425535229287,
+        "higher_education_career_training": 0.00047365789962328407,
+        "community_centre": 0.017480663162410665,
+        "fitness_recreation": 0.019834082163656976,
+        "childcare": 0.022057575108592884,
+        "cultural_venue": 0.004970286864587708,
+        "general_retail": 0.00788021865087543,
+        "bar_pub": 0.023581254611366856,
+        "bank_financial_services": 0.0012549558790023762,
+        "mid_career_multifamily": 0.0033124803365845424,
+        "post_office": 0.014321741742691265,
+        "coworking": 0.008969480521271413,
+        "barber": 0.03794388087055083,
+        "government_operations": 0.01958243984804512,
+        "general_office": 0.08640679800945894,
+        "place_of_worship": 0.03020790878387192,
+        "commercial_services": 0.0038260255305694857,
+        "luxury_multifamily": 0.009803302514584465,
+        "lab": 0.07072356218252945,
+        "senior_multifamily": 0.009298849243807004
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.7744805282790719,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 2.8811009771396505,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.7744805282790719,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 2.618310450498117,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.7744805282790719,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 2.577484733683436,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.7744805282790719,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 2.5366590168687546,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.030473421259403954,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.006126374938948578,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.030473421259403954,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.006126374458474397,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.030473421259403954,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.005588973215475284,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.030473421259403954,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.006126374458474397,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.08554548901153561,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 0.08554642529431852,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.08554548901153561,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 0.08131145029613367,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.08554548901153561,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 0.08554642529431852,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.08554548901153561,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 0.08131145408249321,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 3.114583361893892,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 2.7812500414438546,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 2.911458360031247,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 1.0,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 2.5937500386498873,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.004357452797122866,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.20292038289898495,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 2.4782262206162446,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.2615847158500045,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 3.880673181741835,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.16081472441015018,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.18015018298696156,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 1.8405675229768534,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.27790001334339504,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.13175398038541147,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 0.5826553589227617,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.2514931874394783,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 3.3674142333496038,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.057529839899677505,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.044052487497225255,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.03972533774183126,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.01095904501540363,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.2922433428947326,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 0.6919481513996759,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.03783040618658872,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.010766675572774831,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.10713879460371621,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.08635612175182582,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.6266749367510447,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 3.7875117803083467,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.07249468620602934,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.03649638615571811,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.34906769202958066,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.42308425178104514,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.011545064506627884,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 0.0026997095402911515,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.3665158000265075,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.9328738449361176,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.07248227055923437,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.057766154402546156,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.21693759134533774,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.3540537885494999,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.18246518609977663,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 1.514393850719313,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.045724541737456326,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 0.10163288945841266,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.2163672039491626,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.10836753383869628,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.42829313891480597,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.6369271848675885,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "general_multifamily",
+        "attainable_multifamily",
+        "marketplace"
+      ],
+      "profit_gain_vs_luxury_only": 1594850.000000015,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.008904100000000525,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "general_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 20.0,
+            "podium_quantity": -0.0,
+            "tower_quantity": 20.0,
+            "area_sqft": 19900.0,
+            "podium_sqft": -0.0,
+            "tower_sqft": 19900.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 10.613555178189959,
+            "annual_noi": 576000.0,
+            "construction_cost": 17656275.0,
+            "annual_surplus": -483376.5,
+            "capitalization_rate": 0.045,
+            "completed_value": 12800000.0,
+            "development_profit": -4856275.0
+          },
+          {
+            "amenity_type": "attainable_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 15.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 14.0,
+            "area_sqft": 11250.0,
+            "podium_sqft": 750.0,
+            "tower_sqft": 10500.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 8.807291763368994,
+            "annual_noi": 208800.00000000003,
+            "construction_cost": 8701875.0,
+            "annual_surplus": -313312.5,
+            "capitalization_rate": 0.045,
+            "completed_value": 4640000.000000001,
+            "development_profit": -4061874.999999999
+          },
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 124.0,
+            "podium_quantity": 13.0,
+            "tower_quantity": 111.0,
+            "area_sqft": 155000.0,
+            "podium_sqft": 16250.0,
+            "tower_sqft": 138750.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 8463000.0,
+            "construction_cost": 161655000.0,
+            "annual_surplus": -1236300.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 188066666.6666667,
+            "development_profit": 26411666.666666687
+          },
+          {
+            "amenity_type": "marketplace",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 3000.0,
+            "podium_sqft": 3000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 3.7875117803083467,
+            "annual_noi": 48960.0,
+            "construction_cost": 1560000.0,
+            "annual_surplus": -44640.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 1088000.0,
+            "development_profit": -472000.0
+          }
+        ],
+        "totals": {
+          "annual_noi": 9296760.0,
+          "construction_cost": 189573150.0,
+          "land_cost": 0.0,
+          "development_cost": 189573150.0,
+          "annual_capital_charge": 11374389.0,
+          "annual_surplus": -2077629.0,
+          "yield_on_development_cost": 0.0490404891198991,
+          "completed_value": 206594666.6666667,
+          "development_profit": 17021516.666666687,
+          "profit_on_cost": 0.08978864710886898,
+          "objective_value": 17021516.666666675,
+          "bonus_far": 23.2083587218673,
+          "podium_sqft": 20000.0,
+          "tower_sqft": 169150.0,
+          "indoor_sqft": 189150.0,
+          "outdoor_sqft": 0.0,
+          "podium_floor_equivalents": 5.0,
+          "tower_floor_equivalents": 28.191666666666666,
+          "effective_tower_capacity_sqft": 169250.1523312038,
+          "unused_authorized_tower_sqft": 100.15233120380435,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 0.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 9,
+      "weights": {
+        "supermarket": 0.003052836059430374,
+        "park": 0.0389023402147069,
+        "hospital": 0.022437475379955284,
+        "school": 0.012710299182442524,
+        "convenience_store": 0.030916389543367465,
+        "clinic": 0.0828200438220115,
+        "playground": 0.013036031408905201,
+        "bakery": 0.03376292159410124,
+        "cafe": 0.04809260937739063,
+        "pharmacy": 0.0001865160251517875,
+        "marketplace": 0.006207046637565044,
+        "restaurant": 0.06164603832151348,
+        "outdoor_sports": 0.02578160536508994,
+        "general_multifamily": 0.016756861290168415,
+        "greengrocer": 0.04443965068022243,
+        "butcher": 0.02358334038213051,
+        "attainable_multifamily": 0.002497226531390184,
+        "library": 0.015352093197163129,
+        "higher_education_career_training": 0.01069004558855762,
+        "community_centre": 0.03448375213919788,
+        "fitness_recreation": 0.002734049827855412,
+        "childcare": 0.06780490963210119,
+        "cultural_venue": 0.029795146904102898,
+        "general_retail": 0.05725471436392465,
+        "bar_pub": 0.0384099202932165,
+        "bank_financial_services": 0.01744629246132041,
+        "mid_career_multifamily": 0.02242524356533173,
+        "post_office": 0.03853728355020573,
+        "coworking": 0.03283612084296202,
+        "barber": 0.02523899373018612,
+        "government_operations": 0.026640477640978447,
+        "general_office": 0.008168599956169668,
+        "place_of_worship": 0.00203687215199164,
+        "commercial_services": 0.004213867895309622,
+        "luxury_multifamily": 0.08877956582705142,
+        "lab": 0.006631281128550047,
+        "senior_multifamily": 0.0036915374882808085
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.18874682630023118,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 0.2676025778054781,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.18874682630023118,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 0.24698603025540267,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.18874682630023118,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 0.24698603025540267,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.18874682630023118,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 0.24698603025540267,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.2525946523439596,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 0.42092957962706035,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.2525946523439596,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 0.42092954661474924,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.2525946523439596,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 0.384005903912349,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.2525946523439596,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 0.42092954661474924,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.04158093649018483,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 0.02021138955131317,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.04158093649018483,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 0.019210824897279977,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.04158093649018483,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 0.02021138955131317,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.04158093649018483,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 0.019210825791853743,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.02812839315135816,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.005952363779470491,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.02812839315135816,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.0054944896740782515,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.02812839315135816,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.005952363779470491,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.02812839315135816,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.0054944896740782515,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.12041110461592648,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.7637445509047626,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 22.99709115594799,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.17292372466734116,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 1.6958658788503076,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.3884199231878939,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.3000744303354208,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 5.106699701504653,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.022943028984390445,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.4340783060966862,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 6.324415868194708,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.932872818767221,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 21.559190233136093,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.0021008891338253816,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 5.8747633305521847e-05,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.34823767446210174,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.8421491647349223,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.38030059371853303,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 1.1717590224409113,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.26563928492365513,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.5308651588215698,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.5005617032053735,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 1.8850152043840038,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.06991526236630612,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 0.05091816777069592,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.6449086997728812,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 2.5421019439173467,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.28428832124898407,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.28062450286258056,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.19651247782971776,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 0.7821761637816862,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.5417080938543705,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 2.0378309952780995,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.6943719283512167,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 4.098416805907638,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.4326437050620592,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 1.4081872130795152,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.03079593600605713,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 0.043138558188956413,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.33560816192935494,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 5.475207443277231,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.4381902507891431,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.4444692762955041,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.14683594459450577,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.07486387691890982,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "clinic",
+        "cafe"
+      ],
+      "profit_gain_vs_luxury_only": 2028344.4444444329,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.01166549999999944,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 143.0,
+            "podium_quantity": 14.0,
+            "tower_quantity": 129.0,
+            "area_sqft": 178750.0,
+            "podium_sqft": 17500.0,
+            "tower_sqft": 161250.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 9759750.0,
+            "construction_cost": 187005000.0,
+            "annual_surplus": -1460550.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 216883333.33333334,
+            "development_profit": 29878333.333333343
+          },
+          {
+            "amenity_type": "commercial_services",
+            "program_unit": "square_foot",
+            "quantity": 1000.0,
+            "podium_quantity": 1000.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1000.0,
+            "podium_sqft": 1000.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 61925.5,
+            "construction_cost": 942500.0,
+            "annual_surplus": 5375.5,
+            "capitalization_rate": 0.045,
+            "completed_value": 1376122.2222222222,
+            "development_profit": 433622.22222222225
+          },
+          {
+            "amenity_type": "clinic",
+            "program_unit": "facility",
+            "quantity": 1.0,
+            "podium_quantity": 0.0,
+            "tower_quantity": 1.0,
+            "area_sqft": 10000.0,
+            "podium_sqft": 0.0,
+            "tower_sqft": 10000.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 21.559190233136093,
+            "annual_noi": 302500.0,
+            "construction_cost": 19337500.0,
+            "annual_surplus": -857750.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 6722222.222222222,
+            "development_profit": -12615277.777777778
+          },
+          {
+            "amenity_type": "cafe",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1500.0,
+            "podium_sqft": 1500.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 2.0378309952780995,
+            "annual_noi": 33000.0,
+            "construction_cost": 975000.0,
+            "annual_surplus": -25500.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 733333.3333333334,
+            "development_profit": -241666.66666666663
+          }
+        ],
+        "totals": {
+          "annual_noi": 10157175.5,
+          "construction_cost": 208260000.0,
+          "land_cost": 0.0,
+          "development_cost": 208260000.0,
+          "annual_capital_charge": 12495600.0,
+          "annual_surplus": -2338424.5,
+          "yield_on_development_cost": 0.048771610006722366,
+          "completed_value": 225715011.1111111,
+          "development_profit": 17455011.111111104,
+          "profit_on_cost": 0.08381355570494144,
+          "objective_value": 17455011.111111123,
+          "bonus_far": 23.597021228414192,
+          "podium_sqft": 20000.0,
+          "tower_sqft": 171250.0,
+          "indoor_sqft": 191250.0,
+          "outdoor_sqft": 0.0,
+          "podium_floor_equivalents": 5.0,
+          "tower_floor_equivalents": 28.541666666666668,
+          "effective_tower_capacity_sqft": 171582.12737048516,
+          "unused_authorized_tower_sqft": 332.1273704851628,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 0.0
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    },
+    {
+      "trial": 10,
+      "weights": {
+        "supermarket": 0.05277010767266308,
+        "park": 0.005308926266022387,
+        "hospital": 0.02358055810811,
+        "school": 0.022137793537742145,
+        "convenience_store": 0.005467912631099892,
+        "clinic": 0.007491062541850312,
+        "playground": 0.047481965932591304,
+        "bakery": 0.01887163925289021,
+        "cafe": 0.04394782960864604,
+        "pharmacy": 0.0025405533406169366,
+        "marketplace": 0.06166850249774121,
+        "restaurant": 0.004587950258192147,
+        "outdoor_sports": 0.046970377204607935,
+        "general_multifamily": 0.048597839600774795,
+        "greengrocer": 0.021201088447348335,
+        "butcher": 0.045728437422268925,
+        "attainable_multifamily": 0.009394710705376829,
+        "library": 0.009022811144381918,
+        "higher_education_career_training": 0.02036982750210151,
+        "community_centre": 0.019922361718532285,
+        "fitness_recreation": 0.005383467107740945,
+        "childcare": 0.01610525976054601,
+        "cultural_venue": 0.029304097957092604,
+        "general_retail": 0.02112424769295449,
+        "bar_pub": 0.002442886969844511,
+        "bank_financial_services": 0.02735296680570516,
+        "mid_career_multifamily": 0.030843268680699157,
+        "post_office": 0.04126999104006938,
+        "coworking": 0.07419634195161076,
+        "barber": 0.009544392818054248,
+        "government_operations": 0.0023714347541201144,
+        "general_office": 0.03559035679287943,
+        "place_of_worship": 0.026522288689558034,
+        "commercial_services": 0.01752247056822553,
+        "luxury_multifamily": 0.07360615386157748,
+        "lab": 0.0144342150005022,
+        "senior_multifamily": 0.0553239041552616
+      },
+      "weight_total": 0.9999999999999999,
+      "schedule": [
+        {
+          "amenity": "general_multifamily",
+          "quantity": 5,
+          "preference": 0.6549896979081428,
+          "break_even_total_bonus_far": 2.7041668072342873,
+          "incremental_bonus_far": 2.7599298006679276,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 10,
+          "preference": 0.6549896979081428,
+          "break_even_total_bonus_far": 5.200000107288361,
+          "incremental_bonus_far": 2.5344334898288077,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 15,
+          "preference": 0.6549896979081428,
+          "break_even_total_bonus_far": 7.695833407342434,
+          "incremental_bonus_far": 2.5215667599038967,
+          "feasible": true
+        },
+        {
+          "amenity": "general_multifamily",
+          "quantity": 20,
+          "preference": 0.6549896979081428,
+          "break_even_total_bonus_far": 10.191666707396507,
+          "incremental_bonus_far": 2.5087000299789852,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 5,
+          "preference": 0.41569796932596037,
+          "break_even_total_bonus_far": 2.3750001564621925,
+          "incremental_bonus_far": 1.1400317529972779,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 10,
+          "preference": 0.41569796932596037,
+          "break_even_total_bonus_far": 4.75000012665987,
+          "incremental_bonus_far": 1.1400316635878263,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 15,
+          "preference": 0.41569796932596037,
+          "break_even_total_bonus_far": 6.916666775941849,
+          "incremental_bonus_far": 1.0400288907858828,
+          "feasible": true
+        },
+        {
+          "amenity": "mid_career_multifamily",
+          "quantity": 20,
+          "preference": 0.41569796932596037,
+          "break_even_total_bonus_far": 9.291666746139526,
+          "incremental_bonus_far": 1.1400316635878263,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 5,
+          "preference": 0.7456419373254634,
+          "break_even_total_bonus_far": 4.208333417773247,
+          "incremental_bonus_far": 4.438174604726741,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 10,
+          "preference": 0.7456419373254634,
+          "break_even_total_bonus_far": 8.20833332836628,
+          "incremental_bonus_far": 4.163847086421909,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 15,
+          "preference": 0.7456419373254634,
+          "break_even_total_bonus_far": 12.416666746139526,
+          "incremental_bonus_far": 4.323254011249994,
+          "feasible": true
+        },
+        {
+          "amenity": "senior_multifamily",
+          "quantity": 20,
+          "preference": 0.7456419373254634,
+          "break_even_total_bonus_far": 16.416666842997074,
+          "incremental_bonus_far": 4.054615824677082,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 5,
+          "preference": 0.12661959415066384,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.12061503646333928,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 10,
+          "preference": 0.12661959415066384,
+          "break_even_total_bonus_far": 5.208333395421505,
+          "incremental_bonus_far": 0.11133695737348623,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 15,
+          "preference": 0.12661959415066384,
+          "break_even_total_bonus_far": 7.916666753590107,
+          "incremental_bonus_far": 0.12061503646333928,
+          "feasible": true
+        },
+        {
+          "amenity": "attainable_multifamily",
+          "quantity": 20,
+          "preference": 0.12661959415066384,
+          "break_even_total_bonus_far": 10.41666679084301,
+          "incremental_bonus_far": 0.11133695737348623,
+          "feasible": true
+        },
+        {
+          "amenity": "higher_education_career_training",
+          "quantity": 1,
+          "preference": 0.27453951187224657,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "childcare",
+          "quantity": 1,
+          "preference": 0.21706271949430483,
+          "break_even_total_bonus_far": 21.6666666790843,
+          "incremental_bonus_far": 2.835698679983638,
+          "feasible": true
+        },
+        {
+          "amenity": "library",
+          "quantity": 1,
+          "preference": 0.12160722357803569,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 0.838689268028522,
+          "feasible": true
+        },
+        {
+          "amenity": "community_centre",
+          "quantity": 1,
+          "preference": 0.2685086783863983,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "government_operations",
+          "quantity": 1,
+          "preference": 0.03196161282003245,
+          "break_even_total_bonus_far": 20.416666753590107,
+          "incremental_bonus_far": 0.05793482664575962,
+          "feasible": true
+        },
+        {
+          "amenity": "place_of_worship",
+          "quantity": 1,
+          "preference": 0.3574608665593688,
+          "break_even_total_bonus_far": null,
+          "incremental_bonus_far": 0.0,
+          "feasible": false
+        },
+        {
+          "amenity": "post_office",
+          "quantity": 1,
+          "preference": 0.5562267620549914,
+          "break_even_total_bonus_far": 12.083333358168602,
+          "incremental_bonus_far": 10.384558023611339,
+          "feasible": true
+        },
+        {
+          "amenity": "clinic",
+          "quantity": 1,
+          "preference": 0.10096269364244156,
+          "break_even_total_bonus_far": 19.166666828095913,
+          "incremental_bonus_far": 0.5427076589073864,
+          "feasible": true
+        },
+        {
+          "amenity": "pharmacy",
+          "quantity": 1,
+          "preference": 0.03424095142417978,
+          "break_even_total_bonus_far": 4.791666753590107,
+          "incremental_bonus_far": 0.015605430463623348,
+          "feasible": true
+        },
+        {
+          "amenity": "convenience_store",
+          "quantity": 1,
+          "preference": 0.07369517805427585,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.03771513437068971,
+          "feasible": true
+        },
+        {
+          "amenity": "bakery",
+          "quantity": 1,
+          "preference": 0.2543473001027178,
+          "break_even_total_bonus_far": 2.916666679084301,
+          "incremental_bonus_far": 0.5241294507115534,
+          "feasible": true
+        },
+        {
+          "amenity": "butcher",
+          "quantity": 1,
+          "preference": 0.6163166029410455,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 2.7249049081825616,
+          "feasible": true
+        },
+        {
+          "amenity": "greengrocer",
+          "quantity": 1,
+          "preference": 0.28574304190326827,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.6142581757425102,
+          "feasible": true
+        },
+        {
+          "amenity": "marketplace",
+          "quantity": 1,
+          "preference": 0.8311528692069491,
+          "break_even_total_bonus_far": 3.750000149011612,
+          "incremental_bonus_far": 4.0750588842505575,
+          "feasible": true
+        },
+        {
+          "amenity": "general_retail",
+          "quantity": 1,
+          "preference": 0.2847074011644842,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 0.562904899206232,
+          "feasible": true
+        },
+        {
+          "amenity": "barber",
+          "quantity": 1,
+          "preference": 0.12863697275370925,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 0.057456500828811506,
+          "feasible": true
+        },
+        {
+          "amenity": "bank_financial_services",
+          "quantity": 1,
+          "preference": 0.3686565413635105,
+          "break_even_total_bonus_far": 7.29166679084301,
+          "incremental_bonus_far": 2.752759070116302,
+          "feasible": true
+        },
+        {
+          "amenity": "cafe",
+          "quantity": 1,
+          "preference": 0.5923180099270643,
+          "break_even_total_bonus_far": 2.500000037252903,
+          "incremental_bonus_far": 2.4363932646659068,
+          "feasible": true
+        },
+        {
+          "amenity": "restaurant",
+          "quantity": 1,
+          "preference": 0.06183526219101621,
+          "break_even_total_bonus_far": 3.958333469927311,
+          "incremental_bonus_far": 0.04204189575309604,
+          "feasible": true
+        },
+        {
+          "amenity": "bar_pub",
+          "quantity": 1,
+          "preference": 0.03292462816344381,
+          "break_even_total_bonus_far": 2.708333358168602,
+          "incremental_bonus_far": 0.008155326935960688,
+          "feasible": true
+        },
+        {
+          "amenity": "fitness_recreation",
+          "quantity": 1,
+          "preference": 0.07255704211471672,
+          "break_even_total_bonus_far": 16.375000029802322,
+          "incremental_bonus_far": 0.239462740441798,
+          "feasible": true
+        },
+        {
+          "amenity": "cultural_venue",
+          "quantity": 1,
+          "preference": 0.39495340587281375,
+          "break_even_total_bonus_far": 17.500000074505806,
+          "incremental_bonus_far": 7.582759405017773,
+          "feasible": true
+        },
+        {
+          "amenity": "park",
+          "quantity": 1,
+          "preference": 0.07155239903181147,
+          "break_even_total_bonus_far": 0.8333334699273109,
+          "incremental_bonus_far": 0.011851265385183586,
+          "feasible": true
+        },
+        {
+          "amenity": "playground",
+          "quantity": 1,
+          "preference": 0.6399502277829008,
+          "break_even_total_bonus_far": 1.250000111758709,
+          "incremental_bonus_far": 1.2687267827062383,
+          "feasible": true
+        }
+      ],
+      "selected_amenity_types": [
+        "general_multifamily",
+        "senior_multifamily",
+        "butcher",
+        "cafe",
+        "playground"
+      ],
+      "profit_gain_vs_luxury_only": 1827434.3055555671,
+      "result": {
+        "status": "optimal",
+        "objective": "development-profit",
+        "scenario": {
+          "required_return": 0.06,
+          "podium_footprint": 4000.0,
+          "podium_stories": 5,
+          "tower_footprint": 6000.0,
+          "base_tower_stories": 5,
+          "max_tower_stories": 30,
+          "open_space": 2500.0,
+          "max_nonhousing_stories": 2,
+          "land_cost": 0.0,
+          "development_budget": null,
+          "capitalization_rate": 0.045
+        },
+        "required_quantities": {},
+        "max_amenity_types": null,
+        "solver": {
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "solve_seconds": 0.02328480000000077,
+          "nodes": 1,
+          "relative_gap": 0.0
+        },
+        "allocation": [
+          {
+            "amenity_type": "general_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 5.0,
+            "podium_quantity": 2.0,
+            "tower_quantity": 3.0,
+            "area_sqft": 4975.0,
+            "podium_sqft": 1990.0,
+            "tower_sqft": 2985.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 2.7599298006679276,
+            "annual_noi": 144000.0,
+            "construction_cost": 3657371.25,
+            "annual_surplus": -75442.275,
+            "capitalization_rate": 0.045,
+            "completed_value": 3200000.0,
+            "development_profit": -457371.25
+          },
+          {
+            "amenity_type": "senior_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 15.0,
+            "podium_quantity": -0.0,
+            "tower_quantity": 15.0,
+            "area_sqft": 12000.0,
+            "podium_sqft": -0.0,
+            "tower_sqft": 12000.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 12.925275702398643,
+            "annual_noi": 178200.0,
+            "construction_cost": 11466000.0,
+            "annual_surplus": -509760.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 3960000.0,
+            "development_profit": -7506000.0
+          },
+          {
+            "amenity_type": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "quantity": 130.0,
+            "podium_quantity": 12.0,
+            "tower_quantity": 118.0,
+            "area_sqft": 162500.0,
+            "podium_sqft": 15000.0,
+            "tower_sqft": 147500.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 0.0,
+            "annual_noi": 8872500.0,
+            "construction_cost": 170430000.0,
+            "annual_surplus": -1353300.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 197166666.6666667,
+            "development_profit": 26736666.666666687
+          },
+          {
+            "amenity_type": "butcher",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1500.0,
+            "podium_sqft": 1500.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 2.7249049081825616,
+            "annual_noi": 24480.0,
+            "construction_cost": 975000.0,
+            "annual_surplus": -34020.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 544000.0,
+            "development_profit": -431000.0
+          },
+          {
+            "amenity_type": "cafe",
+            "program_unit": "commercial_bay",
+            "quantity": 1.0,
+            "podium_quantity": 1.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 1500.0,
+            "podium_sqft": 1500.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 0.0,
+            "bonus_far": 2.4363932646659068,
+            "annual_noi": 33000.0,
+            "construction_cost": 975000.0,
+            "annual_surplus": -25500.0,
+            "capitalization_rate": 0.045,
+            "completed_value": 733333.3333333334,
+            "development_profit": -241666.66666666663
+          },
+          {
+            "amenity_type": "playground",
+            "program_unit": "facility",
+            "quantity": 1.0,
+            "podium_quantity": 0.0,
+            "tower_quantity": 0.0,
+            "area_sqft": 2500.0,
+            "podium_sqft": 0.0,
+            "tower_sqft": 0.0,
+            "outdoor_sqft": 2500.0,
+            "bonus_far": 1.2687267827062383,
+            "annual_noi": -12500.0,
+            "construction_cost": 568750.0,
+            "annual_surplus": -46625.0,
+            "capitalization_rate": 0.045,
+            "completed_value": -277777.7777777778,
+            "development_profit": -846527.7777777778
+          }
+        ],
+        "totals": {
+          "annual_noi": 9239680.000000002,
+          "construction_cost": 188072121.25000003,
+          "land_cost": 0.0,
+          "development_cost": 188072121.25000003,
+          "annual_capital_charge": 11284327.275000002,
+          "annual_surplus": -2044647.2750000004,
+          "yield_on_development_cost": 0.04912838723033226,
+          "completed_value": 205326222.22222227,
+          "development_profit": 17254100.97222224,
+          "profit_on_cost": 0.09174193845182801,
+          "objective_value": 17254100.97222224,
+          "bonus_far": 22.11523045862128,
+          "podium_sqft": 19990.000000000025,
+          "tower_sqft": 162485.0,
+          "indoor_sqft": 182475.00000000003,
+          "outdoor_sqft": 2500.0,
+          "podium_floor_equivalents": 4.997500000000007,
+          "tower_floor_equivalents": 27.080833333333334,
+          "effective_tower_capacity_sqft": 162691.38275172768,
+          "unused_authorized_tower_sqft": 206.38275172768044,
+          "bonus_capacity_blocked_by_height_cap_sqft": 0.0,
+          "unused_podium_sqft": 9.999999999974534
+        },
+        "limitations": "Stabilized model; provisional capitalization rates; negative NOI capitalized as an ongoing liability; simplified common area basis; no financing, vacancy, transaction costs, construction timing, floor-plan packing, or mechanical floors. Valuation is an estimate, not an additional cash receipt. Land excluded unless enabled. Objective choice remains provisional.",
+        "decision": "develop"
+      }
+    }
+  ]
+}

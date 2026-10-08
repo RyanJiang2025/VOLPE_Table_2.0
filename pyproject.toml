@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "volpe-proforma"
+version = "0.1.0"
+description = "Scenario-driven VOLPE development optimization and amenity policy analysis"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.23.5,<3",
+    "pandas>=2.2,<3",
+    "scipy>=1.13,<2",
+]
+
+[project.scripts]
+proforma = "proforma.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/volpe-proforma/config" = ["config/*.json"]
+"share/volpe-proforma/config/scenarios" = ["config/scenarios/*.json"]
+"share/volpe-proforma/reference" = ["reference/*.json"]

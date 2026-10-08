@@ -1,0 +1,105 @@
+{
+  "description": "Historical outputs, copied without regeneration; original run provenance is incomplete.",
+  "files": [
+    {
+      "original_path": "amenity_break_even_results.json",
+      "archived_path": "results/history/root/amenity_break_even_results.json",
+      "sha256": "b3d30cc25e7afed0096a706f46beb00254e665be53c74e64c5b49b77c8e4f311"
+    },
+    {
+      "original_path": "building_use_example.json",
+      "archived_path": "results/history/root/building_use_example.json",
+      "sha256": "f5ee1ac02e004705a758f810408f2d8044e7b5856c122e3f8217df567493fdf2"
+    },
+    {
+      "original_path": "financial_optimizer_result.json",
+      "archived_path": "results/history/root/financial_optimizer_result.json",
+      "sha256": "e87c0ecc27ae3b97660cb5c7d1476d5fbe0cc2a4931a4977c07e39b18f48e8af"
+    },
+    {
+      "original_path": "legacy_optimizer_result.json",
+      "archived_path": "results/history/root/legacy_optimizer_result.json",
+      "sha256": "e9dbd17e31e9dca267a5abeba12c77da196604313c3307b1630853c9083b2c5f"
+    },
+    {
+      "original_path": "preference_bonus_results.json",
+      "archived_path": "results/history/root/preference_bonus_results.json",
+      "sha256": "6ddcdd68dea00e9c81fdd67ff91e8baa5abf9f9a885fe2418181a83c1772a951"
+    },
+    {
+      "original_path": "dummy_data/amenity_break_even_results.json",
+      "archived_path": "results/history/dummy_data/amenity_break_even_results.json",
+      "sha256": "b3d30cc25e7afed0096a706f46beb00254e665be53c74e64c5b49b77c8e4f311"
+    },
+    {
+      "original_path": "dummy_data/building_use_example.json",
+      "archived_path": "results/history/dummy_data/building_use_example.json",
+      "sha256": "7e1fcb25af9e1cb1fa27242cd9498eb00366bb29a99d93e6bfd0a862b99e75a2"
+    },
+    {
+      "original_path": "dummy_data/financial_optimizer_required_result.json",
+      "archived_path": "results/history/dummy_data/financial_optimizer_required_result.json",
+      "sha256": "33dcf553ca27f69c59ade8cd90f61818d6b4fd006ed40bfe20af09fdb4ee9c7a"
+    },
+    {
+      "original_path": "dummy_data/financial_optimizer_result.json",
+      "archived_path": "results/history/dummy_data/financial_optimizer_result.json",
+      "sha256": "c2fea9e2a41065b1cd3cf5f5849602bc5233cbbc64cc121d81415b13d3a6eece"
+    },
+    {
+      "original_path": "dummy_data/financial_optimizer_sensitivity.json",
+      "archived_path": "results/history/dummy_data/financial_optimizer_sensitivity.json",
+      "sha256": "96ad1de83c292cf7824801dcfd2f8ee0bb939cae637c47a363c2a2189c86aeba"
+    },
+    {
+      "original_path": "dummy_data/preference_bonus_one_per_type_no_type_cap_results.json",
+      "archived_path": "results/history/dummy_data/preference_bonus_one_per_type_no_type_cap_results.json",
+      "sha256": "fe9b534da8e6ce4b7b420cb1ce8985ef09d1dc7e79bdd76f53c06cebf8282651"
+    },
+    {
+      "original_path": "dummy_data/preference_bonus_results.json",
+      "archived_path": "results/history/dummy_data/preference_bonus_results.json",
+      "sha256": "71c7379947e343f2e4d8c42aa2bf4d02627dd8cb3a7fd6b438164e526f90a7f0"
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_lab_results.json",
+      "archived_path": "results/history/dummy_data/preference_monte_carlo_lab_results.json",
+      "sha256": "08011e2535083b3b48762422b4c8add7246a1547aaeec581750b58da3b0881aa"
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_lab_unrestricted_results.json",
+      "archived_path": "results/history/dummy_data/preference_monte_carlo_lab_unrestricted_results.json",
+      "sha256": "fed7a0ff88ee8b914a2c77f51b64d07a01e48679c498050bd6d02f317eb9ce2d"
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_office_results.json",
+      "archived_path": "results/history/dummy_data/preference_monte_carlo_office_results.json",
+      "sha256": "5d85c5681715e9f6d483aaf79c1f1fb168c94eefd4640bd7052b35c0cff8672c"
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_office_unrestricted_results.json",
+      "archived_path": "results/history/dummy_data/preference_monte_carlo_office_unrestricted_results.json",
+      "sha256": "02caee687ea596a7b1352413288b82358c574f934c8bbd716802caac2cc1cf23"
+    },
+    {
+      "original_path": "dummy_data/preference_monte_carlo_results.json",
+      "archived_path": "results/history/dummy_data/preference_monte_carlo_results.json",
+      "sha256": "0f51ba46063ee768cfc69b982e7482fc6978d7a3daedd2f2ee30765619c6bc9a"
+    },
+    {
+      "original_path": "dummy_data/stress_test_results.json",
+      "archived_path": "results/history/dummy_data/stress_test_results.json",
+      "sha256": "47ce334301de67fac13b234164d40952f7986ec2a719ba31605bc44e0a359f33"
+    },
+    {
+      "original_path": "dummy_data/uncapped_amenity_results.json",
+      "archived_path": "results/history/dummy_data/uncapped_amenity_results.json",
+      "sha256": "0dbeb8caa5cd6a069b23aa02ad27363d77076a5362ddb0800ce7e89445ef192b"
+    },
+    {
+      "original_path": "dummy_data/valuation_optimizer_result.json",
+      "archived_path": "results/history/dummy_data/valuation_optimizer_result.json",
+      "sha256": "8c890191fa7e8973e36790ad78be181e94c5263c6b34acfa2337d816fed7bd76"
+    }
+  ]
+}

@@ -1,0 +1,672 @@
+{
+  "schema_version": 1,
+  "description": "111 historical reference types, including five residential archetypes. Not the active choice set.",
+  "amenities": [
+    {
+      "amenity_type": "accountant",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "acting_school",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "adoption_agency",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "advertising_agency",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "architect",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "association",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "bakery",
+      "broad_amenity_category": "grocery",
+      "financial_group": "grocery",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "bank",
+      "broad_amenity_category": "civic",
+      "financial_group": "civic",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "bar",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "barber",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "butcher",
+      "broad_amenity_category": "grocery",
+      "financial_group": "grocery",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "cafe",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "Charlie Company",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "childcare",
+      "broad_amenity_category": "education",
+      "financial_group": "education",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "cinema",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "clinic",
+      "broad_amenity_category": "healthcare",
+      "financial_group": "healthcare",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "clothes",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "clothes;toys",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "clothes;toys;books;games",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "college",
+      "broad_amenity_category": "education",
+      "financial_group": "education",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "commercial",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "community_centre",
+      "broad_amenity_category": "civic",
+      "financial_group": "civic",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "company",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "construction",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "consulting",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "convenience",
+      "broad_amenity_category": "grocery",
+      "financial_group": "grocery",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "coworking",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "dentist",
+      "broad_amenity_category": "healthcare",
+      "financial_group": "healthcare",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "department_store",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "design",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "digital_media",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "diplomatic",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "doctors",
+      "broad_amenity_category": "healthcare",
+      "financial_group": "healthcare",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "educational_institution",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "electronics",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "employment_agency",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "energy_supplier",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "engineer",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "estate_agent",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "fast_food",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "financial",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "financial_advisor",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "fire_department",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "fitness_centre",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "foundation",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "gift",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "government",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "graphic_design",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "greengrocer",
+      "broad_amenity_category": "grocery",
+      "financial_group": "grocery",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "guide",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "harbour_master",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "healthcare",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "hospital",
+      "broad_amenity_category": "healthcare",
+      "financial_group": "hospital",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "insurance",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "investment",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "it",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "jewelry",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "lawyer",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "library",
+      "broad_amenity_category": "education",
+      "financial_group": "education",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "library_dropoff",
+      "broad_amenity_category": "education",
+      "financial_group": "education",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "mall",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "marketplace",
+      "broad_amenity_category": "grocery",
+      "financial_group": "grocery",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "medical",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "mortgage",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "moving_company",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "museum",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "newspaper",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "ngo",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "Nonprofit",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "park",
+      "broad_amenity_category": "leisure_outdoor",
+      "financial_group": "leisure_outdoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "peak",
+      "broad_amenity_category": "leisure_outdoor",
+      "financial_group": "leisure_outdoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "pharmacy",
+      "broad_amenity_category": "healthcare",
+      "financial_group": "healthcare",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "pitch",
+      "broad_amenity_category": "leisure_outdoor",
+      "financial_group": "leisure_outdoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "place_of_worship",
+      "broad_amenity_category": "civic",
+      "financial_group": "civic",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "playground",
+      "broad_amenity_category": "leisure_outdoor",
+      "financial_group": "leisure_outdoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "playground;park",
+      "broad_amenity_category": "leisure_outdoor",
+      "financial_group": "leisure_outdoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "post_office",
+      "broad_amenity_category": "civic",
+      "financial_group": "civic",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "property_management",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "psychic",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "pub",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "public_bookcase",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "rectory",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "religion",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "research",
+      "broad_amenity_category": "work",
+      "financial_group": "lab",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "restaurant",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "school",
+      "broad_amenity_category": "education",
+      "financial_group": "school",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "shoes",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "sports",
+      "broad_amenity_category": "shopping",
+      "financial_group": "shopping",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "sports_centre",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "startup incubator",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "supermarket",
+      "broad_amenity_category": "grocery",
+      "financial_group": "grocery",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "tax_advisor",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "telecommunication",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "theatre",
+      "broad_amenity_category": "leisure_indoor",
+      "financial_group": "leisure_indoor",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "therapist",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "towing",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "townhall",
+      "broad_amenity_category": "civic",
+      "financial_group": "civic",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "travel_agent",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "tutoring",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "union",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "university",
+      "broad_amenity_category": "education; work",
+      "financial_group": "higher_education_career_training",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "vacant",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "venture_capital",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "water_utility",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "general_office",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "youth_services",
+      "broad_amenity_category": "work",
+      "financial_group": "office",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "general_multifamily",
+      "broad_amenity_category": "residential",
+      "financial_group": "general_multifamily",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "mid_career_multifamily",
+      "broad_amenity_category": "residential",
+      "financial_group": "mid_career_multifamily",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "senior_multifamily",
+      "broad_amenity_category": "residential",
+      "financial_group": "senior_multifamily",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "attainable_multifamily",
+      "broad_amenity_category": "residential",
+      "financial_group": "attainable_multifamily",
+      "ground_level": false
+    },
+    {
+      "amenity_type": "luxury_multifamily",
+      "broad_amenity_category": "residential",
+      "financial_group": "luxury_multifamily",
+      "ground_level": false
+    }
+  ]
+}

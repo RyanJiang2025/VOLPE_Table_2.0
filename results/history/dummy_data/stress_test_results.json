@@ -1,0 +1,514 @@
+[
+  {
+    "vote_scenario": "current snapshot",
+    "tower_cap_enforced": false,
+    "optimal": true,
+    "solve_seconds": 0.003508599999999973,
+    "solver_nodes": 1,
+    "optimality_gap": 0.0,
+    "bonus_far": 362.251126500414,
+    "tower_sqft": 1566000.0,
+    "podium_sqft": 4000.0,
+    "indoor_sqft": 1570000.0,
+    "outdoor_sqft": 2500.0,
+    "tower_floor_equivalents": 261.0,
+    "uncapped_authorized_tower_sqft": 2203506.759002484,
+    "effective_authorized_tower_sqft": 2203506.759002484,
+    "allocation": [
+      {
+        "amenity_type": "general_multifamily",
+        "quantity": 400,
+        "area_sqft": 398000,
+        "tower_sqft": 398000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 94.92647817765484
+      },
+      {
+        "amenity_type": "mid_career_multifamily",
+        "quantity": 400,
+        "area_sqft": 440000,
+        "tower_sqft": 440000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 98.40540847699634
+      },
+      {
+        "amenity_type": "senior_multifamily",
+        "quantity": 400,
+        "area_sqft": 320000,
+        "tower_sqft": 320000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 69.53973482077268
+      },
+      {
+        "amenity_type": "attainable_multifamily",
+        "quantity": 400,
+        "area_sqft": 300000,
+        "tower_sqft": 300000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 72.00804682910366
+      },
+      {
+        "amenity_type": "higher_education_career_training",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.51607898845698
+      },
+      {
+        "amenity_type": "childcare",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 1.9625506114462197
+      },
+      {
+        "amenity_type": "library",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.0152490141946244
+      },
+      {
+        "amenity_type": "community_centre",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.4635329806577793
+      },
+      {
+        "amenity_type": "government_operations",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 1.870175202317598
+      },
+      {
+        "amenity_type": "place_of_worship",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.2810017566953604
+      },
+      {
+        "amenity_type": "post_office",
+        "quantity": 2,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.381044809952448
+      },
+      {
+        "amenity_type": "clinic",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.4112426188119755
+      },
+      {
+        "amenity_type": "pharmacy",
+        "quantity": 2,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.4648545563272566
+      },
+      {
+        "amenity_type": "convenience_store",
+        "quantity": 2,
+        "area_sqft": 4000,
+        "tower_sqft": 0.0,
+        "podium_sqft": 4000.0,
+        "bonus_far": 0.9928282825691868
+      },
+      {
+        "amenity_type": "fitness_recreation",
+        "quantity": 1,
+        "area_sqft": 12000,
+        "tower_sqft": 12000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.820793051133441
+      },
+      {
+        "amenity_type": "cultural_venue",
+        "quantity": 2,
+        "area_sqft": 12000,
+        "tower_sqft": 12000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.944376086261549
+      },
+      {
+        "amenity_type": "park",
+        "quantity": 1,
+        "area_sqft": 2500,
+        "tower_sqft": 0.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 0.2477302370620801
+      }
+    ]
+  },
+  {
+    "vote_scenario": "current snapshot",
+    "tower_cap_enforced": true,
+    "optimal": true,
+    "solve_seconds": 0.018074299999999877,
+    "solver_nodes": 1,
+    "optimality_gap": 0.0,
+    "bonus_far": 48.73226498069637,
+    "tower_sqft": 180000.0,
+    "podium_sqft": 20000.0,
+    "indoor_sqft": 200000.0,
+    "outdoor_sqft": 2500.0,
+    "tower_floor_equivalents": 30.0,
+    "uncapped_authorized_tower_sqft": 322393.58988417825,
+    "effective_authorized_tower_sqft": 180000.0,
+    "allocation": [
+      {
+        "amenity_type": "attainable_multifamily",
+        "quantity": 164,
+        "area_sqft": 123000,
+        "tower_sqft": 112000.0,
+        "podium_sqft": 11000.0,
+        "bonus_far": 29.5232991999325
+      },
+      {
+        "amenity_type": "higher_education_career_training",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.51607898845698
+      },
+      {
+        "amenity_type": "childcare",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 1.9625506114462197
+      },
+      {
+        "amenity_type": "library",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.0152490141946244
+      },
+      {
+        "amenity_type": "community_centre",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.4635329806577793
+      },
+      {
+        "amenity_type": "post_office",
+        "quantity": 1,
+        "area_sqft": 5000,
+        "tower_sqft": 0.0,
+        "podium_sqft": 5000.0,
+        "bonus_far": 1.190522404976224
+      },
+      {
+        "amenity_type": "clinic",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.4112426188119755
+      },
+      {
+        "amenity_type": "pharmacy",
+        "quantity": 2,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.4648545563272566
+      },
+      {
+        "amenity_type": "convenience_store",
+        "quantity": 2,
+        "area_sqft": 4000,
+        "tower_sqft": 0.0,
+        "podium_sqft": 4000.0,
+        "bonus_far": 0.9928282825691868
+      },
+      {
+        "amenity_type": "cultural_venue",
+        "quantity": 2,
+        "area_sqft": 12000,
+        "tower_sqft": 12000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.944376086261549
+      },
+      {
+        "amenity_type": "park",
+        "quantity": 1,
+        "area_sqft": 2500,
+        "tower_sqft": 0.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 0.2477302370620801
+      }
+    ]
+  },
+  {
+    "vote_scenario": "equal maximum ratios",
+    "tower_cap_enforced": false,
+    "optimal": true,
+    "solve_seconds": 0.00197920000000007,
+    "solver_nodes": 1,
+    "optimality_gap": 0.0,
+    "bonus_far": 400.81890500421684,
+    "tower_sqft": 1550000.0,
+    "podium_sqft": 20000.0,
+    "indoor_sqft": 1570000.0,
+    "outdoor_sqft": 2500.0,
+    "tower_floor_equivalents": 258.3333333333333,
+    "uncapped_authorized_tower_sqft": 2434913.430025301,
+    "effective_authorized_tower_sqft": 2434913.430025301,
+    "allocation": [
+      {
+        "amenity_type": "general_multifamily",
+        "quantity": 400,
+        "area_sqft": 398000,
+        "tower_sqft": 398000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 100.41321350891721
+      },
+      {
+        "amenity_type": "mid_career_multifamily",
+        "quantity": 400,
+        "area_sqft": 440000,
+        "tower_sqft": 440000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 109.96343916750209
+      },
+      {
+        "amenity_type": "senior_multifamily",
+        "quantity": 400,
+        "area_sqft": 320000,
+        "tower_sqft": 320000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 82.96169007149759
+      },
+      {
+        "amenity_type": "attainable_multifamily",
+        "quantity": 400,
+        "area_sqft": 300000,
+        "tower_sqft": 300000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 77.22396435354926
+      },
+      {
+        "amenity_type": "higher_education_career_training",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.756424451413827
+      },
+      {
+        "amenity_type": "childcare",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 0.0,
+        "podium_sqft": 8000.0,
+        "bonus_far": 2.1932210858833328
+      },
+      {
+        "amenity_type": "library",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 4000.000000000001,
+        "podium_sqft": 3999.999999999999,
+        "bonus_far": 2.1812758161566483
+      },
+      {
+        "amenity_type": "community_centre",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.72659477019581
+      },
+      {
+        "amenity_type": "government_operations",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.1812758161566483
+      },
+      {
+        "amenity_type": "place_of_worship",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.7066453469778304
+      },
+      {
+        "amenity_type": "post_office",
+        "quantity": 2,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.716625041624547
+      },
+      {
+        "amenity_type": "clinic",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.5165595695550906
+      },
+      {
+        "amenity_type": "pharmacy",
+        "quantity": 2,
+        "area_sqft": 10000,
+        "tower_sqft": 5999.999999999999,
+        "podium_sqft": 4000.000000000001,
+        "bonus_far": 2.5852472984149832
+      },
+      {
+        "amenity_type": "bank_financial_services",
+        "quantity": 1,
+        "area_sqft": 4000,
+        "tower_sqft": 0.0,
+        "podium_sqft": 4000.0,
+        "bonus_far": 1.0340989193659933
+      },
+      {
+        "amenity_type": "fitness_recreation",
+        "quantity": 1,
+        "area_sqft": 12000,
+        "tower_sqft": 12000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 3.0946717470673146
+      },
+      {
+        "amenity_type": "cultural_venue",
+        "quantity": 2,
+        "area_sqft": 12000,
+        "tower_sqft": 12000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 3.307709341696592
+      },
+      {
+        "amenity_type": "playground",
+        "quantity": 1,
+        "area_sqft": 2500,
+        "tower_sqft": 0.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 0.25624869824210517
+      }
+    ]
+  },
+  {
+    "vote_scenario": "equal maximum ratios",
+    "tower_cap_enforced": true,
+    "optimal": true,
+    "solve_seconds": 0.0036599999999999966,
+    "solver_nodes": 1,
+    "optimality_gap": 0.0,
+    "bonus_far": 53.17367527105266,
+    "tower_sqft": 180000.0,
+    "podium_sqft": 20000.0,
+    "indoor_sqft": 200000.0,
+    "outdoor_sqft": 2500.0,
+    "tower_floor_equivalents": 30.0,
+    "uncapped_authorized_tower_sqft": 349042.051626316,
+    "effective_authorized_tower_sqft": 180000.0,
+    "allocation": [
+      {
+        "amenity_type": "senior_multifamily",
+        "quantity": 155,
+        "area_sqft": 124000,
+        "tower_sqft": 104000.0,
+        "podium_sqft": 20000.0,
+        "bonus_far": 32.14765490270531
+      },
+      {
+        "amenity_type": "higher_education_career_training",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.756424451413827
+      },
+      {
+        "amenity_type": "childcare",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.1932210858833328
+      },
+      {
+        "amenity_type": "library",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.1812758161566483
+      },
+      {
+        "amenity_type": "community_centre",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.72659477019581
+      },
+      {
+        "amenity_type": "government_operations",
+        "quantity": 1,
+        "area_sqft": 8000,
+        "tower_sqft": 8000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.1812758161566483
+      },
+      {
+        "amenity_type": "place_of_worship",
+        "quantity": 1,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.7066453469778304
+      },
+      {
+        "amenity_type": "post_office",
+        "quantity": 2,
+        "area_sqft": 10000,
+        "tower_sqft": 10000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 2.716625041624547
+      },
+      {
+        "amenity_type": "cultural_venue",
+        "quantity": 2,
+        "area_sqft": 12000,
+        "tower_sqft": 12000.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 3.307709341696592
+      },
+      {
+        "amenity_type": "playground",
+        "quantity": 1,
+        "area_sqft": 2500,
+        "tower_sqft": 0.0,
+        "podium_sqft": 0.0,
+        "bonus_far": 0.25624869824210517
+      }
+    ]
+  }
+]

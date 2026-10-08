@@ -1,0 +1,178 @@
+{
+  "status": "allocated",
+  "inputs": {
+    "parcel_sqft": 12500.0,
+    "open_space_sqft": 2500.0,
+    "podium_footprint_sqft": 4000.0,
+    "tower_footprint_sqft": 6000.0,
+    "podium_stories": 5,
+    "base_tower_stories": 5,
+    "max_tower_stories": 30,
+    "max_tower_capacity_sqft": 180000.0,
+    "podium_capacity_sqft": 20000.0,
+    "base_tower_capacity_sqft": 30000.0,
+    "tower_sqft_per_bonus_far": 6000.0
+  },
+  "area_note": "Separate 4000 sqft podium, 6000 sqft tower and 2500 sqft open-space footprints occupy a 12500 sqft parcel.",
+  "bonus_rule": {
+    "eligible_indoor": "floor area / 6000 + demand bonus",
+    "outdoor": "demand bonus only",
+    "zero_bonus_for_profit_uses": [
+      "commercial_services",
+      "coworking",
+      "general_office",
+      "lab",
+      "luxury_multifamily"
+    ]
+  },
+  "allocation_policy": {
+    "subsidized_amenities": "Five mid-career, five general and five attainable apartments in the tower; one cafe and one greengrocer on the ground floor. Hospital excluded.",
+    "outdoor": "One playground resized to 2500 sqft, occupying the full open-space allotment as requested.",
+    "filler": "One 10000 sqft lab suite, five luxury apartments and up to 12000 sqft office; unused capacity is retained.",
+    "grocery_store_catalog_use": "greengrocer"
+  },
+  "skipped_outdoor_uses": [
+    "park"
+  ],
+  "allocation": [
+    {
+      "amenity_type": "playground",
+      "role": "subsidized",
+      "location": "open_space",
+      "program_unit": "facility",
+      "quantity": 1,
+      "area_sqft": 2500.0,
+      "demand_far_bonus": 0.22315431490548374,
+      "footprint_refund_far": 0.0,
+      "far_bonus": 0.22315431490548374,
+      "annual_noi": -12500.0,
+      "construction_cost": 568750.0
+    },
+    {
+      "amenity_type": "mid_career_multifamily",
+      "role": "subsidized",
+      "location": "tower",
+      "program_unit": "dwelling_unit",
+      "quantity": 5,
+      "area_sqft": 5500.0,
+      "demand_far_bonus": 0.3134009392957876,
+      "footprint_refund_far": 0.9166666666666666,
+      "far_bonus": 1.2300676059624542,
+      "annual_noi": 186000.0,
+      "construction_cost": 5130125.0
+    },
+    {
+      "amenity_type": "general_multifamily",
+      "role": "subsidized",
+      "location": "tower",
+      "program_unit": "dwelling_unit",
+      "quantity": 5,
+      "area_sqft": 4975.0,
+      "demand_far_bonus": 0.35741431055401884,
+      "footprint_refund_far": 0.8291666666666667,
+      "far_bonus": 1.1865809772206855,
+      "annual_noi": 144000.0,
+      "construction_cost": 4414068.75
+    },
+    {
+      "amenity_type": "attainable_multifamily",
+      "role": "subsidized",
+      "location": "tower",
+      "program_unit": "dwelling_unit",
+      "quantity": 5,
+      "area_sqft": 3750.0,
+      "demand_far_bonus": 0.27510058536379567,
+      "footprint_refund_far": 0.625,
+      "far_bonus": 0.9001005853637957,
+      "annual_noi": 69600.00000000001,
+      "construction_cost": 2985937.5
+    },
+    {
+      "amenity_type": "cafe",
+      "role": "subsidized",
+      "location": "podium",
+      "program_unit": "commercial_bay",
+      "quantity": 1,
+      "area_sqft": 1500.0,
+      "demand_far_bonus": 0.11609225646319057,
+      "footprint_refund_far": 0.25,
+      "far_bonus": 0.36609225646319055,
+      "annual_noi": 33000.0,
+      "construction_cost": 975000.0
+    },
+    {
+      "amenity_type": "greengrocer",
+      "role": "subsidized",
+      "location": "podium",
+      "program_unit": "commercial_bay",
+      "quantity": 1,
+      "area_sqft": 2500.0,
+      "demand_far_bonus": 0.18933559114036105,
+      "footprint_refund_far": 0.4166666666666667,
+      "far_bonus": 0.6060022578070278,
+      "annual_noi": 40800.0,
+      "construction_cost": 1300000.0
+    },
+    {
+      "amenity_type": "general_office",
+      "role": "for_profit",
+      "location": "podium_and_tower",
+      "program_unit": "square_foot",
+      "quantity": 12000.0,
+      "area_sqft": 12000.0,
+      "demand_far_bonus": 0.0,
+      "footprint_refund_far": 0.0,
+      "far_bonus": 0.0,
+      "annual_noi": 743106.0,
+      "construction_cost": 11310000.0,
+      "podium_area_sqft": 12000.0,
+      "tower_area_sqft": 0.0
+    },
+    {
+      "amenity_type": "lab",
+      "role": "for_profit",
+      "location": "tower",
+      "program_unit": "square_foot",
+      "quantity": 10000.0,
+      "area_sqft": 10000.0,
+      "demand_far_bonus": 0.0,
+      "footprint_refund_far": 0.0,
+      "far_bonus": 0.0,
+      "annual_noi": 715000.0,
+      "construction_cost": 25025000.0
+    },
+    {
+      "amenity_type": "luxury_multifamily",
+      "role": "for_profit",
+      "location": "tower",
+      "program_unit": "dwelling_unit",
+      "quantity": 5,
+      "area_sqft": 6250.0,
+      "demand_far_bonus": 0.0,
+      "footprint_refund_far": 0.0,
+      "far_bonus": 0.0,
+      "annual_noi": 273000.00000000006,
+      "construction_cost": 6825000.0
+    }
+  ],
+  "totals": {
+    "subsidized_indoor_sqft": 18225.0,
+    "bonus_far": 4.511997997722637,
+    "podium_sqft": 16000.0,
+    "tower_sqft": 30475.0,
+    "indoor_sqft": 46475.0,
+    "tower_capacity_sqft": 57071.98798633582,
+    "uncapped_tower_capacity_sqft": 57071.98798633582,
+    "capacity_removed_by_height_cap_sqft": 0.0,
+    "unused_tower_capacity_sqft": 26596.987986335822,
+    "unused_podium_capacity_sqft": 4000.0,
+    "tower_floor_equivalents": 5.079166666666667,
+    "podium_floor_equivalents": 4.0,
+    "for_profit_filler_sqft": 28250.0,
+    "unused_open_space_sqft": 0.0,
+    "annual_noi": 2192006.0,
+    "construction_cost": 58533881.25,
+    "yield_on_construction_cost": 0.03744849911178579
+  },
+  "limitations": "Synthetic floor-area allocation; fractional tower floors allowed. Construction cost includes hard and soft costs, excluding land and financing; tower area is capped at 30 stories independently of bonuses, with a separate five-story podium."
+}
