@@ -1,0 +1,150 @@
+IMPLEMENTED COMPACT-CATALOG RULES
+=================================
+Indoor nonhousing use area <= two tower floor equivalents (12,000 sq ft).
+This is an aggregate per-use bound; repeats cannot bypass it.
+Housing minimum is five whole apartments. Current housing defaults are five.
+Ground-floor uses and outdoor uses have separate scenario area caps.
+Hospital, school, full supermarket and outdoor sports are excluded from active choices.
+Training services are narrowed; facility counts remain whole.
+Tower area is capped at 30 stories (180,000 sq ft), independently of bonuses.
+The separate podium remains capped at five stories. Net-to-gross conversion remains unset.
+Historical checklist below: implemented rules above supersede older defaults.
+
+MISSING CONSTRAINTS AND OPTIMIZATION DECISIONS
+============================================
+
+Scope: development optimization using the active 33-use dummy catalog.
+All decisions below remain unspecified. No numeric limits are assumed here.
+Existing example program sizes and financial rates are inputs, not parcel limits.
+
+1. Parcel definitions and baseline buildable capacity
+---------------------------------------------------
+- Define the parcels available for development and each parcel's land area.
+- Specify base FAR and the land-area denominator used to calculate FAR.
+- Specify any existing floor area that consumes available capacity.
+- Identify which parcels permit towers and which are plinth-only.
+- Specify an absolute physical/entitlement limit on total floor area, even when
+  amenities earn FAR bonuses.
+
+2. Dedicated open-space capacity
+-------------------------------
+- Specify the open-space allotment available on each parcel or across the site.
+- Define explicitly which uses consume that allotment; the active outdoor uses
+  are park, playground, and outdoor_sports.
+- Determine whether allotments can be shared or transferred between parcels.
+- Enforce outdoor area <= available dedicated open-space area.
+- Open-space amenities must not consume indoor buildable floor capacity.
+- Do not apply the withdrawn four-floor open-space bonus proposal.
+
+3. Construction and development budget
+--------------------------------------
+- Specify a maximum budget, if spending is to be constrained.
+- Decide whether the budget covers construction alone or total development.
+- Count hard and soft construction costs, including public amenities and outdoor
+  site improvements, for the selected program and its plinth/tower placement.
+- If land belongs in the budget, count it once per acquired parcel rather than
+  once per amenity. Specify whether existing land is already owned/sunk cost.
+- Identify who pays public/community construction and maintenance costs.
+- Specify whether annual maintenance has a separate funding/budget limit.
+- Financing, parking, and other project costs require explicit scope decisions
+  if they are to be included; the dummy catalog does not currently price them.
+
+4. Decision variables, quantities, and divisibility
+-------------------------------------------------
+- Decide whether choices are integer dwelling units, commercial bays, whole
+  facilities, continuous square footage, or a combination by program_unit.
+- Define how quantities convert into allocated area using default_unit_sqft.
+- Decide which facilities can be resized and which have fixed footprints.
+- Decide whether a use can appear multiple times within or across parcels.
+- Specify any maximum counts of facilities, units, or bays.
+- Replace example square_footage with actual selected area in all calculations.
+
+5. Selected-program minimums and maximums
+----------------------------------------
+- Enforce the existing minimum_program_sqft and maximum_program_sqft when a
+  use is selected: zero if absent, otherwise within its permitted size range.
+- Decide whether these bounds apply per facility, per parcel, or to the total
+  development. Their current documented meaning is total use within a development.
+- Check consistency between integer quantities and area bounds.
+- These are physical/program constraints only. There is no subsidy eligibility
+  cutoff; bonuses remain proportional to size.
+
+6. Building form, placement, and usable capacity
+----------------------------------------------
+- Specify plinth capacity, tower capacity, and available ground-floor area.
+- Specify building footprints, floor counts/heights, and any coverage limits
+  needed to derive those capacities.
+- Define whether ground_level means mandatory ground-floor placement.
+- Enforce tower_allowed restrictions and any additional use/placement rules.
+- Allocate each selected indoor use between plinth and tower and apply the
+  appropriate construction rates, rather than pricing all area as plinth.
+- Specify the conversion between rentable/program area and gross construction
+  floor area, including common areas and circulation, or explicitly retain the
+  simplified common-area basis used by the dummy model.
+
+7. FAR bonus aggregation and allocation
+---------------------------------------
+- Decide how per-use bonuses combine: sum, weighted aggregation, or another rule.
+- Define whether bonuses are earned and spent on the same parcel or transferred.
+- Specify any parcel-wide or site-wide bonus cap and physical floor-area cap.
+- Recompute bonuses from selected area and corresponding NOI; do not use the
+  example catalog's precomputed bonuses for differently sized programs.
+- Preserve size proportionality: with equal demand and NOI per sq ft, a larger
+  program receives a proportionally larger bonus. No minimum subsidy eligibility.
+- Specify whether outdoor uses also earn the existing demand/NOI-based bonus.
+- Ensure the aggregation rule treats splitting identical programs consistently,
+  rather than awarding an extra fixed bonus for each instance.
+- Count extra building uses' income and costs through those uses themselves;
+  do not also credit the originating amenity with profit from bonus floor area.
+- Check that bonus-generated capacity cannot expand indefinitely. A fixed
+  physical capacity cap is needed if bonus feedback would otherwise permit this.
+
+8. Required uses, policy requirements, and compatibility
+------------------------------------------------------
+- Specify any required uses or minimum provision, such as housing, attainable
+  housing, community facilities, or dedicated open space; otherwise they are optional.
+- Specify any maximum use shares, concentration limits, or demand saturation
+  limits if desired. Preference weights currently express demand, not capacity.
+- Specify incompatibilities, adjacency requirements, or dependencies between
+  uses if needed for valid building programs.
+- If there are no such requirements, record that explicitly rather than assuming
+  the optimizer will provide a balanced program on its own.
+
+9. Optimization objective and feasibility target
+-----------------------------------------------
+- Choose what to maximize: annual NOI, annual surplus, demand satisfaction, or
+  a defined combination. This is an objective decision, not a capacity constraint.
+- If using annual surplus, specify required yield:
+  annual surplus = annual NOI - required yield * development cost.
+- If a minimum development yield is required, specify its threshold and cost
+  scope, including whether land is included at the development level.
+- Do not sum per-amenity yield percentages. Development yield is combined annual
+  NOI divided by combined development cost.
+- Decide whether no development is an allowed solution when options fail targets.
+- For multiple objectives, specify priorities or weights and compatible units.
+
+10. Financial conventions needed for consistent evaluation
+---------------------------------------------------------
+- Confirm rent periods, especially the inherited annual multifamily per-unit
+  rent convention. Do not silently convert it to monthly rent.
+- Specify vacancy/occupancy allowances if income should be adjusted for them.
+- Confirm whether maintenance allowances and commercial opex cover all expenses
+  intended in NOI, or whether additional costs must be supplied.
+- Keep public/community revenue at zero under the established dummy model rule.
+- Specify whether this remains a stabilized annual model or must include timing,
+  construction phasing, financing, resale, and discounted cash flows.
+
+Illustrative constraint structure (values and aggregation still unspecified)
+---------------------------------------------------------------------------
+Indoor gross area <= parcel land area * (base FAR + combined FAR bonus)
+Indoor gross area <= absolute parcel floor-area limit
+Outdoor improved area <= dedicated open-space allotment
+Plinth area <= plinth capacity
+Tower area <= tower capacity
+Required ground-floor area <= available ground-floor capacity
+Total scoped development cost <= scoped budget, if a budget is imposed
+Selected use area is zero or lies within the applicable program bounds
+
+These constraints must be integrated into an allocator/optimizer. The dummy
+catalog currently calculates use-level costs, NOI, yield, and FAR bonuses; it
+does not select a feasible parcel program or enforce the constraints above.

@@ -6,11 +6,23 @@ import math
 from pathlib import Path
 
 if __package__:
+    from .assumptions import (
+        PARCEL_AREA_SQFT, OPEN_SPACE_AREA_SQFT, PODIUM_FOOTPRINT_SQFT,
+        TOWER_FOOTPRINT_SQFT, PODIUM_STORIES, BASE_TOWER_STORIES,
+        EXAMPLE_HOUSING_UNITS, MAX_TOWER_STORIES, MAX_TOWER_CAPACITY_SQFT,
+        tower_capacity_for_bonus,
+    )
     from .amenity_list import (
         BONUS_FAR_AREA_SQFT, FOR_PROFIT_USES, OUTDOOR_USES,
         buildable_use_catalog,
     )
 else:
+    from assumptions import (
+        PARCEL_AREA_SQFT, OPEN_SPACE_AREA_SQFT, PODIUM_FOOTPRINT_SQFT,
+        TOWER_FOOTPRINT_SQFT, PODIUM_STORIES, BASE_TOWER_STORIES,
+        EXAMPLE_HOUSING_UNITS, MAX_TOWER_STORIES, MAX_TOWER_CAPACITY_SQFT,
+        tower_capacity_for_bonus,
+    )
     from amenity_list import (
         BONUS_FAR_AREA_SQFT, FOR_PROFIT_USES, OUTDOOR_USES,
         buildable_use_catalog,
@@ -20,19 +32,21 @@ else:
 def build_example() -> dict:
     catalog = buildable_use_catalog.set_index("amenity_type")
     inputs = {
-        "parcel_sqft": 12_500,
-        "open_space_sqft": 2_500,
-        "podium_footprint_sqft": 4_000,
-        "tower_footprint_sqft": 4_000,
-        "podium_stories": 5,
-        "base_tower_stories": 5,
-        "podium_capacity_sqft": 20_000,
-        "base_tower_capacity_sqft": 20_000,
+        "parcel_sqft": PARCEL_AREA_SQFT,
+        "open_space_sqft": OPEN_SPACE_AREA_SQFT,
+        "podium_footprint_sqft": PODIUM_FOOTPRINT_SQFT,
+        "tower_footprint_sqft": TOWER_FOOTPRINT_SQFT,
+        "podium_stories": PODIUM_STORIES,
+        "base_tower_stories": BASE_TOWER_STORIES,
+        "max_tower_stories": MAX_TOWER_STORIES,
+        "max_tower_capacity_sqft": MAX_TOWER_CAPACITY_SQFT,
+        "podium_capacity_sqft": PODIUM_FOOTPRINT_SQFT * PODIUM_STORIES,
+        "base_tower_capacity_sqft": TOWER_FOOTPRINT_SQFT * BASE_TOWER_STORIES,
         "tower_sqft_per_bonus_far": BONUS_FAR_AREA_SQFT,
     }
-    # Preserve the selected amenities except for the user-requested senior swap.
+    # Compact scenario: explicit apartment counts, no full hospital.
     candidates = catalog.loc[[
-        "hospital", "mid_career_multifamily", "general_multifamily",
+        "mid_career_multifamily", "general_multifamily",
         "attainable_multifamily",
     ]]
     open_remaining = inputs["open_space_sqft"]
@@ -45,17 +59,14 @@ def build_example() -> dict:
         if zone == "tower" and not row.tower_allowed:
             raise ValueError(f"{name} cannot be placed in the tower")
         quantity = area / row.default_unit_sqft
-        resized_playground = name == "playground" and zone == "open_space"
-        if row.program_unit != "square_foot" and not resized_playground and not math.isclose(quantity, round(quantity)):
+        if row.program_unit != "square_foot" and not math.isclose(quantity, round(quantity)):
             raise ValueError(f"{name} requires whole units")
         rate = row.plinth_total_cost_per_sqft if zone != "tower" else row.tower_total_cost_per_sqft
         scale = area / row.square_footage
         return {
             "amenity_type": name, "role": role, "location": zone,
             "program_unit": row.program_unit,
-            "quantity": 1 if resized_playground else (
-                int(round(quantity)) if row.program_unit != "square_foot" else area
-            ),
+            "quantity": int(round(quantity)) if row.program_unit != "square_foot" else area,
             "area_sqft": area,
             "demand_far_bonus": float(row.demand_FAR_Bonus * scale),
             "footprint_refund_far": float(row.footprint_refund_FAR * scale),
@@ -64,12 +75,12 @@ def build_example() -> dict:
             "construction_cost": float(rate * area),
         }
 
-    # The user explicitly selected one playground resized to the site allotment.
+    # The compact playground is one whole facility matching the open-space allotment.
     programs.append(program("playground", float(open_remaining), "open_space", "subsidized"))
     open_remaining = 0
-    skipped_outdoor = ["park", "outdoor_sports"]
+    skipped_outdoor = ["park"]
     for name, row in candidates.iterrows():
-        programs.append(program(name, float(row.square_footage), "tower", "subsidized"))
+        programs.append(program(name, EXAMPLE_HOUSING_UNITS * float(row.default_unit_sqft), "tower", "subsidized"))
     for name in ("cafe", "greengrocer"):
         programs.append(program(name, float(catalog.loc[name, "default_unit_sqft"]), "podium", "subsidized"))
     ground_area = sum(p["area_sqft"] for p in programs
@@ -79,15 +90,20 @@ def build_example() -> dict:
     amenity_podium = sum(p["area_sqft"] for p in programs if p["location"] == "podium")
 
     bonus = sum(p["far_bonus"] for p in programs)
-    tower_capacity = inputs["base_tower_capacity_sqft"] + bonus * BONUS_FAR_AREA_SQFT
+    uncapped_tower_capacity = inputs["base_tower_capacity_sqft"] + bonus * BONUS_FAR_AREA_SQFT
+    tower_capacity = tower_capacity_for_bonus(bonus)
+    selected_tower = sum(p["area_sqft"] for p in programs if p["location"] == "tower")
+    if selected_tower > tower_capacity:
+        raise ValueError("Selected tower amenities exceed the bonus or physical tower capacity")
     subsidized_indoor = sum(p["area_sqft"] for p in programs if p["location"] != "open_space")
     filler_area = inputs["podium_capacity_sqft"] + tower_capacity - subsidized_indoor
     if filler_area <= 0:
         raise ValueError("Selected amenities leave no room for the requested filler")
-    # Keep the established lab and luxury allocations; office takes the remainder.
-    lab_area = 60_280.993524182064
-    luxury_area = 48 * float(catalog.loc["luxury_multifamily", "default_unit_sqft"])
-    office_area = filler_area - lab_area - luxury_area
+    # Respect each use cap; allowable capacity need not be fully occupied.
+    lab_area = float(catalog.loc["lab", "square_footage"])
+    luxury_area = EXAMPLE_HOUSING_UNITS * float(catalog.loc["luxury_multifamily", "default_unit_sqft"])
+    office_area = min(float(catalog.loc["general_office", "maximum_program_sqft"]),
+                      filler_area - lab_area - luxury_area)
     podium_office = min(inputs["podium_capacity_sqft"] - amenity_podium, office_area)
     programs.append(program("general_office", office_area, "tower", "for_profit"))
     office = programs[-1]
@@ -104,24 +120,31 @@ def build_example() -> dict:
     # Check totals after placing all uses, including both office locations.
     actual_tower = sum(p.get("tower_area_sqft", p["area_sqft"])
                        for p in programs if p["location"] in ("tower", "podium_and_tower"))
-    if not math.isclose(actual_tower, tower_capacity) or podium_office + amenity_podium != 20_000:
-        raise ValueError("Allocation does not fill the podium and tower capacities")
+    actual_podium = podium_office + amenity_podium
+    if actual_tower > tower_capacity or actual_podium > inputs["podium_capacity_sqft"]:
+        raise ValueError("Allocation exceeds the podium or tower capacities")
+    for name in {p["amenity_type"] for p in programs}:
+        allocated = sum(p["area_sqft"] for p in programs if p["amenity_type"] == name)
+        if allocated > catalog.loc[name, "maximum_program_sqft"]:
+            raise ValueError(f"{name} exceeds its aggregate use cap")
     if any(p["far_bonus"] != 0 for p in programs if p["role"] == "for_profit"):
         raise ValueError("For-profit filler must not generate capacity")
     total_noi = sum(p["annual_noi"] for p in programs)
     cost = sum(p["construction_cost"] for p in programs)
     return {
         "status": "allocated", "inputs": inputs,
-        "area_note": "The stated 4000 sqft footprints each equal 32% of the parcel; 2000 sqft of land is unassigned.",
+        "area_note": (f"Separate {PODIUM_FOOTPRINT_SQFT:g} sqft podium, "
+                      f"{TOWER_FOOTPRINT_SQFT:g} sqft tower and {OPEN_SPACE_AREA_SQFT:g} sqft "
+                      f"open-space footprints occupy a {PARCEL_AREA_SQFT:g} sqft parcel."),
         "bonus_rule": {
-            "eligible_indoor": "floor area / 4000 + demand bonus",
+            "eligible_indoor": f"floor area / {BONUS_FAR_AREA_SQFT:g} + demand bonus",
             "outdoor": "demand bonus only",
             "zero_bonus_for_profit_uses": sorted(FOR_PROFIT_USES),
         },
         "allocation_policy": {
-            "subsidized_amenities": "Hospital and mid-career, general, and attainable housing remain in tower; senior housing is replaced by one cafe and one greengrocer grocery store on the ground floor.",
+            "subsidized_amenities": "Five mid-career, five general and five attainable apartments in the tower; one cafe and one greengrocer on the ground floor. Hospital excluded.",
             "outdoor": "One playground resized to 2500 sqft, occupying the full open-space allotment as requested.",
-            "filler": "Preserve 60280.993524182064 sqft of lab and 48 luxury apartments; office fills all remaining indoor capacity after recomputing amenity bonuses.",
+            "filler": "One 10000 sqft lab suite, five luxury apartments and up to 12000 sqft office; unused capacity is retained.",
             "grocery_store_catalog_use": "greengrocer",
         },
         "skipped_outdoor_uses": skipped_outdoor,
@@ -129,13 +152,20 @@ def build_example() -> dict:
         "totals": {
             "subsidized_indoor_sqft": subsidized_indoor,
             "bonus_far": bonus, "podium_sqft": podium_office + amenity_podium,
-            "tower_sqft": tower_capacity, "indoor_sqft": podium_office + amenity_podium + tower_capacity,
-            "for_profit_filler_sqft": filler_area,
+            "tower_sqft": actual_tower, "indoor_sqft": actual_podium + actual_tower,
+            "tower_capacity_sqft": tower_capacity,
+            "uncapped_tower_capacity_sqft": uncapped_tower_capacity,
+            "capacity_removed_by_height_cap_sqft": uncapped_tower_capacity - tower_capacity,
+            "unused_tower_capacity_sqft": tower_capacity - actual_tower,
+            "unused_podium_capacity_sqft": inputs["podium_capacity_sqft"] - actual_podium,
+            "tower_floor_equivalents": actual_tower / TOWER_FOOTPRINT_SQFT,
+            "podium_floor_equivalents": actual_podium / PODIUM_FOOTPRINT_SQFT,
+            "for_profit_filler_sqft": office_area + lab_area + luxury_area,
             "unused_open_space_sqft": float(open_remaining),
             "annual_noi": total_noi, "construction_cost": cost,
             "yield_on_construction_cost": total_noi / cost,
         },
-        "limitations": "Synthetic floor-area allocation; fractional tower floors allowed. Construction cost includes hard and soft costs, excluding land and financing; no separate physical height cap is specified.",
+        "limitations": "Synthetic floor-area allocation; fractional tower floors allowed. Construction cost includes hard and soft costs, excluding land and financing; tower area is capped at 30 stories independently of bonuses, with a separate five-story podium.",
     }
 
 
