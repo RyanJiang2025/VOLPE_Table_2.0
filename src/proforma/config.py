@@ -9,6 +9,8 @@ import math
 from pathlib import Path
 import sysconfig
 from types import MappingProxyType
+from urllib.error import URLError
+from urllib.request import urlopen
 
 CHECKOUT_ROOT = Path(__file__).resolve().parents[2]
 _data_candidates = (CHECKOUT_ROOT,
@@ -18,6 +20,7 @@ DATA_ROOT = next((path for path in _data_candidates if (path / "config" / "scena
 PROJECT_ROOT = CHECKOUT_ROOT if DATA_ROOT == CHECKOUT_ROOT else Path.cwd()
 DEFAULT_SCENARIO = DATA_ROOT / "config" / "scenarios" / "default.json"
 NORMALIZATION = "weight_divided_by_maximum_snapshot_weight"
+PREFERENCE_ENDPOINT = "http://volpe.media.mit.edu:8123/api/amenities/pref_order"
 
 
 def freeze(value):
@@ -294,7 +297,7 @@ class ModelConfig:
         return replace(self, data=freeze(data))
 
 
-def load_config(path=None):
+def load_config(path=None, *, fetch_pref_order=False, sample=None):
     scenario_path = Path(path or DEFAULT_SCENARIO).resolve()
     hashes = {}
 
@@ -305,6 +308,24 @@ def load_config(path=None):
 
     data = read(scenario_path)
     _validate_scenario(data)
-    datasets = {name: read((scenario_path.parent / relative).resolve()) for name, relative in data["inputs"].items()}
+    datasets = {name: read((scenario_path.parent / relative).resolve())
+                for name, relative in data["inputs"].items()
+                if name != "preferences" or not fetch_pref_order}
+    if fetch_pref_order:
+        if sample is not None:
+            _number(sample, "sample", positive=True, integer=True)
+            sample = int(sample)
+        url = PREFERENCE_ENDPOINT + (f"?n={sample}" if sample is not None else "")
+        try:
+            with urlopen(url, timeout=15) as response:
+                raw = response.read()
+            weights = json.loads(raw.decode("utf-8-sig"), object_pairs_hook=_object)
+        except (OSError, URLError, ValueError) as error:
+            raise ValueError(f"Could not fetch preferences from {url}: {error}") from error
+        if not isinstance(weights, list):
+            raise ValueError("Remote preferences must be a list of [identifier, weight] pairs")
+        datasets["preferences"] = {"schema_version": 1, "description": f"Fetched from {url}",
+                                   "normalization": NORMALIZATION, "weights": weights}
+        hashes[url] = hashlib.sha256(raw).hexdigest()
     _validate_datasets(data, datasets)
     return ModelConfig(scenario_path, freeze(data), freeze(datasets), freeze(hashes))

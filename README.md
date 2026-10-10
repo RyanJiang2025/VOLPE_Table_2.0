@@ -32,7 +32,16 @@ python -m proforma --objective annual-surplus
 python -m proforma --objective annual-surplus --sensitivity
 python -m proforma --require library=1 --budget 50000000
 python -m proforma --scenario config/scenarios/default.json
+python -m proforma --fetch_pref_order
+python -m proforma --fetch_pref_order --sample=100
 ```
+
+Preferences default to the local snapshot. `--fetch_pref_order` fetches
+`http://volpe.media.mit.edu:8123/api/amenities/pref_order` for this run only;
+`--sample=N` adds `?n=N` (a positive integer) and is ignored without the fetch flag.
+The local snapshot is never overwritten. Fetch or validation failures stop the run
+rather than silently falling back. The manifest preserves the fetched weights,
+source URL, and response hash.
 
 The CLI uses the scenario's explicit objective: currently provisional `development-profit`. The compatibility Python API `proforma.pipeline.optimize()` retains its previous `annual-surplus` default. `proforma.pipeline.run(config)` uses the configured objective. `proforma.optimizer.optimize(programs, scenario, ...)` is the solver for explicit inputs and does not read configuration or select policy.
 
