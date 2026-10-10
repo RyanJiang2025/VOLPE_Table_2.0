@@ -314,6 +314,7 @@ def load_config(path=None, *, fetch_pref_order=False, sample=None):
     if fetch_pref_order:
         if sample is not None:
             _number(sample, "sample", positive=True, integer=True)
+            sample = int(sample)
         url = PREFERENCE_ENDPOINT + (f"?n={sample}" if sample is not None else "")
         try:
             with urlopen(url, timeout=15) as response:
