@@ -12,6 +12,10 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", nargs="?", choices=("optimize", "preferences", "break-even"), default="optimize")
     parser.add_argument("--scenario", type=Path, help="Scenario JSON; referenced files resolve relative to it")
+    parser.add_argument("--fetch_pref_order", action="store_true",
+                        help="Fetch live preference weights instead of the local snapshot")
+    parser.add_argument("--sample", type=int, metavar="NUMBER",
+                        help="Request ?n=NUMBER (positive integer); ignored unless --fetch_pref_order is set")
     parser.add_argument("--objective", choices=("annual-surplus", "development-profit"))
     parser.add_argument("--bonus-policy", choices=("preference", "legacy"))
     parser.add_argument("--cap-rate", type=float)
@@ -29,7 +33,7 @@ def main(argv=None):
     if args.solver_path:
         sys.path.insert(0, str(args.solver_path.resolve()))
     try:
-        config = load_config(args.scenario)
+        config = load_config(args.scenario, fetch_pref_order=args.fetch_pref_order, sample=args.sample)
         finance = {key: value for key, value in {
             "objective": args.objective, "capitalization_rate": args.cap_rate,
             "required_return": args.required_return, "include_land": args.include_land,
