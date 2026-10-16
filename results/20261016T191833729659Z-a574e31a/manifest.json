@@ -1,0 +1,1100 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-16T19:18:33.729659+00:00",
+  "command": "full-site-scenario-randomizer",
+  "source_hashes": {
+    "C:\\Users\\dukef\\code\\VOLPE2.0\\ProForma\\config\\scenarios\\default.json": "bf78a0afa351042c0b829343420f55bf3804718c8d748ed907c6d58819d16f7a",
+    "C:\\Users\\dukef\\code\\VOLPE2.0\\ProForma\\config\\catalog.json": "fdb2582e1b33e40b9955ed4d1f8f7a0de4cb515ef9e1c0cbc4d414f5847a72b7",
+    "C:\\Users\\dukef\\code\\VOLPE2.0\\ProForma\\config\\economics.json": "b64a85b101c44e1e861f3abc99616dddf9f370a502845bdae211a293605d8137",
+    "C:\\Users\\dukef\\code\\VOLPE2.0\\ProForma\\config\\construction_costs.json": "18048187a00a7132eaf3a09a105aa3a0198f91ee67a818daa28d64d2f8d7c7b4",
+    "C:\\Users\\dukef\\code\\VOLPE2.0\\ProForma\\config\\preferences.json": "cc63e4e3e3110abce6d47c8176d26893b63779cf4c50ecff41005cbec6188f8b"
+  },
+  "resolved_configuration": {
+    "scenario": {
+      "schema_version": 1,
+      "name": "default",
+      "inputs": {
+        "catalog": "../catalog.json",
+        "economics": "../economics.json",
+        "construction_costs": "../construction_costs.json",
+        "preferences": "../preferences.json"
+      },
+      "site": {
+        "parcel_area_sqft": 12500.0,
+        "podium": {
+          "footprint_sqft": 4000.0,
+          "stories": 5
+        },
+        "tower": {
+          "footprint_sqft": 6000.0,
+          "base_stories": 5,
+          "maximum_stories": 30
+        },
+        "open_space_sqft": 2500.0
+      },
+      "finance": {
+        "objective": "development-profit",
+        "capitalization_rate": 0.045,
+        "required_return": 0.06,
+        "include_land": false,
+        "land_regime": "tower_permitted",
+        "development_budget_usd": null,
+        "soft_cost_fraction": 0.3,
+        "tower_cost_multiplier": 1.5
+      },
+      "bonuses": {
+        "policy": "preference",
+        "normalization": "weight_divided_by_maximum_snapshot_weight",
+        "threshold": 0.6,
+        "maximum_premium": 0.15,
+        "baseline": "luxury_only",
+        "housing_block_units": 5,
+        "housing_premium_multipliers": [
+          1.0,
+          0.75,
+          0.5,
+          0.25
+        ],
+        "legacy": {
+          "scale": 2.0,
+          "reference_area_sqft": 10000.0,
+          "noi_per_sqft_scale": 100.0
+        }
+      },
+      "selection": {
+        "minimum_housing_units": 5,
+        "maximum_amenity_types": null,
+        "one_package_per_nonhousing_use": true,
+        "package_limit_exemptions": [
+          "general_office",
+          "lab"
+        ],
+        "floor_limit_exemptions": [
+          "general_office",
+          "lab"
+        ],
+        "maximum_nonhousing_floor_equivalents": 2
+      },
+      "solver": {
+        "time_limit_seconds": 60,
+        "relative_gap": 0.0
+      }
+    },
+    "datasets": {
+      "catalog": {
+        "description": "Active buildable uses. Scenario constraints are applied at runtime; these are synthetic model inputs.",
+        "field_notes": {
+          "amenity_type": "Specific buildable use identifier.",
+          "use_family": "Coarser group for synthpop voting and dynamic FAR bonuses.",
+          "financial_group": "Key for shared financial assumptions.",
+          "program_unit": "Unit used when assembling a building program.",
+          "default_unit_sqft": "Area of one dwelling, commercial bay, or facility. For square_foot programs, one unit is one sq ft.",
+          "minimum_program_sqft": "Intrinsic minimum. Scenario minimum housing units are applied separately.",
+          "maximum_program_sqft": "Aggregate maximum for this use across the development. Null for office and lab means no per-use upper limit; runtime bounds follow physical building capacity. Other indoor nonhousing maximum is at most 12000 sq ft; ground-floor and outdoor limits also apply.",
+          "program_description": "Service scope of the selected compact variant; original preference identifiers are retained.",
+          "example_area_sqft": "Typical example total program area; building sq ft or outdoor improved site sq ft. Not a selected development scenario.",
+          "outdoor": "Consumes improved site area instead of indoor floor area.",
+          "bonus_eligible": "Eligible for preference compensation and legacy demand/refund rules."
+        },
+        "amenities": [
+          {
+            "amenity_type": "general_multifamily",
+            "broad_amenity_category": "residential",
+            "use_family": "housing",
+            "financial_group": "general_multifamily",
+            "program_unit": "dwelling_unit",
+            "default_unit_sqft": 995,
+            "minimum_program_sqft": 995,
+            "maximum_program_sqft": 398000,
+            "ground_level": false,
+            "example_area_sqft": 4975,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "mid_career_multifamily",
+            "broad_amenity_category": "residential",
+            "use_family": "housing",
+            "financial_group": "mid_career_multifamily",
+            "program_unit": "dwelling_unit",
+            "default_unit_sqft": 1100,
+            "minimum_program_sqft": 1100,
+            "maximum_program_sqft": 440000,
+            "ground_level": false,
+            "example_area_sqft": 5500,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "senior_multifamily",
+            "broad_amenity_category": "residential",
+            "use_family": "housing",
+            "financial_group": "senior_multifamily",
+            "program_unit": "dwelling_unit",
+            "default_unit_sqft": 800,
+            "minimum_program_sqft": 800,
+            "maximum_program_sqft": 320000,
+            "ground_level": false,
+            "example_area_sqft": 4000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "attainable_multifamily",
+            "broad_amenity_category": "residential",
+            "use_family": "housing",
+            "financial_group": "attainable_multifamily",
+            "program_unit": "dwelling_unit",
+            "default_unit_sqft": 750,
+            "minimum_program_sqft": 750,
+            "maximum_program_sqft": 300000,
+            "ground_level": false,
+            "example_area_sqft": 3750,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "luxury_multifamily",
+            "broad_amenity_category": "residential",
+            "use_family": "housing",
+            "financial_group": "luxury_multifamily",
+            "program_unit": "dwelling_unit",
+            "default_unit_sqft": 1250,
+            "minimum_program_sqft": 1250,
+            "maximum_program_sqft": 500000,
+            "ground_level": false,
+            "example_area_sqft": 6250,
+            "outdoor": false,
+            "bonus_eligible": false
+          },
+          {
+            "amenity_type": "general_office",
+            "broad_amenity_category": "work",
+            "use_family": "work",
+            "financial_group": "office",
+            "program_unit": "square_foot",
+            "default_unit_sqft": 1,
+            "minimum_program_sqft": 5000,
+            "maximum_program_sqft": null,
+            "ground_level": false,
+            "program_description": "Small office program.",
+            "example_area_sqft": 12000,
+            "outdoor": false,
+            "bonus_eligible": false
+          },
+          {
+            "amenity_type": "lab",
+            "broad_amenity_category": "work",
+            "use_family": "work",
+            "financial_group": "lab",
+            "program_unit": "square_foot",
+            "default_unit_sqft": 1,
+            "minimum_program_sqft": 10000,
+            "maximum_program_sqft": null,
+            "ground_level": false,
+            "program_description": "Laboratory program with no per-use upper area limit; specialized layout must be checked.",
+            "example_area_sqft": 10000,
+            "outdoor": false,
+            "bonus_eligible": false
+          },
+          {
+            "amenity_type": "coworking",
+            "broad_amenity_category": "work",
+            "use_family": "work",
+            "financial_group": "office",
+            "program_unit": "square_foot",
+            "default_unit_sqft": 1,
+            "minimum_program_sqft": 3000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "program_description": "Small coworking workspace.",
+            "example_area_sqft": 6000,
+            "outdoor": false,
+            "bonus_eligible": false
+          },
+          {
+            "amenity_type": "commercial_services",
+            "broad_amenity_category": "work",
+            "use_family": "work",
+            "financial_group": "office",
+            "program_unit": "square_foot",
+            "default_unit_sqft": 1,
+            "minimum_program_sqft": 1000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "example_area_sqft": 10000,
+            "outdoor": false,
+            "bonus_eligible": false
+          },
+          {
+            "amenity_type": "higher_education_career_training",
+            "broad_amenity_category": "education",
+            "use_family": "education",
+            "financial_group": "higher_education_career_training",
+            "program_unit": "facility",
+            "default_unit_sqft": 10000,
+            "minimum_program_sqft": 10000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "program_description": "Classroom-based adult education and career training; no large specialist workshops.",
+            "example_area_sqft": 10000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "childcare",
+            "broad_amenity_category": "education",
+            "use_family": "education",
+            "financial_group": "education",
+            "program_unit": "facility",
+            "default_unit_sqft": 8000,
+            "minimum_program_sqft": 8000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "example_area_sqft": 8000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "library",
+            "broad_amenity_category": "civic",
+            "use_family": "education",
+            "financial_group": "civic",
+            "program_unit": "facility",
+            "default_unit_sqft": 8000,
+            "minimum_program_sqft": 8000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "program_description": "Neighborhood branch library with reading, collection, computer and meeting space.",
+            "example_area_sqft": 8000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "community_centre",
+            "broad_amenity_category": "civic",
+            "use_family": "civic",
+            "financial_group": "civic",
+            "program_unit": "facility",
+            "default_unit_sqft": 10000,
+            "minimum_program_sqft": 10000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "program_description": "Compact neighborhood community centre.",
+            "example_area_sqft": 10000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "government_operations",
+            "broad_amenity_category": "civic",
+            "use_family": "civic",
+            "financial_group": "civic",
+            "program_unit": "facility",
+            "default_unit_sqft": 8000,
+            "minimum_program_sqft": 8000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "program_description": "Local public-service office; not an entire government department.",
+            "example_area_sqft": 8000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "place_of_worship",
+            "broad_amenity_category": "civic",
+            "use_family": "civic",
+            "financial_group": "civic",
+            "program_unit": "facility",
+            "default_unit_sqft": 10000,
+            "minimum_program_sqft": 10000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "example_area_sqft": 10000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "post_office",
+            "broad_amenity_category": "civic",
+            "use_family": "civic",
+            "financial_group": "civic",
+            "program_unit": "facility",
+            "default_unit_sqft": 5000,
+            "minimum_program_sqft": 5000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "example_area_sqft": 5000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "clinic",
+            "broad_amenity_category": "healthcare",
+            "use_family": "healthcare",
+            "financial_group": "clinic",
+            "program_unit": "facility",
+            "default_unit_sqft": 10000,
+            "minimum_program_sqft": 10000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "example_area_sqft": 10000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "pharmacy",
+            "broad_amenity_category": "healthcare",
+            "use_family": "healthcare",
+            "financial_group": "pharmacy",
+            "program_unit": "facility",
+            "default_unit_sqft": 5000,
+            "minimum_program_sqft": 5000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "example_area_sqft": 5000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "convenience_store",
+            "broad_amenity_category": "grocery",
+            "use_family": "grocery",
+            "financial_group": "grocery",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 2000,
+            "minimum_program_sqft": 800,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 2000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "bakery",
+            "broad_amenity_category": "grocery",
+            "use_family": "grocery",
+            "financial_group": "food_retail",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 2000,
+            "minimum_program_sqft": 800,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 2000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "butcher",
+            "broad_amenity_category": "grocery",
+            "use_family": "grocery",
+            "financial_group": "food_retail",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 1500,
+            "minimum_program_sqft": 600,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 1500,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "greengrocer",
+            "broad_amenity_category": "grocery",
+            "use_family": "grocery",
+            "financial_group": "grocery",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 2500,
+            "minimum_program_sqft": 800,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 2500,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "marketplace",
+            "broad_amenity_category": "grocery",
+            "use_family": "grocery",
+            "financial_group": "grocery",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 3000,
+            "minimum_program_sqft": 3000,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "program_description": "One ground-floor market bay; aggregate area limited by ground-floor footprint.",
+            "example_area_sqft": 3000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "general_retail",
+            "broad_amenity_category": "shopping",
+            "use_family": "retail_personal_services",
+            "financial_group": "shopping",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 2000,
+            "minimum_program_sqft": 1000,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "program_description": "Two ground-floor retail bays.",
+            "example_area_sqft": 4000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "barber",
+            "broad_amenity_category": "shopping",
+            "use_family": "retail_personal_services",
+            "financial_group": "shopping",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 1000,
+            "minimum_program_sqft": 400,
+            "maximum_program_sqft": 3000,
+            "ground_level": true,
+            "example_area_sqft": 1000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "bank_financial_services",
+            "broad_amenity_category": "shopping",
+            "use_family": "retail_personal_services",
+            "financial_group": "civic",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 4000,
+            "minimum_program_sqft": 1000,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 4000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "cafe",
+            "broad_amenity_category": "leisure_indoor",
+            "use_family": "food_drink",
+            "financial_group": "food_drink",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 1500,
+            "minimum_program_sqft": 500,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 1500,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "restaurant",
+            "broad_amenity_category": "leisure_indoor",
+            "use_family": "food_drink",
+            "financial_group": "food_drink",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 3500,
+            "minimum_program_sqft": 1000,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 3500,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "bar_pub",
+            "broad_amenity_category": "leisure_indoor",
+            "use_family": "food_drink",
+            "financial_group": "food_drink",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 2500,
+            "minimum_program_sqft": 800,
+            "maximum_program_sqft": 4000,
+            "ground_level": true,
+            "example_area_sqft": 2500,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "fitness_recreation",
+            "broad_amenity_category": "leisure_indoor",
+            "use_family": "recreation_culture",
+            "financial_group": "fitness",
+            "program_unit": "commercial_bay",
+            "default_unit_sqft": 12000,
+            "minimum_program_sqft": 3000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "example_area_sqft": 12000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "cultural_venue",
+            "broad_amenity_category": "leisure_indoor",
+            "use_family": "recreation_culture",
+            "financial_group": "cultural_venue",
+            "program_unit": "facility",
+            "default_unit_sqft": 6000,
+            "minimum_program_sqft": 6000,
+            "maximum_program_sqft": 12000,
+            "ground_level": false,
+            "program_description": "Small gallery or performance venue including support space.",
+            "example_area_sqft": 6000,
+            "outdoor": false,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "park",
+            "broad_amenity_category": "leisure_outdoor",
+            "use_family": "public_realm",
+            "financial_group": "park",
+            "program_unit": "facility",
+            "default_unit_sqft": 2500,
+            "minimum_program_sqft": 2500,
+            "maximum_program_sqft": 2500,
+            "ground_level": false,
+            "program_description": "Pocket park; competes with playground for dedicated open space.",
+            "example_area_sqft": 2500,
+            "outdoor": true,
+            "bonus_eligible": true
+          },
+          {
+            "amenity_type": "playground",
+            "broad_amenity_category": "leisure_outdoor",
+            "use_family": "public_realm",
+            "financial_group": "playground",
+            "program_unit": "facility",
+            "default_unit_sqft": 2500,
+            "minimum_program_sqft": 2500,
+            "maximum_program_sqft": 2500,
+            "ground_level": false,
+            "program_description": "One compact playground using the dedicated open-space allotment.",
+            "example_area_sqft": 2500,
+            "outdoor": true,
+            "bonus_eligible": true
+          }
+        ],
+        "excluded_amenity_types": [
+          "hospital",
+          "outdoor_sports",
+          "school",
+          "supermarket"
+        ],
+        "schema_version": 1
+      },
+      "economics": {
+        "schema_version": 1,
+        "currency": "USD",
+        "financial_groups": {
+          "civic": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 12,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "education": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 15,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "school": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 15,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "higher_education_career_training": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 18,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "grocery": {
+            "annual_rent_per_sqft_usd": 27.2,
+            "opex_fraction": 0.4,
+            "basis": "User-supplied retail rent and operating expense."
+          },
+          "healthcare": {
+            "annual_rent_per_sqft_usd": 60,
+            "opex_fraction": 0.5,
+            "basis": "Synthetic commercial model assumption."
+          },
+          "hospital": {
+            "annual_rent_per_sqft_usd": 75,
+            "opex_fraction": 0.6,
+            "basis": "Synthetic commercial model assumption."
+          },
+          "leisure_indoor": {
+            "annual_rent_per_sqft_usd": 35,
+            "opex_fraction": 0.45,
+            "basis": "Synthetic commercial model assumption."
+          },
+          "leisure_outdoor": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 3,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "shopping": {
+            "annual_rent_per_sqft_usd": 27.2,
+            "opex_fraction": 0.4,
+            "basis": "User-supplied retail rent and operating expense."
+          },
+          "office": {
+            "annual_rent_per_sqft_usd": 91.0,
+            "opex_fraction": 0.3195,
+            "basis": "User-supplied CoStar office rent and operating expense."
+          },
+          "lab": {
+            "annual_rent_per_sqft_usd": 110,
+            "opex_fraction": 0.35,
+            "basis": "Synthetic commercial model assumption."
+          },
+          "general_multifamily": {
+            "annual_rent_per_unit_usd": 48000,
+            "unit_size_from_use": "general_multifamily",
+            "opex_fraction": 0.4,
+            "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+          },
+          "mid_career_multifamily": {
+            "annual_rent_per_unit_usd": 60000,
+            "unit_size_from_use": "mid_career_multifamily",
+            "opex_fraction": 0.38,
+            "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+          },
+          "senior_multifamily": {
+            "annual_rent_per_unit_usd": 21600,
+            "unit_size_from_use": "senior_multifamily",
+            "opex_fraction": 0.45,
+            "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+          },
+          "attainable_multifamily": {
+            "annual_rent_per_unit_usd": 24000,
+            "unit_size_from_use": "attainable_multifamily",
+            "opex_fraction": 0.42,
+            "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+          },
+          "luxury_multifamily": {
+            "annual_rent_per_unit_usd": 105000,
+            "unit_size_from_use": "luxury_multifamily",
+            "opex_fraction": 0.35,
+            "basis": "Synthetic housing scenario selected by user; size comes from the catalog."
+          },
+          "supermarket": {
+            "annual_rent_per_sqft_usd": 27.2,
+            "opex_fraction": 0.4,
+            "basis": "User-supplied retail rent and operating expense."
+          },
+          "food_retail": {
+            "annual_rent_per_sqft_usd": 27.2,
+            "opex_fraction": 0.4,
+            "basis": "User-supplied retail rent and operating expense."
+          },
+          "clinic": {
+            "annual_rent_per_sqft_usd": 55,
+            "opex_fraction": 0.45,
+            "basis": "Synthetic commercial model assumption."
+          },
+          "pharmacy": {
+            "annual_rent_per_sqft_usd": 27.2,
+            "opex_fraction": 0.4,
+            "basis": "User-supplied retail rent and operating expense."
+          },
+          "food_drink": {
+            "annual_rent_per_sqft_usd": 40,
+            "opex_fraction": 0.45,
+            "basis": "Synthetic commercial model assumption."
+          },
+          "fitness": {
+            "annual_rent_per_sqft_usd": 32,
+            "opex_fraction": 0.45,
+            "basis": "Synthetic commercial model assumption."
+          },
+          "cultural_venue": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 18,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "park": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 3,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "playground": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 5,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          },
+          "outdoor_sports": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 4,
+            "basis": "Synthetic maintenance; construction and operations remain developer-funded."
+          }
+        },
+        "use_overrides": {
+          "library": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 12,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "community_centre": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 12,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "government_operations": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 12,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "place_of_worship": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 8,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "post_office": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 10,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "government": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 12,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "townhall": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 12,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "fire_department": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 15,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "diplomatic": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 12,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "harbour_master": {
+            "annual_rent_per_sqft_usd": 0.0,
+            "annual_maintenance_per_sqft_usd": 10,
+            "basis": "Public-use maintenance exception; replaces revenue-based operating expenses."
+          },
+          "bank": {
+            "annual_rent_per_sqft_usd": 27.2,
+            "opex_fraction": 0.4,
+            "basis": "Retail economics override the shared civic financial group."
+          },
+          "bank_financial_services": {
+            "annual_rent_per_sqft_usd": 27.2,
+            "opex_fraction": 0.4,
+            "basis": "Retail economics override the shared civic financial group."
+          }
+        },
+        "land_cost_per_parcel_sqft_usd": {
+          "plinth_only": 450.0,
+          "tower_permitted": 1340.0
+        },
+        "inactive_observations": {
+          "description": "Retained original inputs; these do not override active financial groups.",
+          "general_housing_annual_rent_per_unit_usd": 48000.0,
+          "general_housing_conversion_area_sqft": 995.0,
+          "residential_opex_fraction": 0.4,
+          "government_proxy_annual_rent_per_sqft_usd": 91.0,
+          "government_proxy_opex_fraction": 0.3195,
+          "hospitality_daily_revpar_usd": 223.0,
+          "hospitality_opex_fraction": 0.67,
+          "student_opex_fraction": 0.4
+        },
+        "reference_only_use_ids": [
+          "government",
+          "townhall",
+          "fire_department",
+          "diplomatic",
+          "harbour_master",
+          "bank"
+        ]
+      },
+      "construction_costs": {
+        "description": "Boston high-end hard construction costs from the RLB Q2 2026 report, plus documented model estimates for other Kendall uses. Soft costs and tower costs are defined in the selected scenario's finance section.",
+        "source": "Rider Levett Bucknall, North America Quarterly Construction Cost Report, Q2 2026, PDF pages 10-11: https://www.rlb.com/wp-content/uploads/sites/4/2026/06/Q2-2026-QCR_7.7.2026.pdf",
+        "location": "RLB rows: Boston; estimated rows: Kendall Square/Cambridge proxy",
+        "currency": "USD",
+        "area_unit": "RLB building rows: USD per square foot of gross floor area; outdoor model estimates: USD per square foot of improved site area",
+        "rows": [
+          {
+            "type": "office_prime",
+            "hard_cost_high_per_sqft": 725
+          },
+          {
+            "type": "office_secondary",
+            "hard_cost_high_per_sqft": 425
+          },
+          {
+            "type": "retail_shopping_center",
+            "hard_cost_high_per_sqft": 400
+          },
+          {
+            "type": "retail_strip",
+            "hard_cost_high_per_sqft": 280
+          },
+          {
+            "type": "hotel_5_star",
+            "hard_cost_high_per_sqft": 850
+          },
+          {
+            "type": "hotel_3_star",
+            "hard_cost_high_per_sqft": 575
+          },
+          {
+            "type": "hospital_general",
+            "hard_cost_high_per_sqft": 1200
+          },
+          {
+            "type": "industrial_warehouse",
+            "hard_cost_high_per_sqft": 225
+          },
+          {
+            "type": "parking_ground",
+            "hard_cost_high_per_sqft": 175
+          },
+          {
+            "type": "parking_basement",
+            "hard_cost_high_per_sqft": 200
+          },
+          {
+            "type": "residential_multifamily",
+            "hard_cost_high_per_sqft": 390
+          },
+          {
+            "type": "residential_single_family",
+            "hard_cost_high_per_sqft": 450
+          },
+          {
+            "type": "education_elementary",
+            "hard_cost_high_per_sqft": 750
+          },
+          {
+            "type": "education_high_school",
+            "hard_cost_high_per_sqft": 850
+          },
+          {
+            "type": "education_university",
+            "hard_cost_high_per_sqft": 950
+          }
+        ],
+        "financial_group_mapping": {
+          "office": "office_prime",
+          "civic": "office_prime",
+          "shopping": "retail_shopping_center",
+          "education": "education_elementary",
+          "grocery": "retail_shopping_center",
+          "pharmacy": "retail_shopping_center",
+          "hospital": "hospital_general",
+          "higher_education_career_training": "education_university",
+          "general_multifamily": "residential_multifamily"
+        },
+        "financial_group_blends": {
+          "school": [
+            "education_elementary",
+            "education_high_school"
+          ]
+        },
+        "estimated_hard_cost_per_sqft": {
+          "lab": 1100,
+          "healthcare": 850,
+          "leisure_indoor": 500,
+          "leisure_outdoor": 100,
+          "supermarket": 500,
+          "food_retail": 500,
+          "clinic": 850,
+          "food_drink": 500,
+          "fitness": 550,
+          "cultural_venue": 850,
+          "park": 100,
+          "playground": 175,
+          "outdoor_sports": 125,
+          "mid_career_multifamily": 410,
+          "senior_multifamily": 420,
+          "attainable_multifamily": 350,
+          "luxury_multifamily": 480
+        },
+        "outdoor_financial_groups": [
+          "leisure_outdoor",
+          "park",
+          "playground",
+          "outdoor_sports"
+        ],
+        "mapping_notes": "Direct Boston high costs, proxies, blends, and model estimates are documented in sources.md. Outdoor rates apply per square foot of improved site area and those groups cannot be placed in a tower. Promoted synthetic housing rates: mid-career, senior, attainable, and luxury housing use hard rates of 410, 420, 350, and 480 USD/sq ft; general housing retains 390. Office and lab construction rates are unchanged.",
+        "schema_version": 1
+      },
+      "preferences": {
+        "schema_version": 1,
+        "description": "Complete saved cardinal weight snapshot, including inactive uses. Preserve every identifier.",
+        "normalization": "weight_divided_by_maximum_snapshot_weight",
+        "weights": [
+          [
+            "supermarket",
+            0.03523620264705975
+          ],
+          [
+            "park",
+            0.03440032515918967
+          ],
+          [
+            "hospital",
+            0.03297493430115947
+          ],
+          [
+            "school",
+            0.03159363926581805
+          ],
+          [
+            "convenience_store",
+            0.03127841039865995
+          ],
+          [
+            "clinic",
+            0.030869806121164765
+          ],
+          [
+            "playground",
+            0.030685465781942433
+          ],
+          [
+            "bakery",
+            0.030649557602248377
+          ],
+          [
+            "cafe",
+            0.030626381315020164
+          ],
+          [
+            "pharmacy",
+            0.03061800919640505
+          ],
+          [
+            "marketplace",
+            0.030141560934567026
+          ],
+          [
+            "restaurant",
+            0.02989429903549873
+          ],
+          [
+            "outdoor_sports",
+            0.0296387572556262
+          ],
+          [
+            "general_multifamily",
+            0.029563303651902677
+          ],
+          [
+            "greengrocer",
+            0.029051199327052833
+          ],
+          [
+            "butcher",
+            0.02858911556692938
+          ],
+          [
+            "attainable_multifamily",
+            0.028485197374833314
+          ],
+          [
+            "library",
+            0.02833696813848976
+          ],
+          [
+            "higher_education_career_training",
+            0.02746487808614941
+          ],
+          [
+            "community_centre",
+            0.02649098823676425
+          ],
+          [
+            "fitness_recreation",
+            0.026420367894319948
+          ],
+          [
+            "childcare",
+            0.02578386243421677
+          ],
+          [
+            "cultural_venue",
+            0.02544619518231574
+          ],
+          [
+            "general_retail",
+            0.025220578422819186
+          ],
+          [
+            "bar_pub",
+            0.025193432835137294
+          ],
+          [
+            "bank_financial_services",
+            0.024327983905166713
+          ],
+          [
+            "mid_career_multifamily",
+            0.024117995305389963
+          ],
+          [
+            "post_office",
+            0.02397425805042782
+          ],
+          [
+            "coworking",
+            0.023300768302838015
+          ],
+          [
+            "barber",
+            0.02315756295258318
+          ],
+          [
+            "government_operations",
+            0.022308433965912543
+          ],
+          [
+            "general_office",
+            0.022189456413926688
+          ],
+          [
+            "place_of_worship",
+            0.02081469181558027
+          ],
+          [
+            "commercial_services",
+            0.020775376986078568
+          ],
+          [
+            "luxury_multifamily",
+            0.02077342154449209
+          ],
+          [
+            "lab",
+            0.020332780000756816
+          ],
+          [
+            "senior_multifamily",
+            0.01927383459155708
+          ]
+        ]
+      }
+    }
+  },
+  "code": {
+    "revision": "6df3f441f7609978a0a76df0762336ac4c7e5845",
+    "dirty": true
+  },
+  "dependencies": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scipy": "1.13.1"
+  },
+  "reports": {
+    "full_site_scenarios.json": "full_site_scenarios.json"
+  },
+  "run_parameters": {
+    "seed": 6300795350389339451,
+    "scenario_count": 10
+  }
+}
