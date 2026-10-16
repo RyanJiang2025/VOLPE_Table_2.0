@@ -33,8 +33,10 @@ def optimize(programs, scenario, required_quantities=None, time_limit=60.0,
     for key, value in vars(scenario).items():
         if value is not None and (not math.isfinite(value) or value < 0):
             raise ValueError(f"{key} must be finite and nonnegative")
-    if scenario.podium_footprint <= 0 or scenario.tower_footprint <= 0:
-        raise ValueError("Footprints must be positive")
+    if scenario.podium_footprint <= 0:
+        raise ValueError("Podium footprint must be positive")
+    if scenario.tower_footprint == 0 and (scenario.base_tower_stories or scenario.max_tower_stories):
+        raise ValueError("A zero-footprint tower must have zero stories")
     for p in programs:
         if (not isinstance(p.bonus_block_units, int) or isinstance(p.bonus_block_units, bool)
                 or p.bonus_block_units <= 0):
@@ -85,8 +87,7 @@ def optimize(programs, scenario, required_quantities=None, time_limit=60.0,
     for i, p in enumerate(programs):
         unit = p.unit_sqft
         minimum = p.minimum_sqft / unit if p.continuous else math.ceil(p.minimum_sqft / unit)
-        maximum_area = (scenario.podium_footprint * scenario.podium_stories
-                        + scenario.tower_footprint * scenario.max_tower_stories
+        maximum_area = (scenario.podium_capacity + scenario.maximum_tower_capacity
                         if p.unrestricted_nonhousing else p.maximum_sqft)
         maximum = maximum_area / unit if p.continuous else math.floor(maximum_area / unit)
         high[i] = high[n+i] = maximum
@@ -136,8 +137,8 @@ def optimize(programs, scenario, required_quantities=None, time_limit=60.0,
             high[n+i] = 0
         if not p.housing and not p.unrestricted_nonhousing:
             stories = np.zeros(size)
-            stories[i] = unit / scenario.podium_footprint
-            stories[n+i] = unit / scenario.tower_footprint
+            stories[i] = unit / scenario.podium_base_footprint
+            stories[n+i] = unit / scenario.tower_footprint if scenario.tower_footprint else 0
             constrain(stories, scenario.max_nonhousing_stories)
 
     # Do not charge land when nothing is selected; charge it exactly once otherwise.
@@ -146,12 +147,12 @@ def optimize(programs, scenario, required_quantities=None, time_limit=60.0,
     any_selected[2*n:3*n] = -1
     constrain(any_selected, 0)
     cost[project] = scenario.land_cost
-    podium_cap = scenario.podium_footprint * scenario.podium_stories
+    podium_cap = scenario.podium_capacity
     tower_cap = scenario.tower_footprint * scenario.max_tower_stories
     constrain(podium, podium_cap)
     constrain(tower, tower_cap)
     constrain(outdoor, scenario.open_space)
-    constrain(ground, scenario.podium_footprint)
+    constrain(ground, scenario.podium_base_footprint)
     constrain(tower - bonus * scenario.tower_footprint,
               scenario.tower_footprint * scenario.base_tower_stories)
     if scenario.development_budget is not None:
@@ -239,8 +240,8 @@ def optimize(programs, scenario, required_quantities=None, time_limit=60.0,
         "objective_value": float(score @ x),
         "bonus_far": earned_bonus, "podium_sqft": podium_area, "tower_sqft": tower_area,
         "indoor_sqft": podium_area + tower_area, "outdoor_sqft": float(outdoor @ x),
-        "podium_floor_equivalents": podium_area / scenario.podium_footprint,
-        "tower_floor_equivalents": tower_area / scenario.tower_footprint,
+        "podium_floor_equivalents": podium_area / scenario.podium_base_footprint,
+        "tower_floor_equivalents": tower_area / scenario.tower_footprint if scenario.tower_footprint else 0.0,
         "effective_tower_capacity_sqft": effective_capacity,
         "unused_authorized_tower_sqft": effective_capacity - tower_area,
         "bonus_capacity_blocked_by_height_cap_sqft": max(0.0, uncapped_capacity - tower_cap),

@@ -28,7 +28,7 @@
     "land_regime": "tower_permitted",
     "development_budget_usd": null,
     "soft_cost_fraction": 0.3,
-    "tower_cost_multiplier": 1.75
+    "tower_cost_multiplier": 1.5
   },
   "bonuses": {
     "policy": "preference",

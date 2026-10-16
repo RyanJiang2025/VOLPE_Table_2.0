@@ -43,6 +43,14 @@ Housing bonuses are earned in complete blocks. `housing_block_units` defaults to
 
 ## Preferences
 
+The optional site flag `podium_extends_under_tower` (default `false`) prices the
+podium stories across the sum of the separate podium and tower land footprints.
+Land accounting still counts each footprint once. Tower stories then describe
+only the upper tower-priced stories above that base. The full-site randomizer
+sets this flag, five podium stories, zero base tower stories, and a maximum of
+25 bonus-enabled upper stories. Podium capacity, ground-floor capacity,
+nonhousing floor equivalents, and cost allocation use the expanded base.
+
 Keep all **37** identifiers, including the four excluded active choices (`hospital`, `outdoor_sports`, `school`, `supermarket`). The maximum saved weight belongs to inactive `supermarket`. Normalization is cardinal weight divided by the maximum across the complete snapshot; it is not ordinal rank or resident-support percentage. Removing inactive weights would change results.
 
 `baseline: "luxury_only"` preserves current calibration. `all_fillers` explicitly enables all bonus-ineligible filler uses. Changing office/lab profitability in experiments also selects the all-filler baseline. Financial threshold reuse is limited to identical programs, baseline fillers, scenario, search settings, and solver settings; changed economics invalidate it.

@@ -44,6 +44,7 @@ class Scenario:
     land_cost: float = 0.0
     development_budget: Optional[float] = None
     capitalization_rate: float = None
+    podium_extends_under_tower: bool = False
 
     def __post_init__(self):
         fields = ("required_return", "podium_footprint", "podium_stories", "tower_footprint",
@@ -71,11 +72,17 @@ class Scenario:
             land_cost=site["parcel_area_sqft"] * land_rate if include_land else 0.0,
             development_budget=finance["development_budget_usd"] if development_budget is None else development_budget,
             capitalization_rate=finance["capitalization_rate"],
+            podium_extends_under_tower=site.get("podium_extends_under_tower", False),
         )
 
     @property
+    def podium_base_footprint(self):
+        """Cost-zone footprint; land footprints remain separate in the site plan."""
+        return self.podium_footprint + (self.tower_footprint if self.podium_extends_under_tower else 0)
+
+    @property
     def podium_capacity(self):
-        return self.podium_footprint * self.podium_stories
+        return self.podium_base_footprint * self.podium_stories
 
     @property
     def maximum_tower_capacity(self):

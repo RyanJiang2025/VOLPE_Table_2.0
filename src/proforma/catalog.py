@@ -45,8 +45,8 @@ def build_catalog(config=None, scenario=None):
             row["minimum_program_sqft"] = max(row["minimum_program_sqft"],
                 selection["minimum_housing_units"] * row["default_unit_sqft"])
         else:
-            cap = (scenario.open_space if row["outdoor"] else scenario.podium_footprint if row["ground_level"]
-                   else scenario.tower_footprint * scenario.max_nonhousing_stories)
+            cap = (scenario.open_space if row["outdoor"] else scenario.podium_base_footprint if row["ground_level"]
+                   else (scenario.tower_footprint or scenario.podium_base_footprint) * scenario.max_nonhousing_stories)
             row["maximum_program_sqft"] = min(row["maximum_program_sqft"], cap)
     # Examples are descriptive, not constraints. Small scenarios may exclude a use.
     rows = _attach_rates([r for r in rows if r["minimum_program_sqft"] <= r["maximum_program_sqft"]], config)
@@ -58,7 +58,7 @@ def build_catalog(config=None, scenario=None):
             row["amenity_pref_order"], row["NOI_yearly"], reference, row["square_footage"],
             eligible=row["bonus_eligible"], legacy=config.data["bonuses"]["legacy"])
         row["footprint_refund_FAR"] = (row["square_footage"] / scenario.tower_footprint
-                                      if row["bonus_eligible"] and not row["outdoor"] else 0.0)
+                                       if row["bonus_eligible"] and not row["outdoor"] and scenario.tower_footprint else 0.0)
         row["FAR_Bonus"] = row["demand_FAR_Bonus"] + row["footprint_refund_FAR"]
         row["is_for_profit_use"] = not row["bonus_eligible"]
     return pd.DataFrame(rows)
@@ -79,7 +79,7 @@ def catalog_programs(tower_footprint=None, *, config=None, scenario=None):
         podium_cost_per_sqft=float(r.plinth_total_cost_per_sqft),
         tower_cost_per_sqft=float(r.tower_total_cost_per_sqft),
         bonus_far_per_unit=float(r.demand_FAR_Bonus * r.default_unit_sqft / r.square_footage
-            + (r.default_unit_sqft / scenario.tower_footprint if r.bonus_eligible and not r.outdoor else 0.0)),
+            + (r.default_unit_sqft / scenario.tower_footprint if r.bonus_eligible and not r.outdoor and scenario.tower_footprint else 0.0)),
         continuous=r.program_unit == "square_foot", housing=r.program_unit == "dwelling_unit",
         outdoor=bool(r.outdoor), ground_level=bool(r.ground_level), tower_allowed=bool(r.tower_allowed),
         program_unit=r.program_unit,

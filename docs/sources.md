@@ -15,6 +15,11 @@ This reorganization preserves existing numerical inputs. It does not independent
 
 Every financial group and use exception has a `basis` note. Construction source rows remain separate from synthetic estimated hard costs. Original superseded observations are explicitly inactive in economics.
 
+On October 16, 2026, the user selected a 50% tower construction premium for the
+demo: the active default `tower_cost_multiplier` is 1.50. The previous 1.75
+multiplier remains documented in the historical narratives and saved reports;
+it was a provisional model assumption, not an RLB-sourced premium.
+
 The complete prior source narratives are preserved in [root sources](history/root_sources.md) and [dummy sources](history/dummy_sources.md). They contain historical statements that may be superseded by current overrides, including older housing rent examples and government revenue assumptions. Consult active configuration for the actual values used today.
 
 See [financial objective decision](decisions/financial_objective.md), [preference policy decision](decisions/preference_bonus.md), and [limitations](limitations.md).

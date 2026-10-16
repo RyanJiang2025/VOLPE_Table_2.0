@@ -19,7 +19,8 @@ BASELINE = json.loads((Path(__file__).parent / "fixtures" / "before_reorganizati
 
 class ProFormaPortTests(unittest.TestCase):
     def setUp(self):
-        self.config = load_config()
+        # Historical snapshots predate the default tower premium reduction.
+        self.config = load_config().with_overrides(finance={"tower_cost_multiplier": 1.75})
 
     def assertEquivalent(self, actual, expected):
         if isinstance(expected, dict):
